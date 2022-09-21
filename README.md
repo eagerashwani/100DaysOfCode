@@ -120,7 +120,9 @@ Learn Full Stack in just 100 Days
 ```
 - By Default, browser font is Serif font.
 - In Modern Websites, we use Sans-Serif font.
--  <p align="justify"><img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/sansserifvsserif.jpeg?raw=true" width=360px height=200px></p> 
+- Difference between Serif and Sans-serif font.
+  
+    -  <p align="justify"><img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/sansserifvsserif.jpeg?raw=true" width=360px height=200px></p> 
 
 <div align="center">
     <h3>Don't forget to ⭐ this repo</h3>
