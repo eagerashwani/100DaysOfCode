@@ -128,7 +128,7 @@ Learn Full Stack in just 100 Days
   ```css
   body{
     font-family: Arial, Helvetica, sans-serif;
-    // If Arial is not present, than Helvetica, than sans-serif
+    /* If Arial is not present, than Helvetica, than sans-serif */
     }
   ```
 - Many different types of fonts are available in our Operating System.
@@ -136,6 +136,7 @@ Learn Full Stack in just 100 Days
 - To Tackle this problem, we use [google fonts.](https://fonts.google.com/)
 
 - After selecting your font, you get something like this.
+- 1st way (In HTML).
   ```html
   <head>
     ...
@@ -144,17 +145,60 @@ Learn Full Stack in just 100 Days
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
     <title>Diffrernt ways to apply CSS</title>
-</head>
-  ```
+  </head>
+    ```
+
+- 2nd way (In CSS).
+- Paste @import in the 1st line.
+```css
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+```
+
+- You can use any way.
+  
 - Changes in style.css
-  ```css
+  
+```css
   body{
     font-family: 'Roboto', sans-serif;
     }
-  ```
+```
+- We select 4 different weight types : 300, 400, 500, 900.
 
+- Now, add font-weight and see the difference.
 
+```css
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+}
+```
 
+### CSS Colors
+
+- We have 16777216 possible colors.
+
+- RGB
+  - rgb(232, 155, 0);
+  - R stands for Red (232).
+  - G stands for Green (155).
+  - B stands for Blue (0).
+  - Value from 0 to 255.
+
+ - Hex Code
+   - #ff34d8
+   - ff for Red.
+   - 34 for Green.
+   - d8 for Blue.
+   - Value from 0 to f.
+     - 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f
+
+```css
+h1{
+    background-color: #ff0000;
+    color: rgb(255,255,255);
+}
+```
 
 
 

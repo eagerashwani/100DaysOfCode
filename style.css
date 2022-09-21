@@ -1,7 +1,9 @@
 body{
     font-family: 'Roboto', sans-serif;
+    font-weight: 900;
 }
 
 h1{
-    color: brown;
+    background-color: #ff0000;
+    color: rgb(255,255,255);
 }
