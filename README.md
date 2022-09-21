@@ -118,9 +118,9 @@ Learn Full Stack in just 100 Days
         nostrum nulla quasi non dicta.</p>
 </body>
 ```
-- By Default, browser font is Sans-serif font.
-- In Modern Websites, we use Serif font.
-
+- By Default, browser font is Serif font.
+- In Modern Websites, we use Sans-Serif font.
+-  <p align="justify"><img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/sansserifvsserif.jpeg?raw=true" width=360px height=200px></p> 
 
 <div align="center">
     <h3>Don't forget to ⭐ this repo</h3>
