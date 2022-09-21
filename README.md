@@ -123,6 +123,47 @@ Learn Full Stack in just 100 Days
 - Difference between Serif and Sans-serif font.
   
     -  <p align="justify"><img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/sansserifvsserif.jpeg?raw=true" width=360px height=200px></p> 
+- We want to change the font from serif to sans-serif.
+- In style.css
+  ```css
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    // If Arial is not present, than Helvetica, than sans-serif
+    }
+  ```
+- Many different types of fonts are available in our Operating System.
+- But, some fonts are available only in MacOS, some in Windows.
+- To Tackle this problem, we use [google fonts.](https://fonts.google.com/)
+
+- After selecting your font, you get something like this.
+  ```html
+  <head>
+    ...
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
+    <title>Diffrernt ways to apply CSS</title>
+</head>
+  ```
+- Changes in style.css
+  ```css
+  body{
+    font-family: 'Roboto', sans-serif;
+    }
+  ```
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div align="center">
     <h3>Don't forget to ⭐ this repo</h3>
