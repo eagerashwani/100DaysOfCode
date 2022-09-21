@@ -3,7 +3,30 @@ body{
     font-weight: 900;
 }
 
-h1{
-    background-color: #ff0000;
-    color: rgb(255,255,255);
+
+#main-heading{
+    background-color: #cdcdcd;
+    /* id selector */
+}
+
+.sub-heading{
+    /* class selector */
+    background-color: #efefef;
+}
+
+p{
+    /* element selector */
+    background-color: #6e6767;
+}
+
+.text-red{
+    color: rgb(249, 95, 95);
+}
+
+.text-green{
+    color: rgb(80, 181, 80);
+}
+
+.bg-color{
+    background-color: beige;
 }

@@ -200,14 +200,92 @@ h1{
 }
 ```
 
+### CSS Selectors
+- index.html file looks like
+  ```html
+  <body>
+    <div>
+        <h1>Main Heading</h1>
+    </div>
 
+    <div>
+        <h2>Sub Heading</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis soluta enim ipsum quaerat iusto modi quasi
+            natus nam sunt consequatur, expedita pariatur voluptatum dolorem!</p>
+    </div>
+  </body>
+  ```
+  - Now, I want to change the 2nd div.
+  - If we just use div tag, than the styles apply to all div.
+  ```css
+  div{
+    color: blue;
+    background-color: #cdcdcd;
+    }
+  ```
+  - The above selector is called Element Selector.
+ - To tackle above problem, we use id and class selector.
+ - Now, our HTML looks like this.
+  ```html
+    <body>
+        <div>
+            <h1 id="main-heading">Main Heading</h1>
+        </div>
 
+        <div>
+            <h2 class="sub-heading">Sub Heading</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis soluta enim ipsum quaerat iusto modi quasi
+                natus nam sunt consequatur, expedita pariatur voluptatum dolorem!</p>
+        </div>
+    </body>
+  ```
+  - style.css
+  ```css
+    #main-heading{
+        background-color: #cdcdcd;
+        /* id selector */
+    }
 
+    .sub-heading{
+        /* class selector */
+        background-color: #efefef;
+    }
 
+    p{
+        /* element selector */
+        background-color: #6e6767;
+    }
+  ```
+  - You can use same class selector in many times, but you have to use id selector only one time for one element/tag.
+  - Most developers use class selector very frequently.
 
+  - **Utility class**
+  - Many times we already know, how our webpage will look.
+  - Like we already know if h2 text is red and p text is in green.
+  - We define, only one property in utility class.
 
+    ```css
+    .text-red{
+        color: rgb(249, 95, 95);
+    }
 
+    .text-green{
+        color: rgb(80, 181, 80);
+    }
 
+    .bg-color{
+        background-color: beige;
+    }
+    ```
+  - Our HTML 
+    ```html
+    <div>
+            <h2 class="sub-heading text-red">Sub Heading</h2>
+            <p class="text-green bg-color">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis soluta enim ipsum quaerat iusto modi quasi
+                natus nam sunt consequatur, expedita pariatur voluptatum dolorem!</p>
+        </div>
+    ```
+  - We can give more than one class to our tag, like we done in h2 and p tag.
 
 <div align="center">
     <h3>Don't forget to ⭐ this repo</h3>
