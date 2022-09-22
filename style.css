@@ -1,32 +1,39 @@
-body{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
+/*  *{
+    color: royalblue;
+} */
+
+header{
+    background-color: #ffebeb;
 }
 
-
-#main-heading{
-    background-color: #cdcdcd;
-    /* id selector */
+/* Select section which has my-articles class */
+section.my-articles{
+    background-color: #ffefef;
 }
 
-.sub-heading{
-    /* class selector */
-    background-color: #efefef;
+/* Select all p tag inside header tag */
+/* Descendent Selector */
+/* We use mostly */
+header p{
+    color: red;
 }
 
-p{
-    /* element selector */
-    background-color: #6e6767;
+/* change the color of all links inside list */
+li a{
+    color: rgb(0, 70, 0);
 }
 
-.text-red{
-    color: rgb(249, 95, 95);
+/* Selects all h2 inside section tag which has my-articles class */
+/* section.my-articles h2{
+    color: purple;
+} */
+
+/* But, I want to select only Direct child (h2) of section  */
+section.my-articles > h2 {
+  color: purple;
 }
 
-.text-green{
-    color: rgb(80, 181, 80);
-}
-
-.bg-color{
-    background-color: beige;
+/* Selects direct p who come after h2 */
+h2+p{
+    color: rosybrown;
 }

@@ -287,6 +287,86 @@ h1{
     ```
   - We can give more than one class to our tag, like we done in h2 and p tag.
 
+## Day5
+- Some More Selectors
+  - Here is my HTML
+    ```html
+    <body>
+    <header>
+      <p>Inside header</p>
+      <h1 class="main-logo">main logo</h1>
+      <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+      </ul>
+      <p>Inside header</p>
+    </header>
+
+    <main>
+      <h2>Main Content of webpage</h2>
+      <section class="my-articles">
+          <h2>Articles Section</h2>
+          <article>
+              <h2>Article Heading</h2>
+              <p>Lorem ipsum dolor sit amet. </p>
+          </article>
+          <article>
+              <h2>Article Heading</h2>
+              <p>Lorem ipsum dolor sit amet. </p>
+          </article>
+      </section>
+    </main>
+  </body>
+    ```
+    - Now, you want to change the entire text color, you can use **universal selector** .
+      ```css
+        *{
+        color: royalblue;
+        }
+      ```
+      - We not use universal selector like this and not so much, we use this to reset our CSS.
+  - Here is my CSS
+  ```css
+    
+  header{
+      background-color: #ffebeb;
+  }
+
+  /* Select section which has my-articles class */
+  section.my-articles{
+      background-color: #ffefef;
+  }
+
+  /* Select all p tag inside header tag */
+  /* Descendent Selector */
+  /* We use mostly */
+  header p{
+      color: red;
+  }
+
+  /* change the color of all links inside list */
+  li a{
+      color: rgb(0, 70, 0);
+  }
+
+  /* Selects all h2 inside section tag which has my-articles class */
+  /* section.my-articles h2{
+      color: purple;
+  } */
+
+  /* But, I want to select only Direct child (h2) of section  */
+  section.my-articles > h2 {
+    color: purple;
+  }
+
+  /* Selects direct p who come after h2 */
+  h2+p{
+      color: rosybrown;
+  }
+  ```
+**Attribute Selector**
+- 
 <div align="center">
     <h3>Don't forget to ⭐ this repo</h3>
     <h5>Building with the COMMUNITY for the COMMUNITY ❤️</h5>
