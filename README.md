@@ -366,7 +366,7 @@ h1{
       color: rosybrown;
   }
   ```
-**Attribute Selector**
+  - **Attribute Selector**
 - 
 <div align="center">
     <h3>Don't forget to ⭐ this repo</h3>
