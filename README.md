@@ -10,6 +10,9 @@ Learn Full Stack in just 100 Days
     - [CSS Colors](#css-colors)
     - [CSS Selectors](#css-selectors)
   - [Day5](#day5)
+    - [Some More Selectors](#some-more-selectors)
+      - [Universal Selector](#universal-selector)
+      - [Attribute Selector](#attribute-selector)
 
 ## Day 4
 ### Let's start CSS.
@@ -297,8 +300,8 @@ h1{
   - We can give more than one class to our tag, like we done in h2 and p tag.
 
 ## Day5
-- Some More Selectors
-  - Here is my HTML
+### Some More Selectors
+    - Here is my HTML
     ```html
     <body>
     <header>
@@ -328,7 +331,7 @@ h1{
     </main>
     </body>
     ```
-  - Universal Selector
+#### Universal Selector
     - Now, you want to change the entire text color, you can use **universal selector** .
       ```css
         *{
@@ -375,7 +378,7 @@ h1{
       color: rosybrown;
   }
   ```
-- **Attribute Selector**
+#### Attribute Selector
    - Here is my HTML
    ```html
       <body>
