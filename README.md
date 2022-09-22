@@ -319,13 +319,14 @@ h1{
     </main>
   </body>
     ```
+
     - Now, you want to change the entire text color, you can use **universal selector** .
       ```css
         *{
         color: royalblue;
         }
       ```
-      - We not use universal selector like this and not so much, we use this to reset our CSS.
+    - We not use universal selector like this and not so much, we use this to reset our CSS.
   - Here is my CSS
   
   ```css
