@@ -317,7 +317,7 @@ h1{
           </article>
       </section>
     </main>
-  </body>
+    </body>
     ```
 
     - Now, you want to change the entire text color, you can use **universal selector** .
