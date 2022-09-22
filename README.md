@@ -1,6 +1,15 @@
 # 100DaysOfCode
 Learn Full Stack in just 100 Days
 
+- [100DaysOfCode](#100daysofcode)
+  - [Day 4](#day-4)
+    - [Let's start CSS.](#lets-start-css)
+    - [Versioning of CSS](#versioning-of-css)
+    - [Different ways to apply CSS](#different-ways-to-apply-css)
+    - [CSS Fonts](#css-fonts)
+    - [CSS Colors](#css-colors)
+    - [CSS Selectors](#css-selectors)
+  - [Day5](#day5)
 
 ## Day 4
 ### Let's start CSS.
@@ -319,7 +328,7 @@ h1{
     </main>
     </body>
     ```
-
+  - Universal Selector
     - Now, you want to change the entire text color, you can use **universal selector** .
       ```css
         *{
@@ -366,7 +375,7 @@ h1{
       color: rosybrown;
   }
   ```
-  - **Attribute Selector**
+- **Attribute Selector**
    - Here is my HTML
    ```html
       <body>
