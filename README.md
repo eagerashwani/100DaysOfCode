@@ -367,7 +367,57 @@ h1{
   }
   ```
   - **Attribute Selector**
-- 
+   - Here is my HTML
+   ```html
+      <body>
+      <h2>Links</h2>
+      <a href="https://google.com">Google</a><br>
+      <a href="https://amazon.com">Amazon</a><br>
+      <a href="https://amazon.in">Amazon India</a><br>
+      <a href="youtube.com">YouTube</a><br>
+
+      <h2>Form</h2>
+      <form>
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname"><br>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname"><br>
+        <label for="pass">Password:</label><br>
+        <input type="password" id="pass"><br><br>
+        <input type="button" value="Submit">
+    </form>
+    </body>
+   ```
+   - href, type etc are attribute of their respective elements.
+   - CSS file
+    ```css
+      input[type = "text"]{
+          color: red;
+      }
+
+      input[type="password"]{
+          background-color: antiquewhite;
+      }
+
+      /* Now, I want to select link that havve amazon */
+
+      a[href *= "amazon"]{
+          color: brown;
+      }
+
+      /* Now, I want to Select those link that start with https */
+      a[href ^= "https"]{
+          color: bisque;
+      }
+
+      /* Now, I want to Select those a that ends with .in */
+      a[href $= ".in"]{
+          color: rebeccapurple;
+      }
+    ```
+
+
+
 <div align="center">
     <h3>Don't forget to ⭐ this repo</h3>
     <h5>Building with the COMMUNITY for the COMMUNITY ❤️</h5>

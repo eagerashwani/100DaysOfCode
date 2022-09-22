@@ -1,39 +1,23 @@
-/*  *{
-    color: royalblue;
-} */
-
-header{
-    background-color: #ffebeb;
-}
-
-/* Select section which has my-articles class */
-section.my-articles{
-    background-color: #ffefef;
-}
-
-/* Select all p tag inside header tag */
-/* Descendent Selector */
-/* We use mostly */
-header p{
+input[type = "text"]{
     color: red;
 }
 
-/* change the color of all links inside list */
-li a{
-    color: rgb(0, 70, 0);
+input[type="password"]{
+    background-color: antiquewhite;
 }
 
-/* Selects all h2 inside section tag which has my-articles class */
-/* section.my-articles h2{
-    color: purple;
-} */
+/* Now, I want to select link that havve amazon */
 
-/* But, I want to select only Direct child (h2) of section  */
-section.my-articles > h2 {
-  color: purple;
+a[href *= "amazon"]{
+    color: brown;
 }
 
-/* Selects direct p who come after h2 */
-h2+p{
-    color: rosybrown;
+/* Now, I want to Select those link that start with https */
+a[href ^= "https"]{
+    color: bisque;
+}
+
+/* Now, I want to Select those a that ends with .in */
+a[href $= ".in"]{
+    color: rebeccapurple;
 }
