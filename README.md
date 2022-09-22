@@ -327,9 +327,9 @@ h1{
       ```
       - We not use universal selector like this and not so much, we use this to reset our CSS.
   - Here is my CSS
+  
   ```css
-    
-  header{
+      header{
       background-color: #ffebeb;
   }
 
