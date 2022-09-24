@@ -1,12 +1,18 @@
-h1{
-    color: green;
+div#container ul.my-style li{
+    color: blue;
+    background: bisque;
 }
 
-.myClass{
-    color: red;
-
+/* Inline > ID > Class > Element */
+/* 0, 1, 1, 3 */
+/* 0 -> Inline
+1 -> ID 
+1 -> Class
+3 -> Element 
+for easy understanding, we say above style have 113 specificity */
+div#container ul.my-style li.fav{
+    color: bisque;
+    background: blue;
 }
 
-.heading{
-    color: magenta;
-}
+/* 0, 0, 1, 1  --> 11 */

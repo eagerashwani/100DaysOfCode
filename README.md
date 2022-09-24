@@ -304,7 +304,7 @@ h1{
 
 ## Day5
 ### Some More Selectors
-    - Here is my HTML
+  - Here is my HTML
     ```html
     <body>
     <header>
@@ -335,7 +335,7 @@ h1{
     </body>
     ```
 #### Universal Selector
-    - Now, you want to change the entire text color, you can use **universal selector** .
+  - Now, you want to change the entire text color, you can use **universal selector** .
       ```css
         *{
         color: royalblue;
@@ -503,7 +503,44 @@ h1{
   - h1.heading has more specifity.
   
 ### How to calculate specificity
--  <p align="justify"><img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/google.png?raw=true" width=360px height=200px></p>
+- Look this picture carefully.
+-  <p align="justify"><img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/specificity.jpg?raw=true" width=360px height=200px></p>
+-  Here is my HTML.
+  ```html
+  <body>
+  <div id="container">
+    <ul class="my-style">
+        <li class="fav">The Big Short</li>
+        <li>Margin Call</li>
+        <li>Wolf of wallstreet</li>
+        <li>Wall Street : Money never sleeps</li>
+    </ul>
+  </div>
+  </body>
+  ```
+- CSS
+  ```css
+  div#container ul.my-style li{
+    color: blue;
+    background: bisque;
+    }
+
+      /* Inline > ID > Class > Element */
+      /* 0, 1, 1, 3 */
+      /* 0 -> Inline
+      1 -> ID 
+      1 -> Class
+      3 -> Element 
+      for easy understanding, we say above style have 113 specificity */
+  li.fav{
+          color: bisque;
+          background: blue;
+      }
+
+      /* 0, 0, 1, 1  --> 11 */
+  ```
+  - li.fav style not apply, because it has low specificity than above style.
+  
 
 
 <div align="center">
