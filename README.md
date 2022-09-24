@@ -380,7 +380,7 @@ h1{
   ```
 #### Attribute Selector
    - Here is my HTML
-   ```html
+     ```html
       <body>
       <h2>Links</h2>
       <a href="https://google.com">Google</a><br>
@@ -399,10 +399,10 @@ h1{
         <input type="button" value="Submit">
     </form>
     </body>
-   ```
+    ```
    - href, type etc are attribute of their respective elements.
    - CSS file
-    ```css
+      ```css
       input[type = "text"]{
           color: red;
       }
@@ -426,7 +426,7 @@ h1{
       a[href $= ".in"]{
           color: rebeccapurple;
       }
-    ```
+      ```
 
 
 
