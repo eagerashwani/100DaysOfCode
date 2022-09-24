@@ -13,6 +13,8 @@ Learn Full Stack in just 100 Days
     - [Some More Selectors](#some-more-selectors)
       - [Universal Selector](#universal-selector)
       - [Attribute Selector](#attribute-selector)
+  - [Day 6](#day-6)
+    - [CSS Specificity](#css-specificity)
 
 ## Day 4
 ### Let's start CSS.
@@ -427,7 +429,27 @@ h1{
           color: rebeccapurple;
       }
       ```
+## Day 6
+### CSS Specificity
+- classes have more prefrence than elements/tags.
+- Here is my HTML
+   ```html
+  <body>
+    <h1 class="myClass">Hello</h1>
+  </body>
+ ```
+- Here is my CSS.
+  
+  ```css
+      h1{
+        color: green;
+      }
 
+    .myClass{
+        color: red;
+
+      }
+  ```
 
 
 <div align="center">
