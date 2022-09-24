@@ -15,6 +15,7 @@ Learn Full Stack in just 100 Days
       - [Attribute Selector](#attribute-selector)
   - [Day 6](#day-6)
     - [CSS Specificity](#css-specificity)
+    - [How to calculate specificity](#how-to-calculate-specificity)
 
 ## Day 4
 ### Let's start CSS.
@@ -384,24 +385,24 @@ h1{
    - Here is my HTML
      ```html
       <body>
-      <h2>Links</h2>
-      <a href="https://google.com">Google</a><br>
-      <a href="https://amazon.com">Amazon</a><br>
-      <a href="https://amazon.in">Amazon India</a><br>
-      <a href="youtube.com">YouTube</a><br>
+        <h2>Links</h2>
+        <a href="https://google.com">Google</a><br>
+        <a href="https://amazon.com">Amazon</a><br>
+        <a href="https://amazon.in">Amazon India</a><br>
+        <a href="youtube.com">YouTube</a><br>
 
-      <h2>Form</h2>
-      <form>
-        <label for="fname">First Name:</label><br>
-        <input type="text" id="fname"><br>
-        <label for="lname">Last Name:</label><br>
-        <input type="text" id="lname"><br>
-        <label for="pass">Password:</label><br>
-        <input type="password" id="pass"><br><br>
-        <input type="button" value="Submit">
-    </form>
-    </body>
-    ```
+        <h2>Form</h2>
+        <form>
+          <label for="fname">First Name:</label><br>
+          <input type="text" id="fname"><br>
+          <label for="lname">Last Name:</label><br>
+          <input type="text" id="lname"><br>
+          <label for="pass">Password:</label><br>
+          <input type="password" id="pass"><br><br>
+          <input type="button" value="Submit">
+        </form>
+      </body>
+      ```
    - href, type etc are attribute of their respective elements.
    - CSS file
       ```css
@@ -431,15 +432,20 @@ h1{
       ```
 ## Day 6
 ### CSS Specificity
-- classes have more prefrence than elements/tags.
+- class selector have more prefrence than elements/tags selector, because classes are more specific than HTML elements.
+- ID selector have more prefrence than class selector.
+- Inline style attribute have more prefrence than ID selector.
+  ```imp
+    Inline style attribute > ID selector > class selector > element selector
+  ```
 - Here is my HTML
    ```html
   <body>
-    <h1 class="myClass">Hello</h1>
+    <h1 class="myClass" id="myId" style="color: brown;" >Hello</h1>
   </body>
- ```
-- Here is my CSS.
-  
+  ```
+ 
+- Here is my CSS.  
   ```css
       h1{
         color: green;
@@ -449,7 +455,55 @@ h1{
         color: red;
 
       }
+
+      #myId{
+        color : blue;
+      }
   ```
+- If you want to apply ID (forcefully), you can do this.
+  ```css
+  #myId{
+    color : blue !important;
+  }
+  ```
+  - But, its not a good practice.
+- HTML
+  ```html
+  <body>
+    <h1 class="myClass heading">Hello</h1>
+  </body>
+  ```
+- CSS
+  ```css
+    h1{
+      color: green;
+  }
+
+  .myClass{
+      color: red;
+
+  }
+
+  h1.heading{
+      color: magenta;
+  }
+  ```
+  - Now, we have two classes on an element, class write after than other class have more specificity.
+  - Eg : heading has more specificity than myClass, if myClass comes after heading class than text have red color.
+- Here is my updated CSS.
+  ```css
+    h1.heading{
+        color: magenta;
+    }
+    .myClass{
+        color: red;
+    }
+
+  ```
+  - h1.heading has more specifity.
+  
+### How to calculate specificity
+-  <p align="justify"><img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/google.png?raw=true" width=360px height=200px></p>
 
 
 <div align="center">
