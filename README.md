@@ -23,6 +23,8 @@ Learn Full Stack in just 100 Days
       - [Margin](#margin)
   - [Day 8](#day-8)
     - [Margin Collapsing](#margin-collapsing)
+    - [Inline and Block level Elements](#inline-and-block-level-elements)
+    - [Display](#display)
 
 ## Day 4
 ### Let's start CSS.
@@ -673,13 +675,37 @@ h1{
   - What you think the total margin between box1 and box2?
   - It's 50px, not 90px(40 + 50).
   
+### Inline and Block level Elements
+- There are 3 types of elements
+  - Block elements
+    - A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).
+    - If you give custom width and height, element take it.
+    - Some block elements are
+      - div, heading(1-6), p, ul, li, form, article, aside, main, nav etc
+      - [Complete List](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
+  - Inline elements
+    - An inline element does not start on a new line and only takes up as much width as necessary.
+    - If you provide custom height and width, nothing change.
+    - Only left and right margins are available, if you provide other margin, element ignore that.
+    - If you provide padding for top and bottom, everything messed up, so, use only left and right padding.
+    - img tag is exception, you can use width, height, margin, padding.
+    - Some Inline elements are
+      - a, img, input, label, span, textarea
+      - [Complete list](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements)
+  - Inline Block elements
 
 
 
-
-
-
-
+### Display 
+- If you want to convert a block element to inline element, you can use display property.
+- From Block to inline
+  ```css
+  display: inline;
+  ```
+- From Inline to block
+  ```css
+  display: block;
+  ```
 
 <div align="center">
     <h3>Don't forget to ⭐ this repo</h3>
