@@ -25,6 +25,7 @@ Learn Full Stack in just 100 Days
     - [Margin Collapsing](#margin-collapsing)
     - [Inline and Block level Elements](#inline-and-block-level-elements)
     - [Display](#display)
+    - [Box-Sizing](#box-sizing)
 
 ## Day 4
 ### Let's start CSS.
@@ -693,6 +694,8 @@ h1{
       - a, img, input, label, span, textarea
       - [Complete list](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements)
   - Inline Block elements
+    - As you saw above, we can't use full potential of margin, padding, width etc in inline elements.
+    - To tackle this problem, we set display property as inline-block, this gives us full controls over the element.
 
 
 
@@ -706,6 +709,9 @@ h1{
   ```css
   display: block;
   ```
+
+### Box-Sizing
+
 
 <div align="center">
     <h3>Don't forget to ⭐ this repo</h3>
