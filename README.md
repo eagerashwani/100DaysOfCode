@@ -19,6 +19,10 @@ Learn Full Stack in just 100 Days
   - [Day 7](#day-7)
     - [CSS Border](#css-border)
     - [CSS Box-Model](#css-box-model)
+      - [Padding](#padding)
+      - [Margin](#margin)
+  - [Day 8](#day-8)
+    - [Margin Collapsing](#margin-collapsing)
 
 ## Day 4
 ### Let's start CSS.
@@ -591,14 +595,84 @@ h1{
     border-radius: 5px;
   ```
 ### CSS Box-Model
+#### Padding
+- <p align="justify"><img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/box-model.webp?raw=true" width=360px height=200px></p>
+- As you saw above, there is no space between Our content(h2) and border.
+- We can add space with the help of padding property.
+  ```css
+    h2{
+      border: 5px solid red;
+      padding-left: 40px;
+      padding-bottom: 40px;
+      padding-right: 40px;
+      padding-top: 40px;
+    }
+  ```
+- The shorthand, Now, you want equal padding in every side
+  ```css
+   padding: 40px;
+  ```
+  -  add 20px in top, bottom and 40px in left,right  
+  ```css
+  padding: 20px 40px;
+  ```
+  -  Different padding in every sides.
+  - Clockwise Direction -> Top, Right, Bottom, Left 
+  ```css
+  padding: 10px 20px 30px 40px;
+  ```
 
+#### Margin
+-  Used to create space around elements, outside of any defined borders.
+-  Everything same as padding, all shorthands etc.
+-  Now, As you see the output, I want to reduce the width.
+  ```css
+  width: 500px;
+  ```
+- Now, I want my element in center.
+  ```css
+  margin: 20px auto;
+  ```
+- Our Background start from border edge.
+  ```css
+    border: 5px dotted red;
+    background: lightblue;
+  ```
 
+## Day 8
+### Margin Collapsing
+- himHTML
+  ```html
+  <body>
+    <div class="box1">
+      <h2>this is box 1</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt earum provident debitis eaque accusamus illum nihil nam voluptatum! Praesentium, tenetur!</p>
+      
+    </div>
+    <div class="box2">
+      <h2>this is box 2</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt earum provident debitis eaque accusamus illum nihil nam voluptatum! Praesentium, tenetur!</p>
+    </div>
+  </body>
+  ```
+- himCSS
+  ```css
+  .box1, .box2{
+    border: 2px solid black;
+    padding: 10px;
+  }
 
+  .box1{
+      margin-bottom: 40px;
+  }
 
-
-
-
-
+  .box2{
+      margin-top: 50px;
+  }
+  ```
+  - What you think the total margin between box1 and box2?
+  - It's 50px, not 90px(40 + 50).
+  
 
 
 
