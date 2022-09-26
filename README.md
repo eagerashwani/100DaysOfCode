@@ -16,6 +16,9 @@ Learn Full Stack in just 100 Days
   - [Day 6](#day-6)
     - [CSS Specificity](#css-specificity)
     - [How to calculate specificity](#how-to-calculate-specificity)
+  - [Day 7](#day-7)
+    - [CSS Border](#css-border)
+    - [CSS Box-Model](#css-box-model)
 
 ## Day 4
 ### Let's start CSS.
@@ -541,6 +544,67 @@ h1{
   ```
   - li.fav style not apply, because it has low specificity than above style.
   
+## Day 7
+### CSS Border
+- Here is my HTML (himHTML shortform)
+  ```html
+    <body>
+    <div class="header">
+      <ul>
+        <li class="home">Home</li>
+        <li>About</li>
+      </ul>
+    </div>
+
+    <h2>Our Heading</h2>
+
+    <img src="images/amazon.png" alt="" srcset="" width="260px" height="200px">
+
+    <p>This <span>is</span> paragraph</p>
+  </body>
+  ```
+- Now, I want to add border arround my HTML elements.
+- I can achieve this via border property of CSS.
+- Here is my CSS (himCSS shortform).
+  ```css
+  h2, img{
+      border: 5px solid red;
+       /* 5px-> width of border, border style -> solid, border color -> red */
+       /* This is shorthand*/
+  }
+  ```
+- We can also use this.
+- h2 takes full width, because h2 is a block level element.
+  ```css
+    border-width: 5px;
+    border-style: solid;
+    border-color: red;
+  ```
+- Now, I want to apply border only on top and bottom of HTML tag.
+  ```css
+    border-bottom: 5px solid red;
+    border-top: 5px solid red;
+  ```
+- Our border corners are very sharp, we can round that.
+  ```css
+    border: 5px solid red;
+    border-radius: 5px;
+  ```
+### CSS Box-Model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <div align="center">
