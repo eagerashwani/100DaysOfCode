@@ -9,4 +9,5 @@ hr{
     border: 10px solid red;
     background: lightsalmon;
     padding: 50px;
+    box-sizing: border-box;
 }

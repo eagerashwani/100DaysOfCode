@@ -740,9 +740,13 @@ h1{
     - The output of above code, hr represents 500px width, and the box1 size is also 500px but due to border and padding it extends from 500px
     - We have to fix this issue.
     - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/box-sizing.png?raw=true" width=360px height=200px>
-
-
-
+  - We can use box-sizing property
+    - By default it is content-box.
+   ```css
+    box-sizing: border-box;
+   ```
+      - The output is
+      - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/border-box.png?raw=true" width=460px height=300px>
 
 
 
