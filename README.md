@@ -739,7 +739,7 @@ h1{
   ```
     - The output of above code, hr represents 500px width, and the box1 size is also 500px but due to border and padding it extends from 500px
     - We have to fix this issue.
-    - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/box-model.webp?raw=true" width=360px height=200px>
+    - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/box-sizing.png?raw=true" width=360px height=200px>
 
 
 
