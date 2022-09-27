@@ -745,8 +745,8 @@ h1{
    ```css
     box-sizing: border-box;
    ```
-      - The output is
-      - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/border-box.png?raw=true">
+  - The output is
+  - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/border-box.png?raw=true">
 
 
 
