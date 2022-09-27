@@ -711,6 +711,44 @@ h1{
   ```
 
 ### Box-Sizing
+- himHTML
+  ```html
+  <body>
+    <hr>
+    <div class="box1">
+      <h2>Heading</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque praesentium neque, dignissimos illum voluptas totam nam cupiditate debitis architecto eius fugiat perspiciatis quia cumque exercitationem nesciunt est dicta. Rerum consequatur dicta voluptatum, vero molestias sit eveniet omnis necessitatibus magnam harum doloribus id laborum deserunt tenetur sequi, fugit autem exercitationem veritatis! Dolore aliquam animi hic, sapiente voluptate reiciendis doloribus iure eum, eveniet necessitatibus accusantium ad, voluptates nemo suscipit exercitationem accusamus sint atque? Maiores natus voluptatibus dolor quaerat vero odio saepe perspiciatis hic. Dolorem quasi et pariatur maxime illum voluptates natus, harum magni ea! Maxime atque magnam cumque tenetur illo suscipit aperiam.</p>
+      
+      </div>
+  </body>
+  ```
+- himCSS
+  ```css
+  hr{
+    border: 0.5px dashed black;
+    width: 500px;
+    margin-left: 0px;
+  }
+
+  .box1{
+      width: 500px;
+      border: 10px solid red;
+      background: lightsalmon;
+      padding: 50px;
+  }
+  ```
+    - The output of above code, hr represents 500px width, and the box1 size is also 500px but due to border and padding it extends from 500px
+    - We have to fix this issue.
+    - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/box-model.webp?raw=true" width=360px height=200px>
+
+
+
+
+
+
+
+
+
 
 
 <div align="center">

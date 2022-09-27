@@ -1,26 +1,12 @@
-*{
-    width: 1000px;
-    margin: 10px auto;
+hr{
+    border: 0.5px dashed black;
+    width: 500px;
+    margin-left: 0px;
 }
 
-li{
-    display: inline;
-    text-transform: uppercase;
-    border-bottom: 1px solid black;
-    margin: 20px;
-    padding: 2px;
-}
-ul.my-ul{
-    text-align: center;  
-}
-
-div{
-    padding: 20px;
-    background-color: lightgrey;
-}
-
-.about{
-    padding-bottom: 10px;
-    margin-top: 20px;
-    border-bottom: 1px solid black;
+.box1{
+    width: 500px;
+    border: 10px solid red;
+    background: lightsalmon;
+    padding: 50px;
 }
