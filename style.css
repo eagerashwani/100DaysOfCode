@@ -1,13 +1,16 @@
-hr{
-    border: 0.5px dashed black;
-    width: 500px;
-    margin-left: 0px;
+body{
+    color: orange;
 }
 
-.box1{
-    width: 500px;
-    border: 10px solid red;
-    background: lightsalmon;
-    padding: 50px;
-    box-sizing: border-box;
+.container1{
+    color: red;
+}
+
+.container2{
+    color: hotpink;
+}
+
+a{
+    color: burlywood;
+    text-decoration: none;
 }

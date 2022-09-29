@@ -26,6 +26,10 @@ Learn Full Stack in just 100 Days
     - [Inline and Block level Elements](#inline-and-block-level-elements)
     - [Display](#display)
     - [Box-Sizing](#box-sizing)
+    - [CSS Reset](#css-reset)
+    - [CSS Inheritance](#css-inheritance)
+  - [Day 9](#day-9)
+    - [Text Align](#text-align)
 
 ## Day 4
 ### Let's start CSS.
@@ -748,8 +752,66 @@ h1{
   - The output is
   - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/border-box.png?raw=true" width=360px height=300px>
 
+### CSS Reset
+- Use Box-Sizing's HTML, as you see there are some default margin, padding are present in your tags.
+- We don't want default browser styling.
+  ```css
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+  ```
+    - We also reset box-sizing to border-box, so we can't mess up when writing CSS.
+- It's good practice to reset CSS, before start writing CSS.
 
+### CSS Inheritance
+- himHTML
+  ```html
+  <body>
+    <a href="#">My Store</a>
+    <h1>Welcome to My Website</h1>
+    <div class="container1">
+      <h2>My Blog 1</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, fuga?</p>
+    </div>
+    <div class="container2">
+      <h2>My Blog 1</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, fuga?</p>
+    </div>
+  </body>
+  ```
 
+- As you can see, all text is black color and now, i want to change.
+- So, I just provide body{color: orange;}, and all the tags got orange color.
+- All tags, inherites property color : orange.
+- If you want, to change the specific tag style, you can easily achieve that.
+- But, the a tag doesn't inherites color : orange, why..? 
+- Because, The default Style by Browser.
+- You can see browser style in computed tab.
+- If want to change a tag style, you can done that with element selector.
+- himCSS.
+  ```css
+  body{
+    color: orange;
+  }
+
+  .container1{
+      color: red;
+  }
+
+  .container2{
+      color: hotpink;
+  }
+
+  a{
+      color: burlywood;
+      text-decoration: none;
+  }
+  ```
+
+## Day 9
+### Text Align
 
 
 
