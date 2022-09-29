@@ -1,22 +1,15 @@
-h1{
-    background: lightgray;
-    text-align: center;
-    font-weight: 900;
-    font-style: italic;
-    font-size: 20px;
-    text-decoration: underline solid red;
+a:link{
+    color: orange;
 }
 
-a{
-    text-align: center;
-    display: inline-block;
-    width: 500px;
-    text-align: center;
-    background: lightcoral;
+a:visited{
+    color: red;
 }
 
-p{
-    line-height: 35px;
-    word-spacing: 10px;
-    letter-spacing: 5px;
+a:hover{
+    color: green;
+}
+
+a:active{
+    color: blueviolet;
 }

@@ -33,6 +33,7 @@ Learn Full Stack in just 100 Days
     - [Font Weight and Font Size](#font-weight-and-font-size)
     - [Text Decoration](#text-decoration)
     - [Line height, word spacing and letter spacing](#line-height-word-spacing-and-letter-spacing)
+    - [Pseudo classes](#pseudo-classes)
 
 ## Day 4
 ### Let's start CSS.
@@ -878,10 +879,43 @@ h1{
     }
   ```
 
+### Pseudo classes
+- We use pseudo classes to define special state of an element.
+- What is state means?
+- himHTML
+  ```html
+  <body>
+    <a href="https://twitter.com/eagerashwani/">My Twitter</a>
+    <a href="https://github.com/eagerashwani/100DaysOfCode">My Github</a>
+  </body>
+  ```
+- You can see both links are blue in color.
+- Lets click on any link suppose github. After visiting the github, back to himHTML page.
+- Now, your Github color is changed from blue to purple.
+- How browser knows that the particular link is visited? Browser store this information in cache.
+- This is a visited state.
+- Hover State : Till My mouse points on the link. 
+- Now, I want to style my link, when i hover over it.
+- Some other pseudo classes : link, active.
+- himCSS
+  ```css
+  a:link{
+    color: orange;
+  }
 
+  a:visited{
+      color: red;
+  }
 
+  a:hover{
+      color: green;
+  }
 
-
+  a:active{
+      color: blueviolet;
+  }
+  ```
+  - Note : Please follow the above order(recommended).
 
 
 
