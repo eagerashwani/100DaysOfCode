@@ -1,6 +1,10 @@
 h1{
     background: lightgray;
     text-align: center;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 20px;
+    text-decoration: underline solid red;
 }
 
 a{
@@ -9,4 +13,10 @@ a{
     width: 500px;
     text-align: center;
     background: lightcoral;
+}
+
+p{
+    line-height: 35px;
+    word-spacing: 10px;
+    letter-spacing: 5px;
 }

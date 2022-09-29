@@ -30,6 +30,9 @@ Learn Full Stack in just 100 Days
     - [CSS Inheritance](#css-inheritance)
   - [Day 9](#day-9)
     - [Text Align](#text-align)
+    - [Font Weight and Font Size](#font-weight-and-font-size)
+    - [Text Decoration](#text-decoration)
+    - [Line height, word spacing and letter spacing](#line-height-word-spacing-and-letter-spacing)
 
 ## Day 4
 ### Let's start CSS.
@@ -839,6 +842,59 @@ h1{
       background: lightcoral;
   }
   ```
+### Font Weight and Font Size
+- Sometimes you have to show something on bold and sometimes thin(depends on requirement).
+- We use font-weight property to add boldness/thin in our font.
+- In many fonts 400 is normal but not for all(It depends on font to font).
+- himCSS
+  ```css
+  h1{
+    font-weight: 900;
+    font-style: italic;
+    font-size: 20px;
+  }
+  ```
+- font-style for different style of font like italic, normal etc.
+- If you want to change the size of font, you can use font-size property.
+
+### Text Decoration
+- As you saw earlier, in our a tag there is a underline present.
+- If you don't want that line, you can use text-decoration : none.
+- But if we you want to add a line than you can use text-decoration property.
+  ```css
+   text-decoration: underline solid red;
+  ```
+- We can use different line types like : underline, overline, line-through and solid/dotted/wavy etc
+
+### Line height, word spacing and letter spacing
+- If you want to change space between two words, you can use word-spacing property.
+- If you want to change space between two letters, you can use letter-spacing property.
+- If you want to change space between two lines, you can use line-height property.
+  ```css      
+    p{
+        line-height: 35px;
+        word-spacing: 10px;
+        letter-spacing: 5px;
+    }
+  ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
