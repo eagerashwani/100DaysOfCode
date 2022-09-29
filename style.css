@@ -1,16 +1,12 @@
-body{
-    color: orange;
-}
-
-.container1{
-    color: red;
-}
-
-.container2{
-    color: hotpink;
+h1{
+    background: lightgray;
+    text-align: center;
 }
 
 a{
-    color: burlywood;
-    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    width: 500px;
+    text-align: center;
+    background: lightcoral;
 }

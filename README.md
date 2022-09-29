@@ -812,7 +812,33 @@ h1{
 
 ## Day 9
 ### Text Align
+- himHTML
+  ```html
+  <body>
+    <a href="#">My Store</a>
+    <h1>Welcome to My Website</h1>
+  </body> 
+  ```
+- Now, I want to put the h1 text in the middle of screen.
+- As you know h1 is a block element, that takes width as much as possible.
+- To achieve this, I use text-align property.
+- Now, I want to do the same for a tag also that is inline element.
+- If I gave text-align property nothing changes.
+- himCSS
+  ```css
+  h1{
+    background: lightgray;
+    text-align: center;
+  }
 
+  a{
+      text-align: center;
+      display: inline-block;
+      width: 500px;
+      text-align: center;
+      background: lightcoral;
+  }
+  ```
 
 
 
