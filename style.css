@@ -1,15 +1,7 @@
-a:link{
-    color: orange;
-}
-
-a:visited{
-    color: red;
-}
-
-a:hover{
+p:last-child{
     color: green;
 }
 
-a:active{
-    color: blueviolet;
+p:last-of-type{
+    color: red;
 }

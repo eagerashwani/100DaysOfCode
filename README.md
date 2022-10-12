@@ -34,6 +34,12 @@ Learn Full Stack in just 100 Days
     - [Text Decoration](#text-decoration)
     - [Line height, word spacing and letter spacing](#line-height-word-spacing-and-letter-spacing)
     - [Pseudo classes](#pseudo-classes)
+      - [Links](#links)
+      - [Input fields](#input-fields)
+      - [First child and first of type](#first-child-and-first-of-type)
+      - [Last child and last of type](#last-child-and-last-of-type)
+  - [Day 30](#day-30)
+    - [React](#react)
 
 ## Day 4
 ### Let's start CSS.
@@ -880,6 +886,7 @@ h1{
   ```
 
 ### Pseudo classes
+#### Links
 - We use pseudo classes to define special state of an element.
 - What is state means?
 - himHTML
@@ -917,19 +924,127 @@ h1{
   ```
   - Note : Please follow the above order(recommended).
 
+#### Input fields
+-himHTML
+ ```html
+  <body>
+    <form>
+      <input type="email" name="" id="" placeholder="Enter email" required> <br><br>
+      <input type="password" name="" id="" placeholder="Enter password"> <br> <br>
+      <input type="submit" value="Sign in">
+    </form>
+  </body>
+ ```
+
+- himCSS
+  ```css
+  input:focus{
+    color: red;
+    outline: none;
+    border: 2px solid gold;
+    padding: 5px;
+  }
+
+  input:required{
+      color: green;
+  }
+  ```
+- We mainly use focus and required pseudo classes in input fields.
+- For more [visit](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
+
+#### First child and first of type
+- To understand this, first you have to know about parent-child relation.
+  - Which element is parent and who there child, vice-versa.
+- himHTML
+  ```html
+  <body>
+    <header>
+      <p>I am inside header first child</p>
+      <p>I am inside header second child</p>
+      <p>I am inside header third child</p>
+      <h4>I am last child of header</h4>
+    </header>
+
+    <p>I am body first para </p>
+    <p>I am body second para </p>
+    
+    <div class="container">
+      <p>I am inside container first</p>
+      <p>I am inside container second</p>
+      <p>I am inside container third</p>
+    </div>
+  </body>
+  ```
+- himCSS
+  ```css
+  /* Is <p> is the first child of its parent */
+    p:first-child{
+        color: red;
+    }
+  ```
+- himCSS
+  ```css
+  /* Is <p> is the first child of its parent */
+    p:first-child{
+        color: red;
+    }
+  ```
+- himCSS
+  ```css
+  /* Is <p> is the first child of its parent */
+    p:first-child{
+        color: red;
+    }
+  ```
+  - Apply red color to those p tag who is the first child of its parent like header and div tag in above example.
+  
+- Now check first-of-type
+- himCSS
+  ```css
+  p:first-of-type{
+    color: brown;
+  }
+  ```
+  - Apply brown color to the first appeared child of parent.
+  - Or you can say, Who is the first p tag of parent. 
+  - In the above html, I am body first para is the first appeared child of body tag.
+    - I know, I don't write it well, Hope you understand.
 
 
+#### Last child and last of type
+- same as first child and first of type except they change last instead of first.
+- To understand easily
+  - last/first-of-type : start with parent like header tag first/last p tag
+  - first/last-child : start with child like Is this p tag is the first/last element of its parent.
+
+- himCSS
+  ```css
+    p:last-child{
+        color: green;
+    }
+  ```
+
+- himCSS
+  ```css
+  p:last-of-type{
+    color: red;
+  }
+  ```
 
 
-
-
-
-
-
-
-
-
-
+## Day 30
+### React
+- Lets setup React CDN for our first app
+- Add below lines in your .html file in the head tag.
+  ```html 
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  ```
+- Add below line in the body tag
+  ```html
+  <script src="hello.js" type="text/babel"></script>
+  ```
 
 
 
@@ -937,3 +1052,5 @@ h1{
     <h3>Don't forget to ⭐ this repo</h3>
     <h5>Building with the COMMUNITY for the COMMUNITY ❤️</h5>
 </div>
+
+
