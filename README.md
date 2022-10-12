@@ -45,6 +45,7 @@ Learn Full Stack in just 100 Days
       - [Why React? - It's composable](#why-react---its-composable)
       - [Why React? - It's Declarative](#why-react---its-declarative)
       - [JSX](#jsx)
+      - [Thought Expeiment](#thought-expeiment)
 
 ## Day 4
 ### Let's start CSS.
@@ -1099,7 +1100,7 @@ h1{
 
   ReactDOM.render(element, document.getElementById("root"));
   ```
-- We get JS object from JSX.
+- JSX return plain JS object.
 - We have to return only single parent element(We can't give multiple lines of html code in render function).
 - If you still need more elements than wrap up your html inside div element or <></>.
   ```js
@@ -1119,17 +1120,40 @@ h1{
 
   ReactDOM.render(page, document.getElementById("root"));
   ```
+- Challenge : 
+  ```js
+  const navbar = (
+    <nav>
+        <h1>Ashwani Kumar</h1>
+        <ul>
+          <li>Pricing</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+    </nav>
+  );
 
+  ReactDOM.render(navbar, document.getElementById("root"));
+  ```
+#### Thought Expeiment
+```js
+const page = (
+    <div>
+        <h1>H1</h1>
+        <h1>H1 again</h1>
+        <h1>H1 again x2</h1>
+        <h1>H1 again x2 return</h1>
+    </div>
+)
 
+document.getElementById("root").append(JSON.stringify(page))
+// above line prints the object in the browser. Why..?? 
+// Because JSX return plain object
+// ReactDOM.render renders this object as real element that browser can understand
 
-
-
-
-
-
-
-
-
+// Comment .append() line and uncomment below line and you see you element
+// ReactDOM.render(page, document.getElementById("root"))
+```
 
 
 
