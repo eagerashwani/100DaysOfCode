@@ -40,6 +40,11 @@ Learn Full Stack in just 100 Days
       - [Last child and last of type](#last-child-and-last-of-type)
   - [Day 30](#day-30)
     - [React](#react)
+      - [First React](#first-react)
+      - [First React Practice](#first-react-practice)
+      - [Why React? - It's composable](#why-react---its-composable)
+      - [Why React? - It's Declarative](#why-react---its-declarative)
+      - [JSX](#jsx)
 
 ## Day 4
 ### Let's start CSS.
@@ -1034,6 +1039,7 @@ h1{
 
 ## Day 30
 ### React
+#### First React
 - Lets setup React CDN for our first app
 - Add below lines in your .html file in the head tag.
   ```html 
@@ -1055,19 +1061,64 @@ h1{
   <div id="root"></div>
   ```
 
+#### First React Practice
+- Try to write that 1 linear of React code again! This time, see if you can figure out how to render an <ul> with 2+ <li>s inside
+  ```js
+  ReactDOM.render(<ul><li>Hello 1</li><li>Hello 2</li></ul>, document.getElementById("root"));
+  ```
+#### Why React? - It's composable
+- We can make components and put together that build a website.
+- This helps to make our code more maintainable and flexible.
+- Challenge : Create your custom component call it MainContent
+  ```js
+  const MainContent = (){
+    return (
+    <h1>I am learning React</h1>
+    )
+  }
+  ReactDOM.render(
+    <div>
+      <MainContent />
+    </div>, document.getElementById("root));
+  ```
+#### Why React? - It's Declarative
+- Just tell me what to do, and I'll worry about how I get it done.
 
+#### JSX
+- JSX stands for JavaScript XML. JSX allows us to write HTML in React.
+  ```js
+  const element = <h1 className="header">I am learning react </h1>
+  console.log(element);
+  // { $$typeof: Symbol(react.element), type: 'h1', key: null, ref: null, 
+  // props: {className: 'header', children: 'I am learning react '}
+  // ref: null
+  // type: "h1"
+  // _owner
+  // : 
+  // null … }
 
+  ReactDOM.render(element, document.getElementById("root"));
+  ```
+- We get JS object from JSX.
+- We have to return only single parent element(We can't give multiple lines of html code in render function).
+- If you still need more elements than wrap up your html inside div element or <></>.
+  ```js
+  ReactDOM.render( <div>
+      <h1 className="header">I am learning react </h1>
+      <h1 >I am learning stock market </h1>
+     </div>, document.getElementById("root"));
+  ```
+- We can also put html in variable.
+  ```js
+  const page = (
+  <div>
+      <h1 className="header">I am learning react </h1>
+      <h1 >I am learning stock market </h1>
+  </div>
+  );
 
-
-
-
-
-
-
-
-
-
-
+  ReactDOM.render(page, document.getElementById("root"));
+  ```
 
 
 
