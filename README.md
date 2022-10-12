@@ -1045,6 +1045,44 @@ h1{
   ```html
   <script src="hello.js" type="text/babel"></script>
   ```
+- Now, we can call ReactDOM.render() provided by react-dom.development libraray in our JS file
+- ReactDOM.render() takes two input, first is the html part(What is going to render) and second is where render.
+   ```js
+   ReactDOM.render(<h1>Hello React</h1>, document.getElementById("root"));
+   ```
+- Lets give root id to html element
+  ```html
+  <div id="root"></div>
+  ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
