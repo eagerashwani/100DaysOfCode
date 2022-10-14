@@ -39,13 +39,19 @@ Learn Full Stack in just 100 Days
       - [First child and first of type](#first-child-and-first-of-type)
       - [Last child and last of type](#last-child-and-last-of-type)
   - [Day 30](#day-30)
-    - [React](#react)
-      - [First React](#first-react)
-      - [First React Practice](#first-react-practice)
-      - [Why React? - It's composable](#why-react---its-composable)
-      - [Why React? - It's Declarative](#why-react---its-declarative)
-      - [JSX](#jsx)
-      - [Thought Expeiment](#thought-expeiment)
+    - [First React](#first-react)
+    - [First React Practice](#first-react-practice)
+    - [Why React? - It's composable](#why-react---its-composable)
+    - [Why React? - It's Declarative](#why-react---its-declarative)
+    - [JSX](#jsx)
+    - [Thought Expeiment](#thought-expeiment)
+  - [Day 31](#day-31)
+    - [Pop Quiz](#pop-quiz)
+    - [Custom Components](#custom-components)
+  - [Parent and Child Component](#parent-and-child-component)
+    - [Organize Components](#organize-components)
+    - [Update on React 18](#update-on-react-18)
+    - [Local system setup](#local-system-setup)
 
 ## Day 4
 ### Let's start CSS.
@@ -1039,8 +1045,7 @@ h1{
 
 
 ## Day 30
-### React
-#### First React
+### First React
 - Lets setup React CDN for our first app
 - Add below lines in your .html file in the head tag.
   ```html 
@@ -1062,12 +1067,12 @@ h1{
   <div id="root"></div>
   ```
 
-#### First React Practice
+### First React Practice
 - Try to write that 1 linear of React code again! This time, see if you can figure out how to render an <ul> with 2+ <li>s inside
   ```js
   ReactDOM.render(<ul><li>Hello 1</li><li>Hello 2</li></ul>, document.getElementById("root"));
   ```
-#### Why React? - It's composable
+### Why React? - It's composable
 - We can make components and put together that build a website.
 - This helps to make our code more maintainable and flexible.
 - Challenge : Create your custom component call it MainContent
@@ -1082,10 +1087,10 @@ h1{
       <MainContent />
     </div>, document.getElementById("root));
   ```
-#### Why React? - It's Declarative
+### Why React? - It's Declarative
 - Just tell me what to do, and I'll worry about how I get it done.
 
-#### JSX
+### JSX
 - JSX stands for JavaScript XML. JSX allows us to write HTML in React.
   ```js
   const element = <h1 className="header">I am learning react </h1>
@@ -1135,7 +1140,7 @@ h1{
 
   ReactDOM.render(navbar, document.getElementById("root"));
   ```
-#### Thought Expeiment
+### Thought Expeiment
 ```js
 const page = (
     <div>
@@ -1154,6 +1159,238 @@ document.getElementById("root").append(JSON.stringify(page))
 // Comment .append() line and uncomment below line and you see you element
 // ReactDOM.render(page, document.getElementById("root"))
 ```
+## Day 31
+### Pop Quiz
+- 1. Why do we need to `import React from "react"` in our files?
+- React is what defines JSX
+
+- 2. If I were to console.log(page) in index.js, what would show up?
+- A JS object. React elements that describe what react should eventually add to the DOM for us.
+- 3. Can we put multiple html elements in page?
+- We need our JSX to be nested under a single parent element.
+- 4. What does it mean for something to be "declarative" instead of "imperative"
+- Declarative means I can tell the computer WHAT to do and expect it to handle the details. Imperative means I need to tell it HOW to do each step.
+- 5. What does it mean for something to be "composable"?
+- We have small pieces that we can put together to make something larger than the individual pieces.
+
+### Custom Components
+- What is react component?
+  - Function that returns react element (UI).
+- Creating variable like page is good enough but its not recommended.
+- React adopts the concept of having a function that allows us to create user interface or create elements over and over again if we wanted to.
+  ```js
+  function whyReact(){
+    return (
+        <div>
+            <ol>
+                <li>It is composable</li>
+                <li>It is declarative</li>
+                <li>Easy and Fast</li>
+            </ol>
+        </div>
+        )
+    }
+
+    ReactDOM.render(whyReact(), document.getElementById("root"))
+  ```
+- We have to follow some conventions 
+  - Use PascalCase instead of camelCase
+  - Instead of () we have to use < /> with our function component
+  ```js
+    ReactDOM.render(<WhyReact/>, document.getElementById("root"))
+  ```
+- Lets create a component having header,nav, ol, footer etc.
+  ```js      
+    function MyComponent(){
+      return (
+            <div>
+                <header>
+                    <nav>
+                      <img src="react-logo.png" alt="" width="40px" />     
+                    </nav>
+                </header>
+        
+                <h1>Reasons I'm Excited learn React</h1>
+                <ol>
+                    <li>Job Demand</li>
+                    <li>Easy to understand</li>
+                    <li>Fast rendering</li>
+                    <li>Single Page Application</li>
+                </ol>
+        
+                <footer>
+                    &#169; 2022 Kumar Development. All rights reserved.
+                </footer>
+            </div>
+        );
+    } 
+
+    ReactDOM.render(<MyComponent />, document.getElementById("root"));
+
+  ```
+  - If we build our app like above code, than why we use react
+  - Its monolithic approach.
+  - We have to build components and bring them together.
+
+## Parent and Child Component
+```js
+    function Header(){
+        return (
+            <header>
+                <nav>
+                <img src="react-logo.png" alt="" width="40px" />     
+                </nav>
+            </header>
+        );
+    }
+
+    function MainContent(){
+        return (
+            <>
+            <h1>Reasons I'm Excited learn React</h1>
+            <ol>
+                <li>Job Demand</li>
+                <li>Easy to understand</li>
+                <li>Fast rendering</li>
+                <li>Single Page Application</li>
+            </ol>
+            </>
+        );
+    }
+
+    function Footer(){
+        return (
+            <footer>
+              &#169; 2022 Kumar Development. All rights reserved.
+            </footer>
+        );
+    }
+
+    function MyComponent(){
+      return (
+            <div>
+              <Header />
+              <MainContent />
+              <Footer />
+            </div>
+        );
+    } 
+
+    ReactDOM.render(<MyComponent />, document.getElementById("root"));
+```
+ - MyComponent is Parent Component and Header, MainContent and Footer is child component.
+ - Let's add some styling 
+   ```js
+   function Header(){
+        return (
+            <header>
+                <nav>
+                    <img src="react-logo.png" alt="" width="40px" /> 
+                    <ul className="nav-items">
+                        <li>Pricing</li>
+                        <li>About</li>
+                        <li>Contact</li>
+                    </ul>
+
+                </nav>
+            </header>
+        );
+    }
+   ```
+
+  ```css
+  .nav-items{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;  
+    }
+
+  ```
+### Organize Components
+- Now, Lets organize the components 
+- Make Header.js, always follow PascalCase for files that have jsx code
+- Paste the Header function code
+- Now to import Header(), we have to export it
+- And import in index.js or main file
+```js
+export default function Header(){
+    return (
+        <header>
+            <nav>
+                <img src="react-logo.png" alt="" width="40px" /> 
+                <ul className="nav-items">
+                    <li>Pricing</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+
+            </nav>
+        </header>
+    );
+}
+```
+```js
+import Header from "./Header";
+```
+- Do same for Footer and MainContent
+  
+### Update on React 18
+- ReactDOM.render() is not supported in React 18
+- instead of import ReactDOM from "react-dom", use import ReactDOM from "react-dom/client"
+- instead of ReactDOM.render(page, documentElementById("root")), use
+  ```js
+  const root = ReactDOM.createRoot(documentElementById("root"))
+  root.render(page);
+  ```
+
+### Local system setup
+- Install node
+- Check node and npm installed successfully
+- Standard Way
+  - Create react app
+    - npx create-react-app <projectname>
+    - cd <projectname>
+    - npm start
+- With Vite
+  - npm create vite@latest
+  - cd <projectname>
+  - npm install
+  - npm run dev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
