@@ -1418,7 +1418,18 @@ import Header from "./Header";
   db.createCollection('products')
   ```
   - products is the name of collection.
-  - 
+  - if monogodb shell prints `{ok:1}`, than our collection is created successfully.
+  - Now, show collections shows products when we run `show collections`.
+
+> Switch to other db
+- Lets suppose pizza dbs is already  there.
+  ```
+  use pizza
+  ```
+  - You can see `use` is used for both to create a dbs or switch a dbs.
+  - If dbs is not there than `use` create that dbs and if dbs is exist than `use` switch to that dbs.
+
+
 
 
 
