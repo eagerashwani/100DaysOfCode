@@ -1429,12 +1429,79 @@ import Header from "./Header";
   - You can see `use` is used for both to create a dbs or switch a dbs.
   - If dbs is not there than `use` create that dbs and if dbs is exist than `use` switch to that dbs.
 
+- Lets create a new collection named `users` and delete `products` collection.
+  
+> To delete a collection
+  ```
+  db.products.drop()
+  ```
+  - It returns a boolean value
 
+> To delete a database
+- Now, we want to delete `ecom` database.
+  ```
+  db.dropDatabase()
+  ```
+  - Note : Before deleting database, must ensure you are in correct database.
 
+- Now, I recreate everything ecom databse and products collection
+- I want to see whats have in my products collections
 
+> To see collections data
+  ```
+  db.products.find()
+  ```
+  - If above commands return nothing, that means our collection have nothing.
+  - If you enter wrong collection name that doesn't even exist than still mongodb not gives you error, it shows nothing.
+  
+> To insert a document in collection
+  ```
+  db.products.insertOne({ name : 'Keyboard' , price : 250})
+  ```
+  - insertOne() takes data in json format.
+  - After data successfully inserted in collection, mongodb shell shows an object with insertedId and acknowlwdged like below.
+   ```json
+    {
+    acknowledged: true,
+    insertedId: ObjectId("634e8415725a4382a8da306d")
+    }
+   ``` 
+- Everytime we insert new data, mongodb generates new unique ID for us.
+- Now, we run `db.products.find()`, than it shows an array of object and the object looks like.
+  ```
+  [
+    {
+      _id: ObjectId("634e8415725a4382a8da306d"),
+      name: 'Keyboard',
+      price: 250
+    }
+  ]
+  ```
+- find(), return all documents in the collection.
+  ```
+  [
+    {
+      _id: ObjectId("634e8415725a4382a8da306d"),
+      name: 'Keyboard',
+      price: 250
+    },
+    {
+      _id: ObjectId("634e8559725a4382a8da306e"),
+      name: 'Monitor',
+      price: 25000
+    }
+  ]
+  ```
+- we can give option in the find()
+- Now, I want to show that product having price equal to 250
 
-
-
+> find() with filters
+ ```
+ db.products.find({price:250})
+ ```
+ - It shows only that product have 250 price.
+ - If we give filter that doesn't exist `db.products.find({price:2500})`, than mongodb shell shows nothing.
+  
 
 
 
