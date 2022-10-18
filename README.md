@@ -1539,10 +1539,15 @@ import Header from "./Header";
       ```
        db.products.updateOne({_id : ObjectId("634e8b7c725a4382a8da306f")}, { $set : { name : 'RAM'}})
       ```
-
-
-
-
+> Delete a document
+  ```
+  db.products.deleteOne({ _id : ObjectId("634e8b7c725a4382a8da3070")})
+  ```
+> Delete multiple documents
+  ```
+  db.products.deleteMany({_id: { $in : [ObjectId("634e8559725a4382a8da306e"),ObjectId("634e8b7c725a4382a8da306f")]}})
+  ```
+  - $in => is a operator
 
 
 
