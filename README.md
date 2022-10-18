@@ -1501,6 +1501,15 @@ import Header from "./Header";
  ```
  - It shows only that product have 250 price.
  - If we give filter that doesn't exist `db.products.find({price:2500})`, than mongodb shell shows nothing.
+ - Now, I only want one document.
+
+> To get only one document
+  ```
+  db.products.findOne({price:250})
+  ```
+  - It shows an object
+  - If we give filter that doesn't exist, it shows `null`.
+
   
 
 
