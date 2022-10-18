@@ -55,6 +55,9 @@ Learn Full Stack in just 100 Days
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
     - [Install MongoDb in your system](#install-mongodb-in-your-system)
+    - [MongoDB commands](#mongodb-commands)
+    - [Related data in MongoDb](#related-data-in-mongodb)
+    - [Operators](#operators)
 
 ## Day 4
 ### Let's start CSS.
@@ -1393,6 +1396,9 @@ import Header from "./Header";
 - To clear the mongodb shell `Ctrl + L`.
 - When we installed mongodb, some databases are already there or say preinstalled databases.
 
+
+### MongoDB commands
+
 > To show all the databases
   ```
   show dbs;
@@ -1548,6 +1554,190 @@ import Header from "./Header";
   db.products.deleteMany({_id: { $in : [ObjectId("634e8559725a4382a8da306e"),ObjectId("634e8b7c725a4382a8da306f")]}})
   ```
   - $in => is a operator
+
+
+### Related data in MongoDb
+- We can store related data in mongodb also like mysql.
+- It's not a good practice.
+- Lets create a new collection named `reviews`
+- Lets insert some documents in reviews collections. To accomplish relations we have to provide foriegn key. eg : we have to link reviews with their corresponding product.
+  ```
+  db.reviews.insertMany([
+    {text: "Great App", stars : 4, productId : ObjectId("634e8415725a4382a8da306d")}, 
+    {text : "Awesome Website", stars: 5, productId : ObjectId("634e8415725a4382a8da306d")}
+    ])
+  ```
+- As you know this is not recommended.
+- We have to keep reviews in corresponding document(recommended).
+  ```
+  db.products.updateOne({_id : ObjectId("634e8415725a4382a8da306d")}, {$set: {reviews : [{text : 'Great app', stars : 4}, {text : "Awesome website", stars : 5}]}})
+  ```
+  - and the db.products.find() shows
+   ```json
+   [
+    {
+      _id: ObjectId("634e8415725a4382a8da306d"),
+      name: 'Keyboard',
+      price: 250,
+      reviews: [
+        { text: 'Great app', stars: 4 },
+        { text: 'Awesome website', stars: 5 }
+      ]
+    }
+  ]
+   ```
+- In mongodb we don't care about what a document have in a collection.
+  - We add new document
+  - ```db.products.insertOne({name:'Mouse', price : 100, category : 'computers'})```
+  - It shows 
+  ```[
+        {
+          _id: ObjectId("634e8415725a4382a8da306d"),
+          name: 'Keyboard',
+          price: 250,
+          reviews: [
+            { text: 'Great app', stars: 4 },
+            { text: 'Awesome website', stars: 5 }
+          ]
+        },
+        {
+          _id: ObjectId("634ea06c725a4382a8da3075"),
+          name: 'Mouse',
+          price: 100,
+          category: 'computers'
+        }
+      ]
+  ```
+  - You can see one document have reviews and other have category.
+  - There is `no restriction` about schema in mongodb.
+
+### Operators
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
