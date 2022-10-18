@@ -1387,7 +1387,17 @@ import Header from "./Header";
 ### Install MongoDb in your system
 - Follow installation guide based on your system.
 - check mongodb is installed successfully or not via `mongosh --version`
+- run the mongo shell via `mongosh`
+- you can see `>` that means you are in mongodb shell.
+- To close mongodb shell, just write `exit`
+- To clear the mongodb shell `Ctrl + L`.
+- When we installed mongodb, some databases are already there or say preinstalled databases.
 
+> To show all the databases
+  ```
+  show dbs;
+  ```
+  - ; is optional.
 
 
 
