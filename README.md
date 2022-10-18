@@ -1510,11 +1510,35 @@ import Header from "./Header";
   - It shows an object
   - If we give filter that doesn't exist, it shows `null`.
 
+> Insert many documents
+- To insert many documents in collection.
+  ```
+  db.products.insertMany([{name : 'Mouse', price: 100}, {name : 'Table', price: 500}])
+  ```
+  - It shows
+  ```
+   {
+      acknowledged: true,
+      insertedIds: {
+        '0': ObjectId("634e8b7c725a4382a8da306f"),
+        '1': ObjectId("634e8b7c725a4382a8da3070")
+      }
+    }
+  ```
   
+- We can use `.pretty()` method on approx every command, to rectify the output.
 
-
-
-
+> To Update exsiting document
+- Update the name of product that has 100 price(Mouse).
+  ```
+  db.products.update({_id : ObjectId("634e8b7c725a4382a8da306f")}, { $set : { name : 'RAM'}})
+  ```
+  - The first parameter is filter
+  - The second parameter is operator within operator we have to give an object with key value pair, here we give value we want to update. 
+  - `.update()` is deprecated, we can use `.updateOne()`
+      ```
+       db.products.updateOne({_id : ObjectId("634e8b7c725a4382a8da306f")}, { $set : { name : 'RAM'}})
+      ```
 
 
 
