@@ -1398,9 +1398,27 @@ import Header from "./Header";
   show dbs;
   ```
   - ; is optional.
+  - admin, config and local dbs are there.
+  - Above command shows all the databases along with there size.
 
-
-
+> To create a new database
+ ```
+ use <dbname> 
+ eg: use ecom
+ ```
+- Lets create a collection, collections are same as tables in sql dbs.
+> To view all the collections in dbs
+ ```
+ show collections
+ ```
+ - Our ecom dbs has no data, so there is no collections are there.
+  
+> To create a collection 
+  ```
+  db.createCollection('products')
+  ```
+  - products is the name of collection.
+  - 
 
 
 
