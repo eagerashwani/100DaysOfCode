@@ -52,6 +52,9 @@ Learn Full Stack in just 100 Days
     - [Organize Components](#organize-components)
     - [Update on React 18](#update-on-react-18)
     - [Local system setup](#local-system-setup)
+  - [Day 50 - MongoDB](#day-50---mongodb)
+    - [MongoDB Document](#mongodb-document)
+    - [Install MongoDb in your system](#install-mongodb-in-your-system)
 
 ## Day 4
 ### Let's start CSS.
@@ -1364,8 +1367,26 @@ import Header from "./Header";
 
 
 
-
-
+## Day 50 - MongoDB
+- It is document based means all data in one object.
+- It is no sql database.
+- Store data in JSON format.
+  
+### MongoDB Document
+- Records in mongoDb is called documents. Eg:
+  ```json
+      {
+      title: "Post Title 1",
+      body: "Body of post.",
+      category: "News",
+      likes: 1,
+      tags: ["news", "events"],
+      date: Date()
+     }
+  ```
+### Install MongoDb in your system
+- Follow installation guide based on your system.
+- check mongodb is installed successfully or not via ==mongosh --version==
 
 
 
