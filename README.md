@@ -1386,7 +1386,7 @@ import Header from "./Header";
   ```
 ### Install MongoDb in your system
 - Follow installation guide based on your system.
-- check mongodb is installed successfully or not via <mark>mongosh --version</mark>
+- check mongodb is installed successfully or not via `mongosh --version`
 
 
 
