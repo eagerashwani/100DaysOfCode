@@ -54,6 +54,7 @@ Learn Full Stack in just 100 Days
     - [Local system setup](#local-system-setup)
   - [Day 32 - React official docs](#day-32---react-official-docs)
     - [Creating and Nesting components](#creating-and-nesting-components)
+    - [Writing markup with JSX](#writing-markup-with-jsx)
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
     - [Install MongoDb in your system](#install-mongodb-in-your-system)
@@ -1379,6 +1380,53 @@ import Header from "./Header";
       );
     }
   ```
+- Lets Nest MyButton into another component
+  ```js
+  function App(){
+    return (
+      <>
+        <h1> I am Heading </h1>
+        <MyButton/>
+      </h1>
+    );
+  }
+  ```
+- React components are always start with capital letter while HTML tags with small letter.
+
+### Writing markup with JSX
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
