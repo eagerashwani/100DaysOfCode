@@ -48,10 +48,12 @@ Learn Full Stack in just 100 Days
   - [Day 31](#day-31)
     - [Pop Quiz](#pop-quiz)
     - [Custom Components](#custom-components)
-  - [Parent and Child Component](#parent-and-child-component)
+    - [Parent and Child Component](#parent-and-child-component)
     - [Organize Components](#organize-components)
     - [Update on React 18](#update-on-react-18)
     - [Local system setup](#local-system-setup)
+  - [Day 32 - React official docs](#day-32---react-official-docs)
+    - [Creating and Nesting components](#creating-and-nesting-components)
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
     - [Install MongoDb in your system](#install-mongodb-in-your-system)
@@ -1238,7 +1240,7 @@ document.getElementById("root").append(JSON.stringify(page))
   - Its monolithic approach.
   - We have to build components and bring them together.
 
-## Parent and Child Component
+### Parent and Child Component
 ```js
     function Header(){
         return (
@@ -1364,6 +1366,19 @@ import Header from "./Header";
   - npm install
   - npm run dev
 
+## Day 32 - React official docs
+- For, Now we are going to follow official react docs.
+
+### Creating and Nesting components
+- React apps are made up of `components`. A component is the pieace of UI that has its own logic and appearance. Everything in the UI is component eg : Button, section, even text can be a component.
+- React components are JS functions that returns Markup
+  ```js
+    function MyButton(){
+      return (
+        <button> Who Am I? </button>
+      );
+    }
+  ```
 
 
 
