@@ -52,7 +52,7 @@ Learn Full Stack in just 100 Days
     - [Organize Components](#organize-components)
     - [Update on React 18](#update-on-react-18)
     - [Local system setup](#local-system-setup)
-  - [Day 32 - React official docs](#day-32---react-official-docs)
+  - [Day 32 - React official docs (Quickstart)](#day-32---react-official-docs-quickstart)
     - [Creating and Nesting components](#creating-and-nesting-components)
     - [Writing markup with JSX](#writing-markup-with-jsx)
     - [Adding Styles](#adding-styles)
@@ -61,6 +61,8 @@ Learn Full Stack in just 100 Days
     - [Rendering Lists](#rendering-lists)
     - [Responding to events](#responding-to-events)
     - [Updating the screen](#updating-the-screen)
+    - [Using Hooks](#using-hooks)
+    - [Sharing data between components](#sharing-data-between-components)
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
     - [Install MongoDb in your system](#install-mongodb-in-your-system)
@@ -1373,7 +1375,7 @@ import Header from "./Header";
   - npm install
   - npm run dev
 
-## Day 32 - React official docs
+## Day 32 - React official docs (Quickstart)
 - For, Now we are going to follow official react docs.
 
 ### Creating and Nesting components
@@ -1558,9 +1560,14 @@ import Header from "./Header";
    - If we render same component multiple times, each will get its own state and doesn't effect other buttons state.
 
 
+### Using Hooks
+- Functions starting with `use` are called Hooks. useState is a built-in Hook.
+- We can write our own Hooks by combining the existing ones.
+- You can only call Hooks `at top level` of your components.
 
-
-
+### Sharing data between components
+- In useState, we can see MyButton had its own independent `count` and when each button was clicked, only the `count` for the button clicked changed.
+- Sometimes we needd components to <i> share data and always update together.</i>
 
 
 
