@@ -1435,13 +1435,18 @@ import Header from "./Header";
       return (
         <>
           <h1>{user.name}</h1>
-          <img src={user.imgUrl} alt={'Photo of' + user.name} srcset="" className= "avatar"/>
+          <img src={user.imgUrl} alt={'Photo of' + user.name}
+             style={{
+                width: user.imgSize,
+                height : user.imgSize
+              }}
+             srcset="" className= "avatar"/>
         </>
 
       );
     }
   ```
-
+- style use two {{}}, outer {} is for style attribute and inner one is for JSX.
 
 
 
