@@ -57,6 +57,8 @@ Learn Full Stack in just 100 Days
     - [Writing markup with JSX](#writing-markup-with-jsx)
     - [Adding Styles](#adding-styles)
     - [Displaying Data](#displaying-data)
+    - [Conditional Rendering](#conditional-rendering)
+    - [Rendering Lists](#rendering-lists)
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
     - [Install MongoDb in your system](#install-mongodb-in-your-system)
@@ -1448,13 +1450,62 @@ import Header from "./Header";
   ```
 - style use two {{}}, outer {} is for style attribute and inner one is for JSX.
 
+### Conditional Rendering
+- Use JS conditions eg: if else
+  ```jsx
+  let content;
+  if(isLoggedIn){
+    content = <AdminPanel />
+  } else {
+    content = <LoginForm/>
+  }
 
+  return (
+    <div>
+      {content}
+    </div>
+  );
+  ```
+- You can also use ternary operator
+  ```jsx
+  <div>
+   {isLoggedIn ? (<AdminPanel />) : (<LoginForm />)}
+  </div>
+  ```
+- If you don't need `else`, use logical && syntax.
+  ```jsx
+  <div>
+    {isLoggedIn && <AdminPanel />}
+  </div>
+  ```
+### Rendering Lists
+- We can use for loop or map() to render list.
+- lets take some products in an array. Eg:
+  ```js
+      const products = [
+        { name : 'Apple Pencil', id : 1},
+        { name : 'iphone 14', id : 2},
+        { name : 'ipad Pro M2', id : 3},
+        { name : 'Apple Watch Ultra', id : 4},
+      ]
+  ```
+- Lets transform array of products into array of list
+  ```jsx
+  const listitems = products.map(product => {
+    return <li key={product.id}>
+      {product.name}
+    </li>
+  });
 
-
-
-
-
-
+  return(
+    <>
+      {listitems}
+    </>
+  )
+  ```
+  - li has key(string or number) attribute, it uniquely identifies that item along ites siblings  
+  - React need this keys to understand what happens later, if you insert, delete or reorder the items.\
+  - 
 
 
 
