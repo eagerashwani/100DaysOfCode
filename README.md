@@ -1541,6 +1541,23 @@ import Header from "./Header";
     - Always follow this convention `[something, setSomething]`
     - First time the button displayed, count will be 0, because we pass 0 to useState().
     - When you want to change the state, call setCount() and pass the new value to it.
+   ```jsx
+   function MyUpdateState(){
+    const [count, setCount] = useState(0);
+
+    function handleClick(){
+      setCount(count + 1);
+    }
+
+    return (
+      <button onClick={handleClick}> My press count is {count}</button>
+    )
+   }
+   ```
+   - React will call your function again and again like 1,2 and so on.
+   - If we render same component multiple times, each will get its own state and doesn't effect other buttons state.
+
+
 
 
 
