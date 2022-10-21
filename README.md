@@ -59,6 +59,7 @@ Learn Full Stack in just 100 Days
     - [Displaying Data](#displaying-data)
     - [Conditional Rendering](#conditional-rendering)
     - [Rendering Lists](#rendering-lists)
+    - [Responding to events](#responding-to-events)
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
     - [Install MongoDb in your system](#install-mongodb-in-your-system)
@@ -1505,7 +1506,24 @@ import Header from "./Header";
   ```
   - li has key(string or number) attribute, it uniquely identifies that item along ites siblings  
   - React need this keys to understand what happens later, if you insert, delete or reorder the items.\
-  - 
+  
+### Responding to events
+- You can respond to events by declaring `event handlers` functions inside your component.
+  ```js
+  function MyButton(){
+    function handleClick(){
+      alert('You clicked me');
+    }
+
+    return (
+      <button onClick={handleClick}> Click me </button>
+    );
+  }
+  ```
+  - `onClick = {handleClick}` has no parantheses.
+  - React will call your event handler when the user clicks on button.
+  
+
 
 
 
