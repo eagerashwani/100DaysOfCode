@@ -63,6 +63,7 @@ Learn Full Stack in just 100 Days
     - [Updating the screen](#updating-the-screen)
     - [Using Hooks](#using-hooks)
     - [Sharing data between components](#sharing-data-between-components)
+  - [Day 33 - Describing the UI](#day-33---describing-the-ui)
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
     - [Install MongoDb in your system](#install-mongodb-in-your-system)
@@ -1568,7 +1569,39 @@ import Header from "./Header";
 ### Sharing data between components
 - In useState, we can see MyButton had its own independent `count` and when each button was clicked, only the `count` for the button clicked changed.
 - Sometimes we needd components to <i> share data and always update together.</i>
+- To make same count and update together, we have to move the state from individual buttons upwards to closet component containing all of them.
+  - Move the state from MyUpdateState to App
+  - Then, <i>pass the state down</i> from App to each Button, together with the shared click handler.
+    ```jsx
+    export default function MyApp() {
+        const [count, setCount] = useState(0);
 
+        function handleClick() {
+          setCount(count + 1);
+        }
+
+        return (
+          <div>
+            <h1>Counters that update together</h1>
+            <MyButton count={count} onClick={handleClick} />
+            <MyButton count={count} onClick={handleClick} />
+          </div>
+        );
+      }
+    ```
+  - The information you pass down like this is called `props`.
+  - To read the props you have passed from its parent component. 
+    ```jsx
+    function MyButton({ count, onClick }) {
+        return (
+          <button onClick={onClick}>
+            Clicked {count} times
+          </button>
+        );
+     }
+    ``` 
+## Day 33 - Describing the UI
+- 
 
 
 
