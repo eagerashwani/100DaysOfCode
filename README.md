@@ -55,6 +55,8 @@ Learn Full Stack in just 100 Days
   - [Day 32 - React official docs](#day-32---react-official-docs)
     - [Creating and Nesting components](#creating-and-nesting-components)
     - [Writing markup with JSX](#writing-markup-with-jsx)
+    - [Adding Styles](#adding-styles)
+    - [Displaying Data](#displaying-data)
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
     - [Install MongoDb in your system](#install-mongodb-in-your-system)
@@ -1382,7 +1384,7 @@ import Header from "./Header";
   ```
 - Lets Nest MyButton into another component
   ```js
-  function App(){
+  export default function App(){
     return (
       <>
         <h1> I am Heading </h1>
@@ -1394,9 +1396,51 @@ import Header from "./Header";
 - React components are always start with capital letter while HTML tags with small letter.
 
 ### Writing markup with JSX
-- 
+- Above markup syntax is JSX.
+- JSX is stricter than HTML.
+- All components and tags must be wrap up with single parent(<></> or div).
+- <></> is called fragment.
+  
+### Adding Styles
+- You can specify CSS class with `className`. It works same as HTML class tag.
+  ```js
+    <h1 className="textMe"> I am Heading </h1>
+  ```
+  ```css
+    .textMe{
+      font-size : 80px;
+    }
+  ```
+- You can import CSS file like this
+  > import './App.css';
 
+### Displaying Data
+- JSX helps you put markup inside JS.
+- You can embed JS variable from your code and display it.
+  ```jsx
+    return (
+      <h1>
+        {user.name}
+      </h1>
+    );
+  ```
+- Look the below example 
+  ```jsx
+    function DisplayingData(){
+      const user = {
+        name : 'Ashwani Kumar',
+        imgUrl : 'https://i.imgur.com/yXOvdOSs.jpg',
+        imgSize : 120
+      }
+      return (
+        <>
+          <h1>{user.name}</h1>
+          <img src={user.imgUrl} alt={'Photo of' + user.name} srcset="" className= "avatar"/>
+        </>
 
+      );
+    }
+  ```
 
 
 
