@@ -60,6 +60,7 @@ Learn Full Stack in just 100 Days
     - [Conditional Rendering](#conditional-rendering)
     - [Rendering Lists](#rendering-lists)
     - [Responding to events](#responding-to-events)
+    - [Updating the screen](#updating-the-screen)
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
     - [Install MongoDb in your system](#install-mongodb-in-your-system)
@@ -1523,9 +1524,23 @@ import Header from "./Header";
   - `onClick = {handleClick}` has no parantheses.
   - React will call your event handler when the user clicks on button.
   
-
-
-
+### Updating the screen
+- Sometimes, you want your component to remenber some information and display it. Eg: No of times button clicked.
+- To achieve this, add `state` to your component.
+- First, import
+    > import {useState} from 'react';
+- Now, declare a state variable inside your component.
+  ```js
+  function UpdateState(){
+    const [count, setCount] = useState(0);
+  }
+  ```
+  - useState gives two things:
+    - the current state (count)
+    - the function that lets you update it (setCount)
+    - Always follow this convention `[something, setSomething]`
+    - First time the button displayed, count will be 0, because we pass 0 to useState().
+    - When you want to change the state, call setCount() and pass the new value to it.
 
 
 
