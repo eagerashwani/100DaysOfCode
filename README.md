@@ -1721,10 +1721,32 @@ import Header from "./Header";
 - Suppose you have a list of users and you have to show particular user profile and url change based on username.
 - Why Its important?
   - Suppose we have 1000s of users, we don't make 1000s Route url instead we use dynamic routing with params.
-  - 
+- Lets create a new component
+  ```js
+  import { useParams } from "react-router-dom";
 
+    const User = () => {
+        const params = useParams();
+        const {name} = params;
+        return (
+            <>
+                <h1>I am {name}'s page </h1>
+            </>
+        );
+    }
 
-
+    export default User;
+  ```
+  - With the help of useParamas(), you can get data from urls.
+- In App.js
+  ```js
+  <Route path='user/:name' element={<User/>} />
+  ```
+- Lets create their Link
+  ```js
+  <Link to="user/anil">Anil</Link>
+  <Link to="user/ashwani">Ashwani</Link>
+  ```
 
 
 ## Day 50 - MongoDB
