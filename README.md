@@ -68,6 +68,7 @@ Learn Full Stack in just 100 Days
     - [React Router v5.2.0](#react-router-v520)
     - [React Router v6](#react-router-v6)
     - [404 and redirect](#404-and-redirect)
+    - [Dynamic routing with param](#dynamic-routing-with-param)
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
     - [Install MongoDb in your system](#install-mongodb-in-your-system)
@@ -1712,6 +1713,15 @@ import Header from "./Header";
     </Routes>
  ```
  - * means, if all paths that mentioned above is not found than load Page404 component.
+- To redirect, first import Navigate from react-router-dom
+  ` <Route path="*" element={<Navigate to="/" />} />`
+  - In the element give Navigate with to and give the path, where you want to redirect.
+
+### Dynamic routing with param
+- Suppose you have a list of users and you have to show particular user profile and url change based on username.
+- Why Its important?
+  - Suppose we have 1000s of users, we don't make 1000s Route url instead we use dynamic routing with params.
+  - 
 
 
 
