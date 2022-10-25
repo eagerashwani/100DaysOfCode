@@ -64,6 +64,8 @@ Learn Full Stack in just 100 Days
     - [Using Hooks](#using-hooks)
     - [Sharing data between components](#sharing-data-between-components)
   - [Day 33 - Describing the UI](#day-33---describing-the-ui)
+  - [Day 40 - Pizza Project](#day-40---pizza-project)
+    - [React Router](#react-router)
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
     - [Install MongoDb in your system](#install-mongodb-in-your-system)
@@ -1615,6 +1617,48 @@ import Header from "./Header";
 
 
 
+
+## Day 40 - Pizza Project
+### React Router
+- First install react router in your project
+  ```bash
+  npm i react-router-dom
+  ```
+  - In this project, we are going to use version 5.2.0
+    ```bash
+    npm install react-router-dom@5.2.0
+    ```
+  
+- Lets import BrowserRouter, Switch, Route from react-router-dom in App.js
+    ```bash
+    import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+    ```
+    - BrowserRouter as Router means, we're aliasing the BrowserRouter 
+    - We can use Router in our project instead of BrowserRouter.
+- Lets create some components
+  - Use react snipets `rafce`, `rfc`, `rafc`.
+- In App.js
+  ```js
+    <>
+      <Router>
+        <Switch>
+          <Route path="/" component={Home}>Home</Route>
+          <Route path="/about" component={About}>About</Route>
+        </Switch>
+      </Router>
+    </>
+  ```
+  - When we add /about in our browser still Home component shows.
+    - Why?
+      - Whenever react get / in browser url it renders the Home component 
+    - If we remove `Switch` than the browser shows both components.
+      - Why?
+        - After getting / react still continues to find the matching components
+        - And shows all components start with /
+    - You have to use `exact` in Route of Home component
+      ```js
+      <Route path="/" component={Home} exact>Home</Route>
+      ```
 
 
 
