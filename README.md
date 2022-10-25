@@ -70,6 +70,7 @@ Learn Full Stack in just 100 Days
     - [404 and redirect](#404-and-redirect)
     - [Dynamic routing with param](#dynamic-routing-with-param)
     - [Link and Nav Link Styles](#link-and-nav-link-styles)
+    - [Active Link](#active-link)
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
     - [Install MongoDb in your system](#install-mongodb-in-your-system)
@@ -1785,7 +1786,15 @@ import Header from "./Header";
     </ul>
   ```
 
-
+### Active Link
+- We can simply use .active class
+  ```css
+  .navbar .active{
+    color:  green;
+  }
+  ```
+  - Sometimes Home Path is always active, use `end` 
+   > <li><NavLink className='nav-bar-link' to="/" end>Home</NavLink></li>
 
 
 
