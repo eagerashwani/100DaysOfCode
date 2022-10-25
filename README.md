@@ -67,6 +67,7 @@ Learn Full Stack in just 100 Days
   - [Day 40 - Pizza Project](#day-40---pizza-project)
     - [React Router v5.2.0](#react-router-v520)
     - [React Router v6](#react-router-v6)
+    - [404 and redirect](#404-and-redirect)
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
     - [Install MongoDb in your system](#install-mongodb-in-your-system)
@@ -1680,8 +1681,8 @@ import Header from "./Header";
         <br/>
         
         <Routes>
-          <Route path="/" element={<Home />} exact>Home</Route>
-          <Route path="/about" element={<About />}>About</Route>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="about" element={<About />}></Route>
         </Routes>
   </Router>
   ```
@@ -1692,7 +1693,7 @@ import Header from "./Header";
     <>
     <ul>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
+        <li><Link to="about">About</Link></li>
     </ul>
     </>
   )
@@ -1700,6 +1701,17 @@ import Header from "./Header";
   ```
 - If you want to use navigation anywhere in your app
 - `<Link to="/about">Go to About</Link>` use like this
+
+### 404 and redirect
+- Create a new component, and in App.js
+ ```js
+     <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="about" element={<About />}></Route>
+          <Route path="*" element={<Page404 />}></Route>
+    </Routes>
+ ```
+ - * means, if all paths that mentioned above is not found than load Page404 component.
 
 
 
