@@ -69,6 +69,7 @@ Learn Full Stack in just 100 Days
     - [React Router v6](#react-router-v6)
     - [404 and redirect](#404-and-redirect)
     - [Dynamic routing with param](#dynamic-routing-with-param)
+    - [Link and Nav Link Styles](#link-and-nav-link-styles)
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
     - [Install MongoDb in your system](#install-mongodb-in-your-system)
@@ -1747,6 +1748,73 @@ import Header from "./Header";
   <Link to="user/anil">Anil</Link>
   <Link to="user/ashwani">Ashwani</Link>
   ```
+- You can pass multiple params.
+  ```js
+  <Route path='page/:name/:id' element={<Page404/>} />
+  ```
+
+### Link and Nav Link Styles
+- Lets add some styles to our navbar
+  ```css
+  .navbar{
+  text-align: right;
+  }
+
+  .navbar li{
+    display: inline-block;
+    padding: 10px 5px;
+  }
+
+  .nav-bar-link{
+  color: black;
+  text-decoration: none;
+  }
+
+  .nav-bar-link:hover{
+    color: orange;
+  }
+
+  ```
+- We cant apply style to Link tag, so instead of Link tag we use NavLink tag
+  ```js
+    <ul className='navbar'>
+        <li><NavLink className='nav-bar-link' style={{color:'red'}} to="/">Home</NavLink></li>
+        <li><NavLink className='nav-bar-link' to="about">About</NavLink></li>
+        <li><NavLink className='nav-bar-link' to="user/anil">Anil</NavLink></li>
+        <li><NavLink className='nav-bar-link' to="user/ashwani">Ashwani</NavLink></li>
+    </ul>
+  ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Day 50 - MongoDB
