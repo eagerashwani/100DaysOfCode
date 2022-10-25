@@ -65,7 +65,8 @@ Learn Full Stack in just 100 Days
     - [Sharing data between components](#sharing-data-between-components)
   - [Day 33 - Describing the UI](#day-33---describing-the-ui)
   - [Day 40 - Pizza Project](#day-40---pizza-project)
-    - [React Router](#react-router)
+    - [React Router v5.2.0](#react-router-v520)
+    - [React Router v6](#react-router-v6)
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
     - [Install MongoDb in your system](#install-mongodb-in-your-system)
@@ -1619,7 +1620,7 @@ import Header from "./Header";
 
 
 ## Day 40 - Pizza Project
-### React Router
+### React Router v5.2.0
 - First install react router in your project
   ```bash
   npm i react-router-dom
@@ -1659,9 +1660,46 @@ import Header from "./Header";
       ```js
       <Route path="/" component={Home} exact>Home</Route>
       ```
-
-
-
+- Lets add simple nav
+  ```js
+   <Router>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <Switch>
+  ```
+  - Everytime we click on Home and About, our browser reload the page, so what's the use of react?
+  - To tackle this problem, use <Link>, import from react-router-dom.
+ 
+### React Router v6
+- In v6
+- `import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';`
+  ```js
+  <Router>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <br/>
+        
+        <Routes>
+          <Route path="/" element={<Home />} exact>Home</Route>
+          <Route path="/about" element={<About />}>About</Route>
+        </Routes>
+  </Router>
+  ```
+- Lets create a new component for router named navbar and put above code inside it.
+  ```js
+  const NavBar = () => {
+  return (
+    <>
+    <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+    </ul>
+    </>
+  )
+  }
+  ```
+- If you want to use navigation anywhere in your app
+- `<Link to="/about">Go to About</Link>` use like this
 
 
 
