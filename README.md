@@ -75,6 +75,8 @@ Learn Full Stack in just 100 Days
     - [Navigation on Button Click](#navigation-on-button-click)
   - [Day 41](#day-41)
     - [Nested Routing](#nested-routing)
+    - [useLocation() Hook](#uselocation-hook)
+    - [Protected Routes](#protected-routes)
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
     - [Install MongoDb in your system](#install-mongodb-in-your-system)
@@ -1866,8 +1868,74 @@ import Header from "./Header";
      </Route>
   ```
   - Make sure `path` and `to` have same spellings, to avoid non-viewable error like route will work but component not shows.
-  -  
 
+### useLocation() Hook
+- Whenever we move from one route to another and we want all the data that route have, we can use useLocation().
+- It gives all object data.
+- It has search, Hash, Key, state.
+- As you know, we can't pass more data via route, we can use state 
+  ` <li><NavLink className='nav-bar-link' to="user/ashwani" state={{name: "Ashwani", age: 24}}>Ashwani</NavLink></li>`
+
+### Protected Routes
+- Many website restrict outsiders to access their website, it you want to access website you must login to website, and manytimes website show only single content and show popups/navbar to login.
+- To achieve this we use protected routes, Its basically a logic.
+- Lets create a ProtectedRoute.js
+  ```js
+  import React, { useEffect } from 'react'
+  import { useNavigate } from 'react-router-dom';
+
+  const ProtectedRoute = (props) => {
+      const {Component} = props;
+      const navigate = useNavigate();
+      useEffect(()=>{
+          let login = localStorage.getItem('login')
+          if(!login)
+              navigate('/login')
+      })
+
+    return (
+      <div>
+          <Component />
+      </div>
+    )
+  }
+
+  export default ProtectedRoute
+  ```
+- Login.js
+  ```js
+  import React, { useEffect } from 'react'
+  import { useNavigate } from 'react-router-dom';
+
+  const Login = () => {
+      const Login = ()=>{
+          localStorage.setItem('login', true);
+          navigate('/')
+      }
+      const navigate = useNavigate();
+      useEffect(()=>{
+          let login = localStorage.getItem('login');
+          if(login)
+              navigate('/')
+
+      })
+    return (
+      <>
+          <div>Login</div>
+          <input type="text" />
+          <br/>
+          <button onClick={Login}>Login</button>
+      </>
+    )
+  }
+
+  export default Login
+  ```
+- In App.js
+  ```js
+   <Route path="filter" element={<ProtectedRoute Component={Filter} />}></Route>
+  ```
+  - Now add ProtectedRoute in element to those element who you want to first login than component.
 
 
 
