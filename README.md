@@ -73,6 +73,8 @@ Learn Full Stack in just 100 Days
     - [Active Link](#active-link)
     - [useSearchParam() Hook and setSearchParams](#usesearchparam-hook-and-setsearchparams)
     - [Navigation on Button Click](#navigation-on-button-click)
+  - [Day 41](#day-41)
+    - [Nested Routing](#nested-routing)
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
     - [Install MongoDb in your system](#install-mongodb-in-your-system)
@@ -1830,6 +1832,41 @@ import Header from "./Header";
    <button onClick={()=>{navigate('/about')}}>Go to About</button>
   ```
   - You can also use function for navigation. 
+
+## Day 41
+### Nested Routing
+- Routing inside routing.
+- suppose we have a contact component and this component have 3 different components link.
+- `localhost:3000/contact/company` this is the example of nested routing.
+- Contact.js
+  ```js
+  import { Link, Outlet } from "react-router-dom";
+
+  const Contact = ()=>{
+      return (
+          <>
+              <h1>I am Contact</h1>
+              <Link to='company'>Company</Link>
+              <Link to='channel'>Channel</Link>
+              <Link to='other'>Others</Link>
+              <Outlet/>
+          </>
+      );
+  }
+
+  export default Contact;
+  ```
+  - We have to define `Outlet` tag, otherwise component not renders.
+- In App.js
+  ```js
+     <Route path='contact/' element={<Contact/>} >
+            <Route path='company' element={<Company />}/>
+            <Route path='channel' element={<Channel />}/>
+            <Route path='other' element={<Others />}/>
+     </Route>
+  ```
+  - Make sure `path` and `to` have same spellings, to avoid non-viewable error like route will work but component not shows.
+  -  
 
 
 
