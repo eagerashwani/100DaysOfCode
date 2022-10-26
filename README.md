@@ -71,6 +71,8 @@ Learn Full Stack in just 100 Days
     - [Dynamic routing with param](#dynamic-routing-with-param)
     - [Link and Nav Link Styles](#link-and-nav-link-styles)
     - [Active Link](#active-link)
+    - [useSearchParam() Hook and setSearchParams](#usesearchparam-hook-and-setsearchparams)
+    - [Navigation on Button Click](#navigation-on-button-click)
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
     - [Install MongoDb in your system](#install-mongodb-in-your-system)
@@ -1796,8 +1798,38 @@ import Header from "./Header";
   - Sometimes Home Path is always active, use `end` 
    > <li><NavLink className='nav-bar-link' to="/" end>Home</NavLink></li>
 
+### useSearchParam() Hook and setSearchParams
+- Sometimes url have a query like this `....com/filter?price=10`
+- And when we have to use this query in our app, there we use SearchParams.
+- useSearchParams is same as react states.
+  ```js
+  const Filter = () => {
+    const [searchParams, setSearchParams] = useSearchParams();
+    const age = searchParams.get('age');
+    const name = searchParams.get('name');
+    const handleChange = (e)=>{
+        setSearchParams({name : e.target.value, age: 21},)
+    }
+    return (
+        <>
+            <h1>This is Filter Page</h1>
+            <h3>My name is {name} and age is {age}</h3>
+            <input type="text" onChange={handleChange} />
+        </>
+    )
+  }
+  ```
 
-
+### Navigation on Button Click
+- Mainly we want to implement navigation by our button.
+- To achieve this, we use `useNavigate()`.
+  ```js
+   const navigate = useNavigate();
+   ....
+   <button onClick={()=>{navigate('/')}}>Go to Home</button>
+   <button onClick={()=>{navigate('/about')}}>Go to About</button>
+  ```
+  - You can also use function for navigation. 
 
 
 
