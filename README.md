@@ -77,6 +77,7 @@ Learn Full Stack in just 100 Days
     - [Nested Routing](#nested-routing)
     - [useLocation() Hook](#uselocation-hook)
     - [Protected Routes](#protected-routes)
+    - [Interview Question](#interview-question)
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
     - [Install MongoDb in your system](#install-mongodb-in-your-system)
@@ -1936,6 +1937,43 @@ import Header from "./Header";
    <Route path="filter" element={<ProtectedRoute Component={Filter} />}></Route>
   ```
   - Now add ProtectedRoute in element to those element who you want to first login than component.
+
+### Interview Question
+- Where we can use react routing?
+  - on web
+  - on server-side with Node js
+  - with react-native
+- Link vs NavLink
+  - With NavLink we can add custom style and classes
+  - With NavLink we can add active link feature
+  - Style is not recommended with Link
+- What is nested routes?
+  - make route inside a route
+  - we can make tabs or pages inside a page
+  - multiple nested routes also possible.
+- How to Add 404 page?
+- Some Important Hooks
+  - useParams
+  - useSearchParams
+  - useLocation
+  - useNavigate
+- useParams and useSearchParams
+  - useParams : use to get Dynamic routing value
+    - Eg: localhost:3000/user/100
+    -     localhost:3000/user/101
+    - 100 is dynamic value here
+  - useSearchParams : use for get query params.
+    - Eg: localhost:3000/user?id=100
+    - id=100 is query paramas here
+- Redirect on button click
+- a href vs Link
+  - No refresh with Link
+  - Refresh with anchor tag
+- Hash Route vs Browser Route
+  - Mostly we use Browser route
+  - Hash route used for hiding route from the server
+  - Eg BR : localhost:3000/about
+  - Eg HR : localhost:3000#about
 
 
 
