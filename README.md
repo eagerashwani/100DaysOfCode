@@ -2,6 +2,8 @@
 Learn Full Stack in just 100 Days
 
 - [100DaysOfCode](#100daysofcode)
+  - [Day 1](#day-1)
+    - [Gith and Github](#gith-and-github)
   - [Day 4](#day-4)
     - [Let's start CSS.](#lets-start-css)
     - [Versioning of CSS](#versioning-of-css)
@@ -84,6 +86,19 @@ Learn Full Stack in just 100 Days
     - [MongoDB commands](#mongodb-commands)
     - [Related data in MongoDb](#related-data-in-mongodb)
     - [Operators](#operators)
+
+## Day 1 
+### Gith and Github
+- Download and install git based on your system.
+- run the command `git -v`
+  - this command shows the current version and verifies that git is installed correctly.
+- Setup config file(One time only)
+  - `git config --global user.name "Your username"`
+  - `git config --global user.email "Your github email"`
+    - if you want to change your username and email you should run `git config --global --edit`, which open vim editor and edit your config file and save your changes.
+    - Must ensure that your config variables is set correctly
+      - `git config --global user.name`
+      - `git config --global user.email`
 
 ## Day 4
 ### Let's start CSS.
