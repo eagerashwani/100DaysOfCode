@@ -130,7 +130,7 @@ Learn Full Stack in just 100 Days
   - Make sure that your changes are saved in your local git repository.
   - `git commit -m "Your changes"` 
     - This command will commit your changes and helps you to understand what has happened.
-    - <p align="justify"><img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/git4.png?raw=true" height=200px></p>
+    - <p align="justify"><img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/git4.png?raw=true" width=360px height=200px></p>
   - `git log` will show the order of your commits(commit history) in your git repository.
     - Helps in understanding the state of the current branch by showing the commit that lead to this state.
     - <p align="justify"><img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/git5.png?raw=true" width=360px height=200px></p>
