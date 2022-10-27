@@ -3,7 +3,8 @@ Learn Full Stack in just 100 Days
 
 - [100DaysOfCode](#100daysofcode)
   - [Day 1](#day-1)
-    - [Gith and Github](#gith-and-github)
+    - [Git and Github](#git-and-github)
+    - [Initialize git repository](#initialize-git-repository)
   - [Day 4](#day-4)
     - [Let's start CSS.](#lets-start-css)
     - [Versioning of CSS](#versioning-of-css)
@@ -88,7 +89,7 @@ Learn Full Stack in just 100 Days
     - [Operators](#operators)
 
 ## Day 1 
-### Gith and Github
+### Git and Github
 - Download and install git based on your system.
 - run the command `git -v`
   - this command shows the current version and verifies that git is installed correctly.
@@ -99,6 +100,17 @@ Learn Full Stack in just 100 Days
     - Must ensure that your config variables is set correctly
       - `git config --global user.name`
       - `git config --global user.email`
+
+### Initialize git repository
+- To initialize your git repository you need to run `git init` command.
+  - This command place your project under revision control.
+  - Create a code file in your project named `sum.js`, etc
+     ```sum.js
+     var a = 10;
+     var b = 20;
+     console.log(a+b); 
+     ```
+
 
 ## Day 4
 ### Let's start CSS.
