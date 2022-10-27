@@ -197,8 +197,8 @@ Learn Full Stack in just 100 Days
 - Now you want to push all of your branches as well.
   - git22
 - Your Github branch button looks like this
-  - git23
-        -  <p align="justify"><img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/netflix.png?raw=true" width=360px height=200px></p>
+    -  <p align="justify"><img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/git23.png?raw=true" width=360px height=200px></p>
+
 
 
 
