@@ -5,6 +5,10 @@ Learn Full Stack in just 100 Days
   - [Day 1](#day-1)
     - [Git and Github](#git-and-github)
     - [Initialize git repository](#initialize-git-repository)
+    - [Git Branch](#git-branch)
+    - [Merge branches](#merge-branches)
+    - [gitignore](#gitignore)
+    - [Github](#github)
   - [Day 4](#day-4)
     - [Let's start CSS.](#lets-start-css)
     - [Versioning of CSS](#versioning-of-css)
@@ -127,6 +131,78 @@ Learn Full Stack in just 100 Days
   - `git commit -m "Your changes"` 
     - This command will commit your changes and helps you to understand what has happened.
     - git4
+  - `git log` will show the order of your commits(commit history) in your git repository.
+    - Helps in understanding the state of the current branch by showing the commit that lead to this state.
+    - git5
+- Now lets make some changes in sum.js and create a new file learngithub.js
+  - run `git status`
+    - sum.js shows modified
+    - learngithub.js shows untracked
+    - git6
+  - Commit your changes
+  - Now, run `git log`
+    - git7
+  - Now you want to go back in the time where you have only sum.js(initial version)
+    - `git checkout` 
+      - Used to switch branche. Also works with files and commits.
+    - `git checkout <hashCode>`
+    - learngithub.js is now deleted and sum.js is restored.
+    - git8
+  - Now, you want your learngithub.js and all the changes you done before back.
+    - `git checkout master`
+
+### Git Branch
+- Some git branch commands
+  - `git branch` at which branch local repo is present.
+  - `git branch <branchName>` -> create a new branch
+  - `git checkout -b <newBranch>` -> create a new branch and checkout.
+  - git9
+  - Branch Concept
+  - git10
+  - `git branch -a` -> list all remote and local branches
+  - `git branch -d <branchName>` -> deletes a branch
+- Now, I create a new file named multiply.js in the multiply branch.
+  - git11
+- Branch Map is look like this:
+  - master -> dev -> multiply
+- Push all the changes to the multiply branch.
+- Note: master and dev branches have no idea about the changes in multiply branch.
+- git12
+
+### Merge branches
+- Now, you want your eager branch code get sync with your master branch.
+  - `git merge <branch_name>`
+    - Integrate the branch together. Combines the changes from one branch to another branch.
+    - merge the changes in the staging branch to stable branch.
+    - git 13 and git14
+  
+### gitignore
+- Now, You have some confidential file and you can't share that file on github.
+- Use `.gitignore`
+  - Not track files/folder that mention in .gitignore file.
+  - git 15 and git16
+- Let's create a .gitignore file and secure.txt file, check the status.
+- Mention files in .gitignore file
+- git 17 and git18
+
+### Github
+- Host your project.
+- On Github
+  - Create a repository.
+  - git19
+  - Connect your local repository to github repository.
+  - git20
+  - Push 
+  - git21
+- Now you want to push all of your branches as well.
+  - git22
+- Your Github branch button looks like this
+  - git23
+        -  <p align="justify"><img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/netflix.png?raw=true" width=360px height=200px></p>
+
+
+
+
 
 ## Day 4
 ### Let's start CSS.
