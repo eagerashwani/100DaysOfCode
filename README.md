@@ -102,7 +102,7 @@ Learn Full Stack in just 100 Days
       - `git config --global user.email`
 
 ### Initialize git repository
-- To initialize your git repository you need to run `git init` command.
+- Step 1: To initialize your git repository you need to run `git init` command.
   - This command place your project under revision control.
   - Create a code file in your project named `sum.js`, etc
      ```sum.js
@@ -110,7 +110,23 @@ Learn Full Stack in just 100 Days
      var b = 20;
      console.log(a+b); 
      ```
-
+- Lets check the status of your git repository 
+- To check the status of your git repository run `git status` command
+  - git status will return the current state of your git repository
+  - git1.png will show
+- Step 2: Add files to staging area
+  - `git add <filename>` or
+    - Add specific files to your staging area
+  - `git add .`
+    - Add all files in your staging area
+    - git2
+  - Lets understand how staging area works, Look at the below image
+    - git3
+- Step 3 : Commit your changes
+  - Make sure that your changes are saved in your local git repository.
+  - `git commit -m "Your changes"` 
+    - This command will commit your changes and helps you to understand what has happened.
+    - git4
 
 ## Day 4
 ### Let's start CSS.
