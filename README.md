@@ -45,6 +45,9 @@ Learn Full Stack in just 100 Days
       - [Input fields](#input-fields)
       - [First child and first of type](#first-child-and-first-of-type)
       - [Last child and last of type](#last-child-and-last-of-type)
+  - [Day 16 - JavaScript](#day-16---javascript)
+    - [Comments](#comments)
+    - [Variables](#variables)
   - [Day 30](#day-30)
     - [First React](#first-react)
     - [First React Practice](#first-react-practice)
@@ -85,6 +88,8 @@ Learn Full Stack in just 100 Days
     - [useLocation() Hook](#uselocation-hook)
     - [Protected Routes](#protected-routes)
     - [Interview Question](#interview-question)
+  - [Day 43](#day-43)
+    - [React Redux](#react-redux)
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
     - [Install MongoDb in your system](#install-mongodb-in-your-system)
@@ -1198,6 +1203,227 @@ h1{
   }
   ```
 
+## Day 16 - JavaScript
+### Comments 
+```js
+// console.log() - Is used to print, what inside the ()
+// we can also use '' and `` instead of ""
+// we use `` in string templates
+// ; is not mandatory but its good for practice
+// you already know how to add comments in javascript
+// you can use ctrl + / to comment a line and same for undo the comment
+console.log("Hello world");
+```
+### Variables
+```js
+"use strict";
+//Variables
+
+// Is used to store the information
+// use that information later
+// we can also change the information later
+// Variables is CaseSensitive
+
+
+// declare a variable --------------------------------
+var firstName = "Ashwani";
+
+// use a variable ---------------------------------
+console.log(firstName);
+
+// change value -----------------------------------
+// no need to use var keyword again
+firstName = "Eager"
+
+console.log(firstName)
+
+// if we remove var keyword from line 10, still everything works!
+// this may raise problem 
+// if by mistake you wrote firstname instead of firstName in line 17
+// this create two different variables
+// we don't want two different variables
+// so, to tackle this problem we use "use-strict"
+// JS is loosely typed lang, and we don't want to declare a variable without
+// var keyword. use-strict help in that type of problem, and give error if
+// we make that type of mistake.
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+```js
+```
+
 
 ## Day 30
 ### First React
@@ -2098,7 +2324,9 @@ import Header from "./Header";
   - Eg BR : localhost:3000/about
   - Eg HR : localhost:3000#about
 
-
+## Day 43
+### React Redux
+-  
 
 
 
