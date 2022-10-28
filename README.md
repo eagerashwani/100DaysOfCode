@@ -63,6 +63,10 @@ Learn Full Stack in just 100 Days
     - [falsy vs truthy value](#falsy-vs-truthy-value)
     - [Ternary operator](#ternary-operator)
     - [and or operator](#and-or-operator)
+  - [Day 18](#day-18)
+    - [Nested if else](#nested-if-else)
+    - [if else if](#if-else-if)
+    - [Switch](#switch)
   - [Day 30](#day-30)
     - [First React](#first-react)
     - [First React Practice](#first-react-practice)
@@ -1706,11 +1710,114 @@ else{
 
 // || - only enter in else block, if both condition gives false
 ```
+## Day 18
+### Nested if else
 ```js
+// sometimes we have to take decision based on two or more conditions
+
+// suppose we have to print only those, whos name start with "A" and an adult
+
+let firstName = "Ashwani";
+let age = 24;
+
+if(firstName[0] === "A" && age > 18){
+    console.log("Condition satisfied");
+}
+else{
+    console.log("Not match");
+}
+
+// && - both conditions must true
+
+// now, we want if any one condition is true, we can print
+
+if(firstName[0] === "f" || age >18){
+    console.log("Inside if");
+}
+else{
+    console.log("Inside else");
+}
+
+// || - only enter in else block, if both condition gives false
 ```
+### if else if
 ```js
+// suppose you have to categroize your employee based on experience they have
+
+
+let experience = 1;
+
+if(experience < 1){
+    console.log("fresher");
+}
+else if(experience < 2){
+    console.log("SDE");
+}
+else if(experience < 3){
+    console.log("SDE2");
+}
+else if(experience < 4){
+    console.log("Lead Software Engineer");
+}
+else{
+    console.log("Too much experience");
+}
+
+// JS engine stop execution when condition is matched
 ```
+### Switch
 ```js
+// suppose you have to make a condition on the basis of month number, and print month name
+
+// one way is use if elseif
+
+// other way is switch
+
+let monthNumber = 12;
+
+switch(monthNumber){
+    case 1:
+        console.log("Jan");
+        break;
+    case 2:
+        console.log("Feb");
+        break;
+    case 3:
+        console.log("March");
+        break;
+    case 4:
+        console.log("April");
+        break;
+    case 5:
+        console.log("May");
+        break;
+    case 6:
+        console.log("June");
+        break;
+    case 7:
+        console.log("July");
+        break;
+    case 8:
+        console.log("Aug");
+        break;
+    case 9:
+        console.log("Sept");
+        break;
+    case 10:
+        console.log("Oct");
+        break;
+    case 11:
+        console.log("Nov");
+        break;
+    case 12:
+        console.log("Dec");
+        break;
+    default:
+        console.log("Invalid month");
+}
+
+// if you not use than JS engine prints continuosly
+// break statement is used to terminated the flow.
 ```
 ```js
 ```
