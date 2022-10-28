@@ -50,6 +50,8 @@ Learn Full Stack in just 100 Days
     - [Variables](#variables)
     - [Naming Rules](#naming-rules)
     - [`Let` Keyword](#let-keyword)
+    - [`const` keyword](#const-keyword)
+    - [String Index](#string-index)
   - [Day 30](#day-30)
     - [First React](#first-react)
     - [First React Practice](#first-react-practice)
@@ -1310,9 +1312,39 @@ myBike = "Royal Enfield";
 // Hoisting and Scopes cover later
 
 ```
+### `const` keyword
 ```js
+// declare constant
+
+const carWheels = 4;
+carWheels = 5; // this line gives error
+// redeclaration not allowed
+// reassign not allowed
+console.log(carWheels);
+
+// Good Practice
+// Always says like, I declare a constant carWheels instead of I declare a variable carWheels
 ```
+### String Index
 ```js
+// string indexing
+
+let firstName = "Ashwani";
+
+// A s h w a n i
+// 0 1 2 3 4 5 6 - Index
+
+console.log(firstName[4]);
+// 4th index have 'a'
+
+
+console.log(firstName.length); // o/p 7
+// length - no of characters including spaces
+
+
+//if you don't know the length, and want to print the 2nd last number
+console.log(firstName[firstName.length - 2]);
+
 ```
 ```js
 ```
