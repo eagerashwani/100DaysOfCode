@@ -59,6 +59,10 @@ Learn Full Stack in just 100 Days
     - [Template String](#template-string)
     - [undefined, null and BigInt](#undefined-null-and-bigint)
     - [Boolean and Comparision Operators](#boolean-and-comparision-operators)
+    - [if else](#if-else)
+    - [falsy vs truthy value](#falsy-vs-truthy-value)
+    - [Ternary operator](#ternary-operator)
+    - [and or operator](#and-or-operator)
   - [Day 30](#day-30)
     - [First React](#first-react)
     - [First React Practice](#first-react-practice)
@@ -1597,13 +1601,110 @@ console.log(n !== m);
 
 
 ```
+### if else
 ```js
+// if this is true, do this, otherwise do that
+
+let age = 17;
+
+if(age>18){
+    console.log("Right to vote");
+}
+else{
+    console.log("Not an adult");
+}
+
+
+// -----------------------------
+
+
+let isEven = 19;
+
+if(isEven%2 === 0){
+    console.log("even");
+}else{
+    console.log("odd");
+}
 ```
+### falsy vs truthy value
 ```js
+// falsy vs truthy values
+
+// falsy values
+// false
+// ""
+// null
+// undefined
+// 0
+
+// except falsy values all other values are truthy
+
+let age = '';   // use all falsy values and check op in console
+if(age){
+    console.log(age);
+}
+else{
+    console.log("Age not specified");
+}
+
 ```
+### Ternary operator
 ```js
+// suppose you have to store value in variable on the basis of a condition 
+
+// Normal way, if else
+
+let marks = 33;
+let result;
+
+if(marks>=33){
+    console.log("Pass");
+}
+else{
+    console.log("Fail");
+}
+
+
+// Ternary Operator or conditional operator
+
+let age = 18;
+let ageStatus = age > 18 ? "Adult" : "Kid";
+
+// age > 18 ? --> This is a condition
+// if condition is true, save what after ? in variable
+// if condition is false, save what after : in variable
+
+console.log(ageStatus);
+
 ```
+### and or operator
 ```js
+// sometimes we have to take decision based on two or more conditions
+
+// suppose we have to print only those, whos name start with "A" and an adult
+
+let firstName = "Ashwani";
+let age = 24;
+
+if(firstName[0] === "A" && age > 18){
+    console.log("Condition satisfied");
+}
+else{
+    console.log("Not match");
+}
+
+// && - both conditions must true
+
+// now, we want if any one condition is true, we can print
+
+if(firstName[0] === "f" || age >18){
+    console.log("Inside if");
+}
+else{
+    console.log("Inside else");
+}
+
+// || - only enter in else block, if both condition gives false
 ```
 ```js
 ```
