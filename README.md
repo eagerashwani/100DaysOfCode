@@ -74,6 +74,13 @@ Learn Full Stack in just 100 Days
     - [Array](#array)
   - [Day 19](#day-19)
     - [Array Methods](#array-methods)
+    - [Primitive and Reference Data types](#primitive-and-reference-data-types)
+    - [Clone and  Concate](#clone-and--concate)
+    - [for loop in Array](#for-loop-in-array)
+    - [const in Array](#const-in-array)
+    - [while in Array](#while-in-array)
+    - [for of loop](#for-of-loop)
+    - [for in loop](#for-in-loop)
   - [Day 30](#day-30)
     - [First React](#first-react)
     - [First React Practice](#first-react-practice)
@@ -2003,19 +2010,164 @@ console.log(students);
 
 // push pop is fast than unshift and shift --) find yourself --) Hint: Time complexicity
 ```
+### Primitive and Reference Data types
 ```js
+// primitive data type
+
+let a = 1;
+let b = a;
+console.log(a);
+console.log(b);
+a++;
+console.log("After");
+console.log(a);
+console.log(b);
+
+// PDT stores in stack, two different variables are made
+// one store a = 1, b = 1 bcz a = 1
+// when value of a changes, it doesn't affect b
+// bcz a,b are different variables in stack
+
+
+// Reference Data Type
+
+let array1 = ["item1", "item2"];
+let array2 = array1;
+console.log(array1);
+console.log(array2);
+array1.push("item3");
+console.log("After");
+console.log(array1);
+console.log(array2);
+
+// RDT stores in heap
+// In stack array1 (pointer) has address, where the array is stored
+// array2 also have same address
+// both pointer points to same address
+// so, when we update any one, both array shows updated
+
 ```
+### Clone and  Concate
 ```js
+// How to clone an array?
+
+// There are many ways to clone an array
+
+let array1 = ["sub1", "sub2"];
+// let array2 = ["sub1", "sub2"]; - 1 way
+// let array2 = [].concat(array1); - 2nd way
+// let array2 = array1.slice(0); - 3rd way
+let array2 = [...array1]; // 4rth way - via spread --) most recommended
+
+// gives pointer points to same address or not
+console.log(array1 === array2);
+console.log(array1);
+console.log(array2);
+
+
+// Concatenate arrays
+
+let array3 = ["sub3", "sub4"];
+// let array4 = ["sub3", "sub4"]; - 1 way
+// let array4 = [].concat(array3, "sub5", "sub6"); - 2nd way
+// let array4 = array3.slice(0).cpncate(["sub5", "sub6"]); - 3rd way
+let newArray = ["sub5", "sub6"];
+let array4 = [...array3, ...newArray]; // 4rth way - via spread --) most recommended
+
+console.log(array4);
 ```
+### for loop in Array
 ```js
+// for loop in array
+
+let students = ["Raj", "Kunal", "Love", "Ashwani", "Kirti"];
+
+
+// Most important property of array is length
+console.log(students.length);
+
+// with the help of indexes, we get particular item
+console.log(students[2]);
+
+
+for(let i = 0; i<students.length; i++){
+    console.log(students[i]);
+}
+
+// make a new array having students data in uppercase
+
+let newStudents = [];
+
+for(let i=0; i<students.length; i++){
+    newStudents.push(students[i].toUpperCase());
+}
+
+console.log(newStudents);
 ```
+### const in Array
 ```js
+
+let students = ["Raj", "Kunal", "Love", "Ashwani", "Kirti"];
+students = ["Aakash"];
+students.push("Ravneet");
+console.log(students);  // op - ['Aakash', 'Ravneet']
+
+
+// if we use const, we never override array
+
+const student = ["Raj", "Kunal", "Love", "Ashwani", "Kirti"];
+//student = [];  // op - Error
+console.log(student);  
+
+student.push("Nitya");
+console.log(student);  // op - ['Raj', 'Kunal', 'Love', 'Ashwani', 'Kirti', 'Nitya']
+
+// student in stack have address 0x12
+// ["Raj", "Kunal", "Love", "Ashwani", "Kirti"] is in heap memory
+// we not changing the address of student
+// recommended - Always use const with array
+// recommended - For RDT use const
+
 ```
+### while in Array
 ```js
+const students = ["Raj", "Kunal", "Love", "Ashwani", "Kirti"];
+let i = 0;
+while(i<students.length){
+    console.log(students[i]);
+    i++;
+}
 ```
+### for of loop
 ```js
+// for of loop
+
+
+const students = ["Raj", "Kunal", "Love", "Ashwani", "Kirti"];
+
+for(let student of students){
+    console.log(student);
+}
+
+// always follow plural and singular naming convention
+
+
 ```
+### for in loop
 ```js
+// for in loop --> It give index
+
+
+const students = ["Raj", "Kunal", "Love", "Ashwani", "Kirti"];
+const newStudents = [];
+for(let index in students){
+    newStudents.push(students[index].toUpperCase());
+}
+console.log(newStudents);
+
+
+// we use normal for loop and for of loop very much in JS
+// while and for in loop, not that much
 ```
 ```js
 ```
