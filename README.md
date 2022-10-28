@@ -54,6 +54,9 @@ Learn Full Stack in just 100 Days
     - [String Index](#string-index)
     - [String Methods](#string-methods)
     - [typeof](#typeof)
+  - [Day 17](#day-17)
+    - [String Concatenation](#string-concatenation)
+    - [Template String](#template-string)
   - [Day 30](#day-30)
     - [First React](#first-react)
     - [First React Practice](#first-react-practice)
@@ -1443,9 +1446,64 @@ console.log(typeof userName);
 userName = String(userName);
 console.log(typeof userName);
 ```
+## Day 17
+### String Concatenation
 ```js
+// string concatenation - join two or more strings together
+
+let firstName = "Ashwani";
+let lastName = "Kumar";
+
+let fullName = firstName + lastName;
+console.log(fullName); // op - AshwaniKumar
+// + is used to concatenate two strings together
+
+
+fullName = firstName + " " + lastName;
+console.log(fullName); // op - Ashwani Kumar
+
+// ------------------------------------------------------------
+
+let y = "3.123";
+let x = "2";
+
+let result = y + x;
+console.log(result) // op - 3.1232
+
+// but you want addition not concatenation
+result = +x + +y;
+console.log(result) // op - 5.123
+
+
 ```
+### Template String
 ```js
+// string concatenation - join two or more strings together
+
+let firstName = "Ashwani";
+let lastName = "Kumar";
+
+let fullName = firstName + lastName;
+console.log(fullName); // op - AshwaniKumar
+// + is used to concatenate two strings together
+
+
+fullName = firstName + " " + lastName;
+console.log(fullName); // op - Ashwani Kumar
+
+// ------------------------------------------------------------
+
+let y = "3.123";
+let x = "2";
+
+let result = y + x;
+console.log(result) // op - 3.1232
+
+// but you want addition not concatenation
+result = +x + +y;
+console.log(result) // op - 5.123
+
+
 ```
 ```js
 ```
