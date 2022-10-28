@@ -91,6 +91,18 @@ Learn Full Stack in just 100 Days
     - [Object Destructuring](#object-destructuring)
     - [Object inside array](#object-inside-array)
   - [Day 21](#day-21)
+    - [Nested Destructuring](#nested-destructuring)
+    - [Functions](#functions)
+    - [Function Expression](#function-expression)
+    - [Arrow Functions](#arrow-functions)
+    - [Hoisting](#hoisting)
+    - [Function inside function](#function-inside-function)
+    - [Lexical Scope](#lexical-scope)
+    - [Block and function Scope](#block-and-function-scope)
+    - [Default Parameter](#default-parameter)
+    - [Rest Parameter](#rest-parameter)
+    - [Parameter Destructuring](#parameter-destructuring)
+    - [Callback](#callback)
     - [](#)
   - [Day 30](#day-30)
     - [First React](#first-react)
@@ -2436,31 +2448,494 @@ for(let user of users){
 }
 ```
 ## Day 21
+### Nested Destructuring
+```js
+
+const users = [
+    {userId : 1, firstName : "Ashwani", gender : "male"},
+    {userId : 2, firstName : "Kunal", gender : "male"},
+    {userId : 3, firstName : "Saurav", gender : "male"},
+    {userId : 4, firstName : "Alivia", gender : "female"},
+    {userId : 5, firstName : "Parnika", gender : "female"},
+];
+
+const [user1, user2, user3] = users;
+console.log(user1); // op - {userId: 1, firstName: 'Ashwani', gender: 'male'}
+console.log(user2);
+console.log(user3);
+
+// but, we want fistname of userId 1, and userId of userId3, and firstname of userId 5
+
+const [{firstName:newVar}, , {userId}, , {firstName}] = users;
+console.log(newVar); // Ashwani
+console.log(userId); // 3
+console.log(firstName); // Parnika
+
+// you cant use same variable name (line 17) like firstname in userId 1 and 5
+
+```
+### Functions
+```js
+// functions - if you have to use same code over and over again 
+// than function helps you.
+
+// function can do what you want
+
+// suppose you have to print hello world 5 times
+console.log("Hello world");
+console.log("Hello world");
+console.log("Hello world");
+console.log("Hello world");
+console.log("Hello world");
+
+// There is rule in coading, DRY - Don't repeat yourself
+
+function sayHelloWorld(){
+    console.log("Welcome to my world");
+}
+
+// call the function
+// you can call a function many times you want
+sayHelloWorld();
+sayHelloWorld();
+sayHelloWorld();
+sayHelloWorld();
+sayHelloWorld();
+
+// make a resuable function
+// num1 and num2 is parameters
+function addTwoValues(num1, num2) {
+    return num1 + num2;
+}
+
+const sumIs = addTwoValues(4,5); // arguments
+console.log(sumIs);
+
+
+// isEven function
+
+function isEven(number){
+    if(number%2 === 0)
+        return true;
+    else
+        return false;
+}
+
+// isEven function --> return number % 2 === 0
+
+console.log(isEven(9));
+
+
+// firstChar
+
+function firstChar(myString){
+    return myString[0];
+}
+
+console.log(firstChar("Ashwani"));
+
+
+// Linear Search
+
+function linearSearch(myArray, target){
+    for(let i in myArray){
+        if(myArray[i] === target)
+            return "Index is " + i;
+    }
+    return -1;
+}
+
+console.log(linearSearch([1,2,3],2));
+```
+### Function Expression
+```js
+// function expression --> store function in a variable
+
+function sayHelloWorld(){
+    console.log("Welcome to my world");
+} // --> This is function declaration
+
+
+const sayHello = function(){
+    console.log("Welcome to my world");
+} // --> This is function expression
+
+sayHello();
+
+// This is function declaration
+function addTwoValues(num1, num2) {
+    return num1 + num2;
+}
+
+const sumIs = addTwoValues(4,5);
+console.log(sumIs);
+
+// This is function expression
+
+const sumTwo = function(num1, num2){
+    return num1 + num2;
+}
+
+console.log(sumTwo(2,4));
+
+
+// This is function declaration
+function isEven(number){
+    if(number%2 === 0)
+        return true;
+    else
+        return false;
+}
+
+
+console.log(isEven(9));
+
+// This is function expression
+
+const evenHai = function(number){
+    return number % 2 === 0;
+}
+
+console.log(evenHai(3));
+
+
+
+// This is function declaration
+function firstChar(myString){
+    return myString[0];
+}
+
+console.log(firstChar("Ashwani"));
+
+
+// This is function expression
+
+const myChar = function(myString){
+    return myString[0];
+}
+
+console.log(myChar("Ashwani"));
+
+
+
+// This is function declaration
+// Linear Search
+
+function linearSearch(myArray, target){
+    for(let i in myArray){
+        if(myArray[i] === target)
+            return "Index is " + i;
+    }
+    return -1;
+}
+
+console.log(linearSearch([1,2,3],2));
+
+
+// This is function Expression
+
+const searchMe = function(myArray, target){
+    for(let i in myArray){
+        if(myArray[i] === target)
+            return "Index is " + i;
+    }
+    return -1;
+}
+const array = [1,2,3,4,5];
+console.log(searchMe(array,5));
+```
+### Arrow Functions
+```js
+// arrow function
+
+const sayHello = () => {
+    console.log("Welcome to my world");
+} // --> This is function expression
+
+sayHello();
+
+
+// This is arrow function 
+
+const sumTwo = (num1, num2) => {
+    return num1 + num2;
+}
+
+console.log(sumTwo(2,4));
+
+// If function have only one parameter than in arrow function () not required
+const evenHai = (number) => {
+    return number % 2 === 0;
+}
+
+console.log(evenHai(3));
+
+
+// This is arrow function 
+
+// If function have only one line than remove {} and return statement
+
+const myChar = myString =>  myString[0];
+
+
+console.log(myChar("Ashwani"));
+
+
+
+// This is arrow function 
+
+const searchMe = (myArray, target) => {
+    for(let i in myArray){
+        if(myArray[i] === target)
+            return "Index is " + i;
+    }
+    return -1;
+}
+const array = [1,2,3,4,5];
+console.log(searchMe(array,5));
+```
+### Hoisting
+```js
+// hoisting --> a behavior in which a function or a variable can be used before declaration.
+
+// only happens in function declaration not in function expression and arrow function
+
+function sayHi(){
+    console.log("Hi Everyone");
+}
+
+sayHi();  // this is normal behaviour
+
+
+saySomething("Hello from Seoul");  // this is hoisting
+
+function saySomething(myString){
+    console.log(myString);
+}
+
+
+console.log(hello);  // undefined
+// only gives undefined with var, give error with let & const case
+var hello = "Hello World";
+console.log(hello);
+```
+### Function inside function
+```js
+// function inside function
+
+// you can declare as many function inside a function
+const avengers = () => {
+    const add = (a,b) => a+b;
+    const mul = (a,b) => a*b;
+    const tony = () => "Love you 3000";
+
+    console.log("Avengers Assemble");
+    tony();
+    console.log(add(4,6));
+    const ans = mul(2,4);
+    console.log(ans);
+}
+
+avengers();
+
+// you have to call the inside func (add, mul, tony)
+// inside the avengers()
+```
+### Lexical Scope
+```js
+const my = "World War Hulk";
+
+const myWorld = () => {
+    //const my = "New World Order";
+
+    const kang = () => {
+        //const my = "Kang Dynasty";
+        console.log("Inside ", my);
+    }
+
+    console.log("My World"); 
+    console.log(my); // New World Order
+    kang();
+
+    // If you remove my variable in the kang(), than JS search my variable 
+    // in the Lexical Environment (one step above)
+    // than the op is - Inside New World Order
+    // first JS search my variable in the kang(), if its not there than search
+    // in their lexical environment
+    // if you also remove my variable in line 4
+    // than JS search in their one step above environment
+    // than the kang() op is - Inside World War Hulk
+}
+
+myWorld();
+```
+### Block and function Scope
+```js
+// block and function scope
+
+// let and const are block scope
+// var is function scope
+
+{
+    // {}--> This is a block
+    const firstName = "Ashwani";
+    console.log(firstName);  // accessible 
+}
+
+// but you can't access firstName outside the block
+//console.log(firstName); // Error 
+
+
+// you can access value with var bcz it's function scope(means JS search variable in complete file)
+{
+    var lastName = "Kumar";
+    console.log(lastName); // accessible
+}
+console.log(lastName); // accessible
+{
+    console.log(lastName); // accessible
+}
+
+
+// real example
+
+function myProject(){
+    if(true){
+        let projectName = "Secret Wars";
+        console.log(projectName);
+    }
+    console.log(projectName); // Error
+    
+}
+
+myProject();
+
+// if we use var instead of let than line 34 run without any error
+
+// note : Don't confuse with Lexical Scope
+// if projrctName is declared one step above 
+// than it also run successfully.
+```
+### Default Parameter
+```js
+// default parameter
+
+// suppose you have a function sum(a,b) that takes two parameters
+// but you only pass one argument
+// to deal this type of situation, we have default parameters
+// if one arugument is not there, than use the default one.
+
+
+// Before ES6
+
+function add(a,b){
+    if(typeof b === "undefined"){
+        b = 1;
+    }
+    return a+b;
+}
+
+console.log(add(2));  // 3
+
+
+// Current Scenerio
+
+function sum(a, b=1){
+    return a + b;
+}
+
+console.log(sum(3,3));
+```
+### Rest Parameter
+```js
+// rest paramters --> allows a function to accept an indefinite number of arguments as an array
+
+function myFun(a,b,c){
+    console.log(a);
+    console.log(b);
+    console.log(c);
+
+}
+
+myFun(1,2,3);
+
+// rest parameter
+// what you do, if you have more arguments than paramteres
+// eg : myFun(1,2,3,4,5,6,7,8)
+// and you want to assign a = 1, b = 2 and rest to c
+
+function myFunc(a,b,...c){
+    console.log(a);  // 1
+    console.log(b);  // 2
+    console.log(c);  // [3, 4, 5, 6, 7, 8]
+
+}
+
+myFunc(1,2,3,4,5,6,7,8);
+
+
+// make a function to add everything
+function addAll(...numbers){
+    let sum = 0;
+    for(let number of numbers){
+        sum += number;
+    }
+    return sum;
+
+}
+
+console.log(addAll(1,2,3,4,5));
+```
+### Parameter Destructuring
+```js
+// paramater Destructuring --> 
+
+// most used in react
+// use with objects
+
+// we used this till now
+const person = {
+    firstName : "Ashwani",
+    age : 24,
+    gender : "male"
+}
+
+const getDetails = obj => {
+    console.log(obj.firstName);
+    console.log(obj.gender);
+    console.log(obj.age);
+
+}
+
+getDetails(person);
+
+// params destructuring
+
+const printDetails = ({firstName, age}) => {
+    console.log(firstName);
+    console.log(age);
+}
+
+printDetails(person);
+
+// in line 23 two new variables firstName and age is made
+```
+### Callback
+```js
+// callback --> Take function as input and call it
+
+function avengers(name){
+    console.log("Avengers ", name);
+}
+
+function movie(callback){
+    console.log("Movies here...");
+    callback("Kang Dynasty");
+}
+
+movie(avengers);
+```
 ### 
-```js
-```
-```js
-```
-```js
-```
-```js
-```
-```js
-```
-```js
-```
-```js
-```
-```js
-```
-```js
-```
-```js
-```
-```js
-```
-```js
-```
 ```js
 ```
 ```js
