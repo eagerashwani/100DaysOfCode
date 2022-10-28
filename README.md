@@ -52,6 +52,8 @@ Learn Full Stack in just 100 Days
     - [`Let` Keyword](#let-keyword)
     - [`const` keyword](#const-keyword)
     - [String Index](#string-index)
+    - [String Methods](#string-methods)
+    - [typeof](#typeof)
   - [Day 30](#day-30)
     - [First React](#first-react)
     - [First React Practice](#first-react-practice)
@@ -1346,9 +1348,100 @@ console.log(firstName.length); // o/p 7
 console.log(firstName[firstName.length - 2]);
 
 ```
+### String Methods
 ```js
+// Here are some useful string methods
+
+// trim()
+// toUpperCase()
+// to LowerCase()
+// slice()
+
+// Imp : These methods doesn't change your string, they give new string. 
+// Bcz strings are immutable, you have to store the new string.
+
+
+let firstName = "    Ashwani       ";
+// your variable have many spaces and you don't want any spaces
+
+console.log(firstName.length);  // op 18
+firstName.trim();
+console.log(firstName.length); // op 18
+// still print 18, bcz strings are immutable, you can't change them directly
+
+
+// There are 2 ways : 1st is declare new variable and 2nd reassign existing variable
+
+//1st
+let newName = firstName.trim();
+console.log(newName.length);  // op 7
+
+//2nd 
+
+firstName = firstName.trim();
+console.log(firstName.length); // op 7
+
+
+
+// toUpperCase()
+
+let myName = "ashwani Kumar";
+console.log(myName.toUpperCase());  // op - ASHWANI KUMAR
+console.log(myName); // op - ashwani Kumar
+// if you want myName in upper, first you have to store it.
+
+
+// toLowerCase()
+console.log(myName.toLowerCase()) // op - ashwani kumar
+console.log(myName) // op - ashwani Kumar
+
+
+// slice()
+let phone = "Apple";
+phone = phone.slice(0,4);
+console.log(phone); // op - Appl
+// slice takes 2 index, startIndex and endIndex
+// It goes to endIndex but not include that in string
+
+let model = phone.slice(1); // It start from given index and go to end of the string
+console.log(model);
+
+console.log(model.slice(-2)) // It gives 2 elements from end of string
 ```
+### typeof
 ```js
+// typeof : gives the type of variable
+
+// In JS, we have different Data Structures, like : string, number, null etc
+
+let age = 24;
+console.log(typeof age);  // op - number
+
+let myName = "Eager Ashwani";
+console.log(typeof myName); // op - string
+
+
+// convert number to string
+// just add empty string
+let price = 1100;
+price = price + "";
+console.log(typeof price);
+
+
+// convert string to number
+let key = "231";
+key = +key;
+console.log(typeof key);
+
+
+// There is many ways, another is
+
+let userName = "eagerashwani";
+userName = Number(userName);
+console.log(typeof userName);
+
+userName = String(userName);
+console.log(typeof userName);
 ```
 ```js
 ```
