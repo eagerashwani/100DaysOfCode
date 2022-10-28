@@ -81,6 +81,17 @@ Learn Full Stack in just 100 Days
     - [while in Array](#while-in-array)
     - [for of loop](#for-of-loop)
     - [for in loop](#for-in-loop)
+  - [Day 20](#day-20)
+    - [Array Desturing](#array-desturing)
+    - [Objects](#objects)
+    - [Dot vs Bracket](#dot-vs-bracket)
+    - [Object Iterate](#object-iterate)
+    - [Computed Properties](#computed-properties)
+    - [Spread operator in object](#spread-operator-in-object)
+    - [Object Destructuring](#object-destructuring)
+    - [Object inside array](#object-inside-array)
+  - [Day 21](#day-21)
+    - [](#)
   - [Day 30](#day-30)
     - [First React](#first-react)
     - [First React Practice](#first-react-practice)
@@ -2169,22 +2180,263 @@ console.log(newStudents);
 // we use normal for loop and for of loop very much in JS
 // while and for in loop, not that much
 ```
+## Day 20
+### Array Desturing
 ```js
+// arrayDestructuring -- How you can store values of array in variable
+
+const students = ["Ram", "shyam", "Krishna", "balram"];
+
+// let name1 = students[0];
+// let name2 = students[1];
+// console.log(name1);
+// console.log(name2);
+
+let [name1, name2] = students;
+console.log(name1);
+console.log(name2);
+
+// name1, name2 are two different variables, so can play with them
+// students array assign to variables based on their index
+
+
+// If there are more elements in array than variables, 
+// also than variables associated with index get value
+// If there are less elements in array than variables 
+// than after associated elements, other variables shows undefined
+
+// If you want to skip an index
+let [name3, , , name4] = students;
+console.log(name3);
+console.log(name4);
+
+// You want to store, rest of elements in new array
+let [a,b, ...newStudents] = students;
+console.log(a);
+console.log(b);
+console.log(newStudents);
 ```
+### Objects
 ```js
+// Objects 
+// RDT
+// Arrays are good but not sufficient
+// for real world
+// objects stores key value pairs
+// objects don't have indexes
+
+
+// create a object
+
+const person = {
+    name : "Ashwani",
+    age : 24,
+    student : false,
+    movies : [
+        "Forrest Gump",
+        "IronMan",
+        "Avengers Endgame"
+    ]
+};  
+console.log(person);
+
+// accessing 
+
+console.log(person.age);
+console.log(person["movies"]); 
+// movies in "" bcz in objects, keys are stored as string
+// we can use both . notation and bracket notation
+
+
+
+// add new key value pair in object
+
+person["job"] = "Software Engineer";
+person.gender = "Male";
+console.log(person);
+
+
+
 ```
+### Dot vs Bracket
 ```js
+// Difference between dot and bracket
+
+const person = {
+    name : "Ashwani",
+    age : 24,
+    student : false,
+    movies : [
+        "Forrest Gump",
+        "IronMan",
+        "Avengers Endgame"
+    ],
+    "my salary" : 500000
+}; 
+// How can you access a key like this : my salary
+
+console.log(person["my salary"]); 
+// 1st diff : you can't access "my salary via dot notation"
+
+
+// 2nd diff 
+
+const key = "phone";
+// now you want phone as your key in the person
+
+person[key] = "hello@abc.in";
+console.log(person);
 ```
+### Object Iterate
 ```js
+
+
+const person = {
+    name : "Ashwani",
+    age : 24,
+    student : false,
+    movies : [
+        "Forrest Gump",
+        "IronMan",
+        "Avengers Endgame"
+    ],
+    "my salary" : 500000
+}; 
+
+// Iterate objects
+
+// 1st way --> for in loop
+
+for(let key in person){
+   //console.log(key);     // name, age, student, movies, my salary
+   // console.log(person[key]);   // values dega
+   // console.log(person.key); // undefined x3
+   // console.log(key, " : " ,person[key]);  // key value pair
+    console.log(`${key} : ${person[key]}`);  // key value pair
+}
+
+
+// 2nd way - Object.keys
+
+console.log(Object.keys(person));  // op - ['name', 'age', 'student', 'movies', 'my salary']
+
+for(let key of Object.keys(person)){
+    console.log(key, " : " , person[key]);
+}
 ```
+### Computed Properties
 ```js
+
+const key1 = "myKey1";
+const key2 = "myKey2";
+
+const value1 = "myValue1";
+const value2 = "myValue2";
+
+// You have to make object(key : Value) with the values of above variables eg line 24 op
+
+const myObj = {
+    key1 : value1,
+    key2 : value2
+}
+
+console.log(myObj); // op - {key1: 'myValue1', key2: 'myValue2'}
+
+// but we dont want key1 and key2 instead we want mykey1 and mykey2
+// to achieve this
+
+const objNow = {
+    [key1] : value1,
+    [key2] : value2
+}
+console.log(objNow); // op - {myKey1: 'myValue1', myKey2: 'myValue2'}
 ```
+### Spread operator in object
 ```js
+// spread operator in object
+
+const obj1 = {
+    key1 : "value1",
+    key2 : "value2"
+}
+
+const obj2 = {
+    key3 : "value3",
+    key4 : "value4"
+}
+
+const myObj = {...obj1, ...obj2};
+console.log(myObj);
+
+// note : If you add one more key value pair, with same key that already exist in object
+// than the latest one will be taken
+// eg : If we add key1 : "value100" in obj2 than
+// the myObj's key1 is "value100" not value1
+
+// Add new key value pair in myObj like that {...obj1, ...obj2, key23 : "value23"}
+
+const newObj = {..."abc"};
+console.log(newObj); // op - {0: 'a', 1: 'b', 2: 'c'}
+
+// same with array
+
 ```
+### Object Destructuring
 ```js
+// You have to store values of associated keys of object in variables
+
+const team = {
+    plays : "Cricket",
+    teamName : "Chennai",
+    captain : "Dhoni",
+    winner : 5
+}
+
+const var1 = team.plays;
+const var2 = team["teamName"];
+console.log(var1, var2);
+
+// object destructring
+
+const {plays, teamName, ...hereAll} = team;  // goto line 27
+console.log(plays, teamName);
+console.log(hereAll); // op - {captain: 'Dhoni', winner: 5}
+
+// note : names of variable must be same as key of object
+
+// if you want different variables name
+
+const {captain : myCap, winner : wins} = team;
+console.log(myCap, wins);
+
+// now you want only 2 variables and all others in a seprate object
+// const {plays, teamName, ...hereAll} = team;
+// hereAll contain everything as object except all keys before that
+
+
 ```
+### Object inside array
 ```js
+// object inside array
+// very useful, in real world application
+
+const users = [
+    {userId : 1, firstName : "Ashwani", gender : "male"},
+    {userId : 2, firstName : "Kunal", gender : "male"},
+    {userId : 3, firstName : "Saurav", gender : "male"},
+    {userId : 4, firstName : "Alivia", gender : "female"},
+    {userId : 5, firstName : "Parnika", gender : "female"},
+];
+
+console.log(users);
+
+for(let user of users){
+    console.log(user);
+    console.log(user.firstName);
+}
 ```
+## Day 21
+### 
 ```js
 ```
 ```js
