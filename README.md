@@ -48,6 +48,8 @@ Learn Full Stack in just 100 Days
   - [Day 16 - JavaScript](#day-16---javascript)
     - [Comments](#comments)
     - [Variables](#variables)
+    - [Naming Rules](#naming-rules)
+    - [`Let` Keyword](#let-keyword)
   - [Day 30](#day-30)
     - [First React](#first-react)
     - [First React Practice](#first-react-practice)
@@ -1247,9 +1249,66 @@ console.log(firstName)
 // var keyword. use-strict help in that type of problem, and give error if
 // we make that type of mistake.
 ```
+### Naming Rules
 ```js
+// rules for declaring variables
+
+// can't start with number
+// 1man (invalid)
+// man1 (valid)
+
+
+// _ and $ are allowed
+// first_name (valid)
+// _firstName (valid)
+// $firstName (valid)
+// first$name (valid)
+
+
+// can't use spaces
+// first name (invalid)
+
+// convention
+// start with small letter and use camelCase
+
+// my_name -> snake case
+// myName -> camelCase
 ```
+### `Let` Keyword
 ```js
+// let keyword
+// used to declare variables
+
+let myName = "Ashwani";
+myName = "Eager";
+console.log(myName);
+
+// whats the difference b/w var and let keyword
+// 1. Function Scope and Block Scope
+// 2. Redeclare and re-assign
+// 3. Hoisting
+
+// Redeclare
+var fistName = "Ashwani";
+var fistName = "Eager"; // redeclare firstName 
+// you can use redeclaration with var
+//let lastName = "kumar";
+//let lastName = "Ashwani"; // redeclare not allowed here
+// you can't use redeclaration with let
+
+
+// ReAssign
+var myCar = "Tata";
+myCar = "Honda"; // reassign myCar
+// you can use reassignation with var
+
+let myBike = "Bajaj";
+myBike = "Royal Enfield";
+// you can also use reassignation with let
+
+
+// Hoisting and Scopes cover later
+
 ```
 ```js
 ```
