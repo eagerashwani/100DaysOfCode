@@ -70,6 +70,8 @@ Learn Full Stack in just 100 Days
     - [while loop](#while-loop)
     - [for loop](#for-loop)
     - [break and continue](#break-and-continue)
+    - [do while loop](#do-while-loop)
+    - [Array](#array)
   - [Day 30](#day-30)
     - [First React](#first-react)
     - [First React Practice](#first-react-practice)
@@ -1923,9 +1925,53 @@ for(let i=0; i<=10; i++){
     console.log(i); // op - 0 to 10 without 6
 }
 ```
+### do while loop
 ```js
+// break keyword, stops the execution and get outside from the block
+
+for(let i = 0; i<=10; i++){
+    if(i === 7)
+        break;
+    console.log(i);  // op - 0 to 7
+}
+
+
+// continue keyword, bring back to the condition(or skip the continue check)
+
+for(let i=0; i<=10; i++){
+    if(i===6)
+        continue;
+    console.log(i); // op - 0 to 10 without 6
+}
 ```
+### Array
 ```js
+// Array is reference type(means object)
+// Ordered collection of items(means access via index)
+// store any data type in an array
+// Arrays are mutable(it changes the array)
+
+
+let students = ["Raj", "Kunal", "Love", "Ashwani"];
+console.log(students);
+
+let mixed = ["YouTube", 12, true, null, undefined];
+console.log(mixed[3]);
+
+students[2] = "Kirti";
+console.log(typeof students, students);
+
+// students is an object
+// There are many objects in JS
+// How can you know that students is an array
+
+console.log(Array.isArray(students));  // op - true
+
+let obj = {} // object literal
+console.log(typeof obj); //  object
+
+
+
 ```
 ```js
 ```
