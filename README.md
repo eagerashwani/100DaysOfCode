@@ -5161,8 +5161,20 @@ import Header from "./Header";
   }
   ```
 - We can do this, declare variable in App and pass it to Home and show there.
-- But, we have to use redux.
-- 
+- But, we have to use redux. So, we have to declare `value` in new file.
+- Reset App and Home.js
+  ```js
+  const Home = () => {
+  const value = 20;
+  return (
+    <div>
+        <h2>{value}</h2>
+        <button>Increment</button>
+        <button>Decrement</button>
+    </div>
+  )
+  }
+  ```
 
 
 
