@@ -5289,7 +5289,7 @@ import Header from "./Header";
       )
     }
     ```
-- Now, you can access c in the 
+- Now, you can access c, everywhere in our whole application.
 
 
 
