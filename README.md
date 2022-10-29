@@ -168,7 +168,7 @@ Learn Full Stack in just 100 Days
     - [Using Hooks](#using-hooks)
     - [Sharing data between components](#sharing-data-between-components)
   - [Day 33 - Describing the UI](#day-33---describing-the-ui)
-  - [Day 40 - Pizza Project](#day-40---pizza-project)
+  - [Day 40](#day-40)
     - [React Router v5.2.0](#react-router-v520)
     - [React Router v6](#react-router-v6)
     - [404 and redirect](#404-and-redirect)
@@ -4763,7 +4763,7 @@ import Header from "./Header";
 
 
 
-## Day 40 - Pizza Project
+## Day 40 
 ### React Router v5.2.0
 - First install react router in your project
   ```bash
