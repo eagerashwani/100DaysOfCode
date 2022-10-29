@@ -184,6 +184,8 @@ Learn Full Stack in just 100 Days
     - [Interview Question](#interview-question)
   - [Day 43](#day-43)
     - [React Redux](#react-redux)
+    - [Some Terminologies](#some-terminologies)
+    - [Redux Toolkit](#redux-toolkit)
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
     - [Install MongoDb in your system](#install-mongodb-in-your-system)
@@ -5108,12 +5110,59 @@ import Header from "./Header";
 
 ## Day 43
 ### React Redux
--  
+-  What is redux?
+   -  Redux is an open source JavaScript library for managing and centralizing application state.
+- Suppose
+   -  To understand, state is like a variable `don't take it seriously`
+   -  Our App structure looks like this
+      -  <App /> --> <Home /> --> <Post /> 
+      -  Now a variable C = 20, means C's state is 20.
+      -  Now I want to access C in <App />, <Home /> and <Post />, first declare C in <App /> and than pass to <Home /> and than <Post />
+      -  But suppose I declare C in <Post />, Can we still use C in <App />? No, because in react data flow from outer component to inner component.
+         -  In real life example, we have an api of Users in <Post />.
+      - To access api data in <App /> or <Home / >, we use redux.
+      - Lets create a new area(file) named `store` and declare C inside it.
+      - Now, I can access C in <App />, <Home /> and <Post />
+      - That is redux.
 
+### Some Terminologies
+- Store : A seprate place where our data is stored
+- Reducer : With the help of reducer, we can change the state of our data.
+- Action : Its like a trigger of gun, and reducer is the gun, when the action is called reducer activates.
+- State : C = 20, C's state is 20
 
+### Redux Toolkit
+- First install the Redux Toolkit and react-redux
+  - `npm i @reduxjs/toolkit react-redux`
 
-
-
+- Now Create a component
+- App.js
+  ```js
+  function App() {
+  const value = 20;
+  return (
+    <>
+      <Home value = {value} />
+    </>
+    )
+  }
+  ```
+- Home.js
+  ```js
+  const Home = ({value}) => {
+  
+  return (
+    <div>
+        <h2>{value}</h2>
+        <button>Increment</button>
+        <button>Decrement</button>
+    </div>
+  )
+  }
+  ```
+- We can do this, declare variable in App and pass it to Home and show there.
+- But, we have to use redux.
+- 
 
 
 
