@@ -4160,7 +4160,7 @@ person1.fullName = "Elizabeth Olsen";
 console.log(person1);
 ```
 ### Static Methods
-```js=
+```js
 // static methods and properties
 
 // there are methods you have no need to create object to call them
