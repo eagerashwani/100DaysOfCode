@@ -5175,8 +5175,53 @@ import Header from "./Header";
   )
   }
   ```
+- Lets create a new file `store.js`
+  ```js
+  import { configureStore } from "@reduxjs/toolkit";
 
+  const store = configureStore({
+      // reducer takes multiple reducers
+      reducer: {}
+  });
 
+  export default store;
+
+  ```
+- Lets create a new file `Reducers.js`
+- We can create reducers by two ways 
+  - createReducers
+  - createSlice
+- Reducers.js
+  ```js
+  import { createReducer } from "@reduxjs/toolkit";
+
+  const initialState = {
+      c:0,
+  }
+
+  export const customReducer = createReducer( initialState, {
+      // all reducers case
+      increment: (state, action ) => {
+          state.c += 1;
+
+      },
+
+      incrementByValue: (state, action) => {
+          state.c += action.payload;
+      },
+
+      decrement : (state, action) => {
+          state.c -= 1;
+      }
+  }); 
+  ```
+  - createReducer take two values one is initial state and other is all reducers.
+  - Lets import our customReducer in store.js
+    ```js
+     reducer: {
+        custom : customReducer
+    }
+    ```
 
 
 
