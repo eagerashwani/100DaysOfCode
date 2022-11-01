@@ -4494,6 +4494,8 @@ console.log(myhead.innerHTML);
 // Go through the DOM tree image below
 
 ```
+<p align="justify"><img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/Dom_tree.png?raw=true" height=200px></p>
+
 ### Traversing DOM
 ```js
 ```
