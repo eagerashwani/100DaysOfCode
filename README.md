@@ -140,8 +140,19 @@ Learn Full Stack in just 100 Days
     - [Inheritance](#inheritance)
     - [Getters and setters](#getters-and-setters)
     - [Static Methods](#static-methods)
-  - [Day 25](#day-25)
+  - [Day 25 - JS DOM](#day-25---js-dom)
+    - [Async vs Defer](#async-vs-defer)
     - [DOM](#dom)
+    - [getElementById](#getelementbyid)
+    - [querySelector](#queryselector)
+    - [textContent and innerHTML](#textcontent-and-innerhtml)
+    - [change style](#change-style)
+    - [get and set attribute](#get-and-set-attribute)
+    - [getElementsByClassName](#getelementsbyclassname)
+    - [iterate Elements](#iterate-elements)
+    - [innerHTML](#innerhtml)
+    - [DOM Tree](#dom-tree)
+    - [Traversing DOM](#traversing-dom)
   - [Day 30](#day-30)
     - [First React](#first-react)
     - [First React Practice](#first-react-practice)
@@ -4205,9 +4216,287 @@ const info = Person.personInfo();
 console.log(info);
 console.log(Person.desc);
 ```
-## Day 25
-### DOM
+## Day 25 - JS DOM
+### Async vs Defer
+```js
+// How to link JS file to HTML file
 
+// one way
+// <script src="./JS DOM/1_AsyncVsDefer.js"></script> in head tag in our HTML document
+// Disadvantage:
+// when the HTML document is loaded in the browser, it start reading the HTML file
+// and when Browser get .js file, than the further reading of HTML document stops 
+// and browser start parsing(read line by line) the js file, after loading the js file, 
+// browser start executing the script and got div header and other tags but
+// Browser have no idea about them, so execution is stopped and Error is occurred.
+// Thats why this way is not used.
+
+
+// second way
+// <script src="./JS DOM/1_AsyncVsDefer.js"></script> </body>
+// add script just before the closing body tag.
+// Browser start executing the HTML document line by line
+// and when it reaches the end of the body end, it get script
+// than browser loads the js and start executing it,
+// this time browser knows about the div, header etc.
+// but still its not a good way. Why?
+// First HTML document parsing, it takes time.
+// Than JS Load, it also takes some time.
+// Than JS Executes, it takes some time.
+
+
+
+// third way
+// <script src="./JS DOM/1_AsyncVsDefer.js" async></script> in the head tag.
+// First browser start parsing the HTML document and when it get the script
+// along with the parsing, browser start loading the JS 
+// when JS is loaded and start executing at that time if any HTML document is parsing
+// than it stopped. It may cause problems that's why we don't this way.
+
+
+
+// fourth way
+// <script src="./JS DOM/1_AsyncVsDefer.js" defer></script> in the head tag.
+// First browser start parsing the HTML document and when it get the script
+// along with the parsing, browser start loading the JS 
+// When JS is loaded than browser still continue parsing the HTML document
+// when the HTML document is parsed completely than browser start executing the JS.
+// It takes less time BECAUSE when HTML document is parsing at that time 
+// JS is start loading, and when the HTML parsing is complete
+// Browser start executing the script because it's already loaded.
+// This is the best way.
+```
+### DOM
+```js
+// DOM - Document object model
+
+// Browser start reading the HTML document line by line
+// First get HTML tag
+// than Two tags Head and Body
+// In the head -> title and meta is present
+// In the body -> Header, section, aside, footer etc.
+
+// Now browser makes an Object and we call that object a document.
+// Browser add this document in the window object.
+// Now document become a property of the window object.
+
+// In the browser console just write window and hit enter.
+// you got the window object and document object as a property of the window object.
+// You can do anything with this document object
+// document object is the main reason we can see our webpages
+
+console.log(window.document); // human readable representation
+
+console.dir(window.document); // Browser format
+
+// we don't need to give window because window is already given by browser
+
+console.dir(document);
+```
+
+### getElementById
+```js
+// I want to select some elements from my website
+// And you know we have document object
+
+// select elements by getElementById
+
+// Our HTML looks like this
+// <h2 id="heading">Heading</h2>
+
+console.log(document.getElementById('heading')); // this gives us an Object in human readable format
+console.dir(typeof document.getElementById('heading')); // this gives us an Object
+
+
+// We can also store above code in a variable
+const heading = document.getElementById('heading');
+console.log(heading)
+```
+
+### querySelector
+```js
+// select element using query selector
+
+// Via getElementById we can only able to select elements that has id attribute
+
+// With the help of the querySelector we can access the element same as we access in CSS(like classes and id)
+
+const selectElement = document.querySelector('#heading');
+console.log(selectElement);
+
+// As you know that, there is unique id attribute in HTML document.
+// but what about class attribute
+
+
+// There are several classes in the document
+// Suppose we have a navbar with 3 link in ul list
+const navItem = document.querySelector('.nav-item');
+console.log(navItem);
+// It returns the first element that matches the .nav-item and stop further processing
+
+
+// If you want all elements that have .nav-item than use querySelectorAll instead
+const navItems = document.querySelector('.nav-item');
+console.log(navItems); // It returns a NodeList with all 3 li elements, it kind of array but not exactly array
+
+
+```
+### textContent and innerHTML
+```js
+// textContent and InnerText
+
+// I want to select a text and change that.
+
+const heading = document.getElementById('heading');
+console.log(heading.textContent); // textContent returns the text
+
+// Now I want to change the text
+// heading.textContent = 'This is changed by textContent';
+// console.log(heading.textContent); 
+
+// <h2 id="heading">My Heading <span style="display: none;">Hello Span</span></h2>
+// If we comment out line 9 and 10
+// In browser it only shows My Heading but in console it shows `My Heading Hello Span` complete text
+
+// To tackle this we have InnerText
+console.log(heading.innerText); // It prints My Heading in console
+```
+### change style
+```js
+// change the style of the element
+
+// `My Heading` is in Black color
+const heading = document.querySelector('#heading');
+heading.style.color = 'blue';
+
+// properties that has - in it like background-color have some issues
+heading.style.backgroundColor = 'black'
+// instead of - we use Capital letter of second word without space(CamelCase)
+
+```
+### get and set attribute
+```js
+// get and set attribute
+
+const link = document.querySelector('a');
+console.log(link.getAttribute('href')); // #home (Human readable format)
+
+// I dont want # 
+console.log(link.getAttribute('href').slice(1));
+
+// Lets set the attribute
+link.setAttribute('href', 'https://github.com');
+console.log(link.getAttribute('href'));
+```
+### getElementsByClassName
+```js
+// get all elements by using get Element by class name
+// get all elements by using querySelectorAll
+
+const navItems = document.getElementsByClassName('nav-item');
+console.log(navItems); // It returns a HTMLCollection (Its also an array like object, we use index and iterate over it)
+console.log(navItems[0])
+console.log(typeof navItems)
+
+
+const navAll = document.querySelectorAll('.nav-item');
+console.log(navAll); // It returns a NodeList (Its also an array like object, we use index and iterate)
+console.log(navAll[1]);
+
+```
+### iterate Elements
+```js
+// I want to change the text color to white and background color to black
+
+// we also have a method named getElementsByTagName
+const navItems = document.getElementsByTagName('a');
+console.log(navItems) // It also returns a HTMLCollection
+
+// loop
+// simple for loop
+// for of loop
+// forEach 
+
+// we can't use forEach to iteration through HTMLCollection
+
+for(let i = 0; i < navItems.length; i++){
+    const navItem = navItems[i];
+    navItem.style.backgroundColor = 'black';
+    navItem.style.color = 'white';
+}
+
+for(let item of navItems){
+    item.style.backgroundColor = 'orange';
+    item.style.color = 'white';
+}
+
+// if you want to use foreach than first convert HTMLCollection in array
+// instead of const in navItems use let
+
+// navItems = Array.from(navItems);
+// navItems.forEach(navItem => {
+//     navItem.style.backgroundColor = 'purple';
+//     navItem.style.color = 'white';
+// })
+
+// NodeList
+// In nodeList you can use all 3 loops
+// simple for loop
+// for of loop
+// for each
+// you can also change NodeList into an array
+// same as above
+```
+### innerHTML
+```js
+// innerHTML
+
+{/* <header>
+<h2 id="heading">My Heading <span style="display: none;">Hello Span</span></h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, alias.</p>
+</header> */}
+
+// everything between header tag is a innerHTML.
+// all child tag of a parent tag is innerHTML.
+
+const myhead = document.querySelector('.mainhead')
+myhead.innerHTML = '<h1> HTML changed by innerHTML</h1>'
+
+// if you want to add more innerHTML
+myhead.innerHTML += '<p class= \"btn\">I am para</p>'
+console.log(myhead.innerHTML);
+
+// \" means " 
+
+```
+### DOM Tree
+```html
+<html>
+<head>
+    <title>DOM Tree</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello DOM </h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, quae.</p>
+    </div>
+</body>
+</html> 
+```
+```js
+// Lets look how browser read the html file and make document model
+
+
+// Browser knows everything going in Document
+// On Top level Document is present, all HTML going to add in Document, sometimes we call this Document as Root Node.
+// HTML is root element(child node of Document) 
+// Head is child node of HTML and so on.
+// Go through the DOM tree image below
+
+```
+### Traversing DOM
+```js
+```
 
 ## Day 30
 ### First React
@@ -4456,7 +4745,6 @@ document.getElementById("root").append(JSON.stringify(page))
                         <li>About</li>
                         <li>Contact</li>
                     </ul>
-
                 </nav>
             </header>
         );
