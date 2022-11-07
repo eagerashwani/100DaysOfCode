@@ -2500,7 +2500,24 @@ h1{
       font-size: 100%;
     }
    ```
-   - `p` takes 100% of 10px.
+     - `p` takes 100% of 10px.
+   - We use `%` mostly to give width of an element and sometimes margins.
+   - ```css
+        div {
+      font-size: 20px;
+      border: 2px solid red;
+      /* half the width */
+      width: 50%;
+      }
+      p {
+        font-size: 100%;
+        width: 50%;
+        /* to center use auto */
+        margin: 10px auto;
+        background-color: aqua;
+        border: 1px solid green;
+      }
+    ```
 
 ## Day 16 - JavaScript
 ### Comments 

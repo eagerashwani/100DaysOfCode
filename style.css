@@ -1,6 +1,14 @@
 div {
-  font-size: 10px;
+  font-size: 20px;
+  border: 2px solid red;
+  /* half the width */
+  width: 50%;
 }
 p {
-  font-size: 300%;
+  font-size: 100%;
+  width: 50%;
+  /* to center use auto */
+  margin: 10px auto;
+  background-color: aqua;
+  border: 1px solid green;
 }
