@@ -9,6 +9,8 @@ Learn Full Stack in just 100 Days
     - [Merge branches](#merge-branches)
     - [gitignore](#gitignore)
     - [Github](#github)
+  - [Day 2](#day-2)
+    - [Lets start HTML](#lets-start-html)
   - [Day 4](#day-4)
     - [Let's start CSS.](#lets-start-css)
     - [Versioning of CSS](#versioning-of-css)
@@ -316,10 +318,25 @@ Learn Full Stack in just 100 Days
     - <p align="justify"><img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/git23.png?raw=true" width=400px height=200px></p>
 
 
+## Day 2
+### Lets start HTML
+- What is HTML?
+  -  Hyper Text Markup Lang (Everyone knows)
+        -It is used to create web pages.
 
+- What is CSS?
+  - Cascading style sheets
+      - Used to style the HTML pages
 
+  - Every website in the world use HTML and CSS.
+  - If you want to see a website without CSS, use web developer chrome extension and disable all styles.
 
-
+- `90% developers use VSCode Text Editor for coding.`
+- Download and install VSCode (Everyone knows, how to install)
+  - If you want to open VSCode in your folder, 
+    - open terminal in the folder
+    - write `code .` and hit enter
+    - 
 ## Day 4
 ### Let's start CSS.
 - CSS means Cascading Style Sheets.
