@@ -51,6 +51,7 @@ Learn Full Stack in just 100 Days
       - [Input fields](#input-fields)
       - [First child and first of type](#first-child-and-first-of-type)
       - [Last child and last of type](#last-child-and-last-of-type)
+  - [Day 10 - CSS Units](#day-10---css-units)
   - [Day 16 - JavaScript](#day-16---javascript)
     - [Comments](#comments)
     - [Variables](#variables)
@@ -2453,6 +2454,12 @@ h1{
   }
   ```
 
+## Day 10 - CSS Units
+- There are 2 types of CSS units
+  - Absolute units --> They are fixed units(never changed)
+  - Relative units --> They change according to view.
+  - `px` is a absolute unit.
+  - 
 ## Day 16 - JavaScript
 ### Comments 
 ```js
