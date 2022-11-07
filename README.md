@@ -336,7 +336,17 @@ Learn Full Stack in just 100 Days
   - If you want to open VSCode in your folder, 
     - open terminal in the folder
     - write `code .` and hit enter
-    - 
+
+- In HTML, we use tags.
+  - Heading
+  - Simple text (paragraph)
+  - Image
+  - //// Line ////
+  - Website Links
+  - Table
+  - Login/Signup Form
+
+
 ## Day 4
 ### Let's start CSS.
 - CSS means Cascading Style Sheets.
