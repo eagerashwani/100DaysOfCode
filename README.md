@@ -2518,7 +2518,38 @@ h1{
         border: 1px solid green;
       }
     ```
+- `rem`
+  - rem takes the root element size, 1rem = 16px.
+  - By default, root element is html tag.
+  - himHtml
+   ```html
+    <div class="box1">
+      <p class="text-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse dolores sequi aspernatur
+        aperiam, consequatur nisi ea repellat perspiciatis itaque eius non repellendus, distinctio ut exercitationem.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, nemo.</p>
+    </div>
+   ```
+   - himCSS
+    ```css
+    html{
+    font-size: 10px;
+    /* most developer prefer 62.5% it is also 10px */
+    /* most user changes there browser fontsize, px not work in that case */
+    /* below font-size override the above font-size */
+    font-size: 62.5%;
+    }
 
+    .box1{
+        font-size: 2rem;
+    }
+
+    .text-content{
+        font-size: 3rem;
+        margin: .5rem;
+        padding: 4.5rem;
+        border: 1rem solid red;
+    }
+    ```
 ## Day 16 - JavaScript
 ### Comments 
 ```js

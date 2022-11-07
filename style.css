@@ -1,14 +1,17 @@
-div {
-  font-size: 20px;
-  border: 2px solid red;
-  /* half the width */
-  width: 50%;
+html{
+    font-size: 10px;
+    /* most developer prefer 62.5% it is also 10px */
+    /* most user changes there browser fontsize, px not work in that case */
+    font-size: 62.5%;
 }
-p {
-  font-size: 100%;
-  width: 50%;
-  /* to center use auto */
-  margin: 10px auto;
-  background-color: aqua;
-  border: 1px solid green;
+
+.box1{
+    font-size: 2rem;
+}
+
+.text-content{
+    font-size: 3rem;
+    margin: .5rem;
+    padding: 4.5rem;
+    border: 1rem solid red;
 }
