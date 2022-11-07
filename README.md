@@ -5051,10 +5051,10 @@ import Header from "./Header";
   - via npx
     - You have to do nothing
     - `npx create-react-app appname`
-
-
-
-
+- To run react app
+  - `npm start`
+- Only index.html, index.js, App.js, App.css are important files.
+- noscript in index.html shows message if javascript is not enable.
 
 
 
