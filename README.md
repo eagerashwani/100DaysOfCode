@@ -378,10 +378,10 @@ Learn Full Stack in just 100 Days
 
 ### Headings are important.
 
-- <h1> to <h6>
-- <h1> defines the most important heading. <h6> defines the least important heading.
-- <p> : paragraph tag.
-- <br> : break tag (new line)
+- `<h1> to <h6>`
+- `<h1>` defines the most important heading. `<h6>` defines the least important heading.
+- `<p>` : paragraph tag.
+- `<br>` : break tag (new line)
 
 
 ## Day 3
@@ -1462,7 +1462,6 @@ client-side scripts</td>
 <td>Defines a parameter for an object</td>
 </tr>
 </table><br>
-<p><b>WHAT ABOUT YOU?</b></p>
 
 ## Day 4
 ### Let's start CSS.
