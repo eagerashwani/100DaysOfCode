@@ -1,9 +1,5 @@
 .box1{
-    border: 4px solid green;
-    width: 50%;
-}
-h1{
-    border: 1px solid red;
-    /* width: 50%; */
-    width: 70vw;
+    background-color: blanchedalmond;
+    /* height: 100px; */
+    height: 100vh;
 }
