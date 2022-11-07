@@ -2459,7 +2459,7 @@ h1{
   - Absolute units --> They are fixed units(never changed)
   - Relative units --> They change according to view.
   - `px` is a absolute unit.
-  - 
+  - In Modern websites, we use Relative units
 ## Day 16 - JavaScript
 ### Comments 
 ```js
