@@ -1,12 +1,9 @@
-/* font-size with em work differently than other properties */
-/* em looks for the parent like 1st h1 parent is body, and 2nd h1 parent is box1 */
-h1{
-    font-size: 2em;
-    /* first it looks for own element font-size*/
-    /* than use this default size, and apply em accordingly */
-    border: 2em solid black;
-}
-
 .box1{
-    font-size: 20px;
+    border: 4px solid green;
+    width: 50%;
+}
+h1{
+    border: 1px solid red;
+    /* width: 50%; */
+    width: 70vw;
 }

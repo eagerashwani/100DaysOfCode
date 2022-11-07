@@ -2584,6 +2584,58 @@ h1{
 ### Viewport Units
 - What is viewport?
   - Area that is visible is viewport, for height `vh` and width `vw`
+- Many people confuse between viewport(vw) and %.
+  - % care about their parent
+  - vw care about the viewport
+- himCSS
+  ```css
+  .box1{
+    border: 4px solid green;
+    width: 50%;
+  }
+  h1{
+      border: 1px solid red;
+      /* width: 50%; */
+      width: 70vw;
+  }
+  ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Day 16 - JavaScript
 ### Comments 
 ```js
