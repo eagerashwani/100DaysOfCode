@@ -51,7 +51,9 @@ Learn Full Stack in just 100 Days
       - [Input fields](#input-fields)
       - [First child and first of type](#first-child-and-first-of-type)
       - [Last child and last of type](#last-child-and-last-of-type)
-  - [Day 10 - CSS Units](#day-10---css-units)
+  - [Day 10](#day-10)
+    - [CSS Units](#css-units)
+    - [Absi](#absi)
   - [Day 16 - JavaScript](#day-16---javascript)
     - [Comments](#comments)
     - [Variables](#variables)
@@ -2454,12 +2456,15 @@ h1{
   }
   ```
 
-## Day 10 - CSS Units
+## Day 10 
+### CSS Units
 - There are 2 types of CSS units
   - Absolute units --> They are fixed units(never changed)
   - Relative units --> They change according to view.
-  - `px` is a absolute unit.
-  - In Modern websites, we use Relative units
+### Absolute unit
+- `px` is a absolute unit.
+  - In Modern websites, we use Relative units.
+  - By default `p` font size is 16px.
 ## Day 16 - JavaScript
 ### Comments 
 ```js
