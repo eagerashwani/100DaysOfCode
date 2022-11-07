@@ -1,7 +1,6 @@
-p:last-child{
-    color: green;
+div {
+  font-size: 10px;
 }
-
-p:last-of-type{
-    color: red;
+p {
+  font-size: 300%;
 }

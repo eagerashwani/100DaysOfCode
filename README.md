@@ -53,7 +53,8 @@ Learn Full Stack in just 100 Days
       - [Last child and last of type](#last-child-and-last-of-type)
   - [Day 10](#day-10)
     - [CSS Units](#css-units)
-    - [Absi](#absi)
+    - [Absolute unit](#absolute-unit)
+    - [Relative units](#relative-units)
   - [Day 16 - JavaScript](#day-16---javascript)
     - [Comments](#comments)
     - [Variables](#variables)
@@ -2465,6 +2466,42 @@ h1{
 - `px` is a absolute unit.
   - In Modern websites, we use Relative units.
   - By default `p` font size is 16px.
+- `inch`
+  - 1 inch = 96px.
+  - ```css
+      font-size: 1in;
+     ```
+- `cm`
+  - 1in = 2.54cm
+  - ```css
+      font-size: 2.54cm;
+     ```
+- `points`
+  - 1px = 0.75pt.
+  - 16px = 12pt.
+  - ```css
+      font-size: 12pt;
+     ```
+### Relative units
+- `%`
+  - Always looks for the parent size.
+  - himHTML
+   ```html
+     <div>
+      <p>Hello there</p>
+    </div>
+   ```
+   - himCSS
+   ```css
+    div {
+      font-size: 10px;
+    }
+    p {
+      font-size: 100%;
+    }
+   ```
+   - `p` takes 100% of 10px.
+
 ## Day 16 - JavaScript
 ### Comments 
 ```js
