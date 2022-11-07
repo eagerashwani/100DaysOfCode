@@ -11,6 +11,7 @@ Learn Full Stack in just 100 Days
     - [Github](#github)
   - [Day 2](#day-2)
     - [Lets start HTML](#lets-start-html)
+    - [HTML structure](#html-structure)
   - [Day 4](#day-4)
     - [Let's start CSS.](#lets-start-css)
     - [Versioning of CSS](#versioning-of-css)
@@ -346,6 +347,22 @@ Learn Full Stack in just 100 Days
   - Table
   - Login/Signup Form
 
+- HTML tag looks like
+  - <openTag> Content </closeTag>
+  - eg: <html> Something here </html>
+
+- Note: In Html, we also have self-closing tags.
+
+### HTML structure
+```html
+<!DOCTYPE html>
+<html>
+     <head></head>
+     <body></body>
+</html>
+```
+- <!DOCTYPE html> means what type of document it is.
+- <!DOCTYPE> declaration is NOT case sensitive.
 
 ## Day 4
 ### Let's start CSS.
