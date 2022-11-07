@@ -55,6 +55,7 @@ Learn Full Stack in just 100 Days
     - [CSS Units](#css-units)
     - [Absolute unit](#absolute-unit)
     - [Relative units](#relative-units)
+    - [Viewport Units](#viewport-units)
   - [Day 16 - JavaScript](#day-16---javascript)
     - [Comments](#comments)
     - [Variables](#variables)
@@ -2550,6 +2551,39 @@ h1{
         border: 1rem solid red;
     }
     ```
+- `em`
+  - himHTML
+  ```html
+  <body>
+    <h1>this is main heading</h1>
+    <div class="box1">
+      <h1>inside box 1 heading</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil vitae non voluptatum maxime. Placeat itaque distinctio eligendi nihil, autem dolorem!</p>
+    </div>
+  </body>
+  ```
+  - himCSS
+  ```css
+  /* font-size with em work differently than other properties */
+  /* em looks for the parent like 1st h1 parent is body, and 2nd h1 parent is box1 */
+  h1{
+      font-size: 2em;
+      /* first it looks for own element font-size*/
+      /* than use this default size, and apply em accordingly */
+      border: 2em solid black;
+  }
+
+  .box1{
+      font-size: 20px;
+  }
+  ```
+- rem vs em vs px
+  - Which unit is best for which element. It's my personal preference.
+  - for `font-size` use `rem` (It help make responsive website)
+  - for `margin` and `padding` use `em`.
+### Viewport Units
+- What is viewport?
+  - Area that is visible is viewport, for height `vh` and width `vw`
 ## Day 16 - JavaScript
 ### Comments 
 ```js

@@ -1,17 +1,12 @@
-html{
-    font-size: 10px;
-    /* most developer prefer 62.5% it is also 10px */
-    /* most user changes there browser fontsize, px not work in that case */
-    font-size: 62.5%;
+/* font-size with em work differently than other properties */
+/* em looks for the parent like 1st h1 parent is body, and 2nd h1 parent is box1 */
+h1{
+    font-size: 2em;
+    /* first it looks for own element font-size*/
+    /* than use this default size, and apply em accordingly */
+    border: 2em solid black;
 }
 
 .box1{
-    font-size: 2rem;
-}
-
-.text-content{
-    font-size: 3rem;
-    margin: .5rem;
-    padding: 4.5rem;
-    border: 1rem solid red;
+    font-size: 20px;
 }
