@@ -178,7 +178,7 @@ Learn Full Stack in just 100 Days
     - [Updating the screen](#updating-the-screen)
     - [Using Hooks](#using-hooks)
     - [Sharing data between components](#sharing-data-between-components)
-  - [Day 33 - Describing the UI](#day-33---describing-the-ui)
+  - [Day 33 - React Again](#day-33---react-again)
   - [Day 40](#day-40)
     - [React Router v5.2.0](#react-router-v520)
     - [React Router v6](#react-router-v6)
@@ -5037,8 +5037,20 @@ import Header from "./Header";
         );
      }
     ``` 
-## Day 33 - Describing the UI
-- 
+## Day 33 - React Again
+- React is a library not a framework.
+- In library we need to add other packages like react-router-dom, etc.
+- Component based, we can use same component over and over again.
+- SPA, UI change according to data, website never reloads like youtube, gmail.
+- Two ways to create react app
+  - via global cli
+    - You have to install react in your system
+    - To create app
+      - `create-react-app appname`
+      - appname in small letters only.
+  - via npx
+    - You have to do nothing
+    - `npx create-react-app appname`
 
 
 
