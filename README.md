@@ -12,6 +12,7 @@ Learn Full Stack in just 100 Days
   - [Day 2](#day-2)
     - [Lets start HTML](#lets-start-html)
     - [HTML structure](#html-structure)
+    - [Headings are important.](#headings-are-important)
   - [Day 4](#day-4)
     - [Let's start CSS.](#lets-start-css)
     - [Versioning of CSS](#versioning-of-css)
@@ -363,6 +364,21 @@ Learn Full Stack in just 100 Days
 ```
 - <!DOCTYPE html> means what type of document it is.
 - <!DOCTYPE> declaration is NOT case sensitive.
+
+- Head Tag : Inside Head tag, we provide information about the metadata, title, linking the script(js file) and style(css file).
+
+- Body Tag : Inside Body tag, we provide the main content like paragraph, heading etc.
+
+`Shortcut:`
+- Create blank html file.
+- Write ! and hit tab/enter.
+- VSCode automatically write boiler plate of HTML code for you.
+
+### Headings are important.
+
+- <h1> to <h6>
+- <h1> defines the most important heading. <h6> defines the least important heading.
+
 
 ## Day 4
 ### Let's start CSS.
