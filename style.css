@@ -1,5 +1,28 @@
-.box1{
-    background-color: blanchedalmond;
-    /* height: 100px; */
-    height: 100vh;
+.box-wrapper{
+    border: 4px solid black;
+    display: flex;
+}
+
+.box{
+    border: 2px solid gray;
+}
+
+.box-1{
+    background-color: lightblue;
+}
+
+.box-2{
+    background-color: lightseagreen
+}
+
+.box-3{
+    background-color: lightcoral;
+}
+
+.box-4{
+    background-color: lightslategrey;
+}
+
+.box-5{
+    background-color: lightsteelblue;
 }

@@ -56,6 +56,9 @@ Learn Full Stack in just 100 Days
     - [Absolute unit](#absolute-unit)
     - [Relative units](#relative-units)
     - [Viewport Units](#viewport-units)
+  - [Day 11](#day-11)
+    - [Flexbox](#flexbox)
+    - [Some Terminologies](#some-terminologies)
   - [Day 16 - JavaScript](#day-16---javascript)
     - [Comments](#comments)
     - [Variables](#variables)
@@ -206,7 +209,7 @@ Learn Full Stack in just 100 Days
     - [Interview Question](#interview-question)
   - [Day 43](#day-43)
     - [React Redux](#react-redux)
-    - [Some Terminologies](#some-terminologies)
+    - [Some Terminologies](#some-terminologies-1)
     - [Redux Toolkit](#redux-toolkit)
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
@@ -2652,8 +2655,79 @@ h1{
 - vmin and vmax(confusing and not used very much)
 
 
+## Day 11
+### Flexbox
+- himHTML
+  ```html
+    <div class="box-wrapper">
+      <div class="box box-1">
+        <h1>Box 1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad optio, temporibus eum nostrum placeat quae pariatur
+          illum eligendi dolorem adipisci.</p>
+      </div>
+      <div class="box box-2">
+        <h1>Box 2</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad optio, temporibus eum nostrum placeat quae pariatur
+          illum eligendi dolorem adipisci.</p>
+      </div>
+      <div class="box box-3">
+        <h1>Box 3</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad optio, temporibus eum nostrum placeat quae pariatur
+          illum eligendi dolorem adipisci.</p>
+      </div>
+      <div class="box box-4">
+        <h1>Box 4</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad optio, temporibus eum nostrum placeat quae pariatur
+          illum eligendi dolorem adipisci.</p>
+      </div>
+      <div class="box box-5">
+        <h1>Box 5</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad optio, temporibus eum nostrum placeat quae pariatur
+          illum eligendi dolorem adipisci.</p>
+      </div>
+    </div>
+  ```
+- himCSS
+  ```css
+    .box-wrapper{
+      border: 4px solid black;
+    }
 
+    .box{
+        border: 2px solid gray;
+    }
 
+    .box-1{
+        background-color: lightblue;
+    }
+
+    .box-2{
+        background-color: lightseagreen
+    }
+
+    .box-3{
+        background-color: lightcoral;
+    }
+
+    .box-4{
+        background-color: lightslategrey;
+    }
+
+    .box-5{
+        background-color: lightsteelblue;
+    }
+  ```
+
+- There are two things in flexbox, 
+  - `flex container` eg: (.box-wrapper)
+  - `flex items` eg: (.box-1, .box-2, .box-3, .box-4, .box-5)
+- add `display:flex` in .box-wrapper
+  - It align the items from left to right
+- flexbox takes width according to their requirement
+  - If we remove p tag, than items takes width as their requirement but flext container takes all width.
+  
+### Some Terminologies
+- <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/flexboxarch.png?raw=true>
 
 
 
