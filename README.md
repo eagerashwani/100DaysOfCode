@@ -64,6 +64,8 @@ Learn Full Stack in just 100 Days
     - [justify-content](#justify-content)
     - [align-items](#align-items)
     - [align-content](#align-content)
+- [Day 16 - JavaScript](#day-16---javascript)
+    - [Comments](#comments)
     - [Variables](#variables)
     - [Naming Rules](#naming-rules)
     - [`Let` Keyword](#let-keyword)
@@ -2776,7 +2778,8 @@ h1{
 ### align-content
 - Its flex container property.
 - When we have more than one row, like in flex-wrap, we use align-content.
-- ```css
+- It work across Cross axis.
+  ```css
   .box-wrapper{
       border: 4px solid black;
       display: flex;
@@ -2793,6 +2796,7 @@ h1{
   ```
   - Output is looks like this:
     - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/align-content1.png?raw=true"> 
+- <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/align-content2.png?raw=true"> 
 
 
 
@@ -2821,7 +2825,8 @@ h1{
 
 
 
-## Day 16 - JavaScript
+
+# Day 16 - JavaScript
 ### Comments 
 ```js
 // console.log() - Is used to print, what inside the ()
