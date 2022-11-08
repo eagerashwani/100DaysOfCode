@@ -60,6 +60,7 @@ Learn Full Stack in just 100 Days
     - [Flexbox](#flexbox)
     - [Flexbox Architecture](#flexbox-architecture)
     - [flex-direction](#flex-direction)
+    - [flex-wrap](#flex-wrap)
   - [Day 16 - JavaScript](#day-16---javascript)
     - [Comments](#comments)
     - [Variables](#variables)
@@ -2741,7 +2742,19 @@ h1{
 - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/flexdir1.png?raw=true">
 - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/flexdir2.png?raw=true">
 
-
+### flex-wrap
+- As you know, flex items takes width according to their requirement.
+- It's flex container property.
+- Suppose I want to give width to my all box should be 500px width. so in .box, I provide `width:500px` 
+- But still nothing changes. To apply 500px width to each item, we have to give `flex-wrap: wrap` to flex-container
+- Than it takes 500px width for each item. 
+- In our example, box 1, box 2 and box 3 in first row and in second row box 4 and box 5
+- If there is less width available for an item than it go to next row.
+- `flex-wrap: wrap-reverse` changes the cross axis from bottom to top.
+- box 4, box 5 in 1st row
+- box 1, box 2, box 3 in second row
+- If we give height to the flex container than flex items takes all the height.
+- If also give individual height to every box.
 
 
 
