@@ -1,6 +1,7 @@
 .box-wrapper{
     border: 4px solid black;
     display: flex;
+    flex-direction: row;
 }
 
 .box{

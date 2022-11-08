@@ -58,7 +58,8 @@ Learn Full Stack in just 100 Days
     - [Viewport Units](#viewport-units)
   - [Day 11](#day-11)
     - [Flexbox](#flexbox)
-    - [Some Terminologies](#some-terminologies)
+    - [Flexbox Architecture](#flexbox-architecture)
+    - [flex-direction](#flex-direction)
   - [Day 16 - JavaScript](#day-16---javascript)
     - [Comments](#comments)
     - [Variables](#variables)
@@ -209,7 +210,7 @@ Learn Full Stack in just 100 Days
     - [Interview Question](#interview-question)
   - [Day 43](#day-43)
     - [React Redux](#react-redux)
-    - [Some Terminologies](#some-terminologies-1)
+    - [Some Terminologies](#some-terminologies)
     - [Redux Toolkit](#redux-toolkit)
   - [Day 50 - MongoDB](#day-50---mongodb)
     - [MongoDB Document](#mongodb-document)
@@ -2726,8 +2727,20 @@ h1{
 - flexbox takes width according to their requirement
   - If we remove p tag, than items takes width as their requirement but flext container takes all width.
   
-### Some Terminologies
+### Flexbox Architecture
 - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/flexboxarch.png?raw=true">
+- Main Axis(Left to right) and Cross Axis(Top to bottom) are very important.
+
+### flex-direction
+- This property allows us to set the direction and orientation in which our flex-items should be distributed inside the flex-container.
+- It's flex container property.
+- By default, flex-direction is `row`, main axis from left to right(-----> , main axis)
+- `flex-direction: row-reverse` changes the main axis from right to left(<---- , Main axis)
+- `flex-direction: column` main axis from top to bottom
+- `flex-direction: column-reverse` main axis from bottom to top
+- <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/flexdir1.png?raw=true">
+- <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/flexdir2.png?raw=true">
+
 
 
 
