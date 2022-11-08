@@ -64,7 +64,7 @@ Learn Full Stack in just 100 Days
     - [justify-content](#justify-content)
     - [align-items](#align-items)
     - [align-content](#align-content)
-- [Day 16 - JavaScript](#day-16---javascript)
+  - [Day 16 - JavaScript](#day-16---javascript)
     - [Comments](#comments)
     - [Variables](#variables)
     - [Naming Rules](#naming-rules)
@@ -2796,6 +2796,7 @@ h1{
   ```
   - Output is looks like this:
     - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/align-content1.png?raw=true"> 
+- <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/align-content3.png?raw=true"> 
 - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/align-content2.png?raw=true"> 
 
 
@@ -2826,7 +2827,7 @@ h1{
 
 
 
-# Day 16 - JavaScript
+## Day 16 - JavaScript
 ### Comments 
 ```js
 // console.log() - Is used to print, what inside the ()
