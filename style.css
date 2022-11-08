@@ -1,8 +1,8 @@
 .box-wrapper{
     border: 4px solid black;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
+    /* flex-direction: row;
+    flex-wrap: wrap-reverse; */
     
 }
 

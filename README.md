@@ -61,6 +61,7 @@ Learn Full Stack in just 100 Days
     - [Flexbox Architecture](#flexbox-architecture)
     - [flex-direction](#flex-direction)
     - [flex-wrap](#flex-wrap)
+    - [justify-content](#justify-content)
   - [Day 16 - JavaScript](#day-16---javascript)
     - [Comments](#comments)
     - [Variables](#variables)
@@ -2758,7 +2759,13 @@ h1{
 - If also give individual height to every box.
 - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/flex-wrap.png?raw=true">
 
-
+### justify-content
+- This property arranges flex-items along the MAIN AXIS inside the flex-container.
+- Its flex-container property.
+- By default, `justify-content: flex-start`.
+- <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/justify-content1.png?raw=true">
+- <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/justify-content2.png?raw=true">
+- 
 
 
 
