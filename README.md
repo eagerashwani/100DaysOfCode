@@ -64,6 +64,8 @@ Learn Full Stack in just 100 Days
     - [justify-content](#justify-content)
     - [align-items](#align-items)
     - [align-content](#align-content)
+    - [flex-flow](#flex-flow)
+    - [Align self](#align-self)
   - [Day 16 - JavaScript](#day-16---javascript)
     - [Comments](#comments)
     - [Variables](#variables)
@@ -2799,10 +2801,33 @@ h1{
 - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/align-content3.png?raw=true"> 
 - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/align-content2.png?raw=true"> 
 
+### flex-flow
+- It's flex-container property.
+- Its a shorthand of `flex-direction` and `flex-wrap` properties.
+- `flex-flow: row wrap-reverse`
 
+### Align self
+- Its flex items property.
+- It positioned the selected item across Cross Axis.
+- It override the align-items property of flex container.
+- align-self values : flex-start, flex-end, center, baseline, stretch, auto.
+  ```css
+  .box-1{
+    background-color: lightblue;
+    align-self: flex-start;
+  }
 
+  .box-2{
+      background-color: lightseagreen;
+      align-self: center;
+  }
 
-
+  .box-3{
+      background-color: lightcoral;
+      align-self: flex-end;
+  }
+  ```
+  - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/align-self.png?raw=true">  
 
 
 
