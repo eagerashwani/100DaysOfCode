@@ -69,6 +69,9 @@ Learn Full Stack in just 100 Days
     - [order](#order)
     - [flex-basis](#flex-basis)
     - [flex-grow](#flex-grow)
+    - [flex](#flex)
+  - [Day 16 - JavaScript](#day-16---javascript)
+    - [Comments](#comments)
     - [Variables](#variables)
     - [Naming Rules](#naming-rules)
     - [`Let` Keyword](#let-keyword)
@@ -2879,6 +2882,34 @@ h1{
 
 - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/flex-grow.png?raw=true">  
 ### flex-shrink
+- flex automatically shrinks the width
+- Suppose we have 3 box, each one has 600px width, and flex container has 1200px width.
+- Than the boxes shrink in 1200px they loss 600px.
+- With the help of flex-shrink, we can control the shrink of each box.
+- more shrink value, more space give up.
+- You have to remove flex-wrap, to see it working.
+```css
+.box-1{
+    background-color: lightblue;
+    flex-shrink: 1;
+    
+}
+
+.box-2{
+    background-color: lightseagreen;
+    flex-shrink: 2;
+    
+}
+
+.box-3{
+    background-color: lightcoral;
+    flex-shrink: 3;
+
+}
+```
+### flex
+- Shorthand
+- `flex: flex-grow flex-shrink flex-basis`
 
 
 
