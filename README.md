@@ -2745,6 +2745,7 @@ h1{
 ### flex-wrap
 - As you know, flex items takes width according to their requirement.
 - It's flex container property.
+- By defualt, `flex-wrap: nowrap`.
 - Suppose I want to give width to my all box should be 500px width. so in .box, I provide `width:500px` 
 - But still nothing changes. To apply 500px width to each item, we have to give `flex-wrap: wrap` to flex-container
 - Than it takes 500px width for each item. 
@@ -2755,6 +2756,7 @@ h1{
 - box 1, box 2, box 3 in second row
 - If we give height to the flex container than flex items takes all the height.
 - If also give individual height to every box.
+- <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/flex-wrap.png?raw=true">
 
 
 
