@@ -67,8 +67,8 @@ Learn Full Stack in just 100 Days
     - [flex-flow](#flex-flow)
     - [Align self](#align-self)
     - [order](#order)
-  - [Day 16 - JavaScript](#day-16---javascript)
-    - [Comments](#comments)
+    - [flex-basis](#flex-basis)
+    - [flex-grow](#flex-grow)
     - [Variables](#variables)
     - [Naming Rules](#naming-rules)
     - [`Let` Keyword](#let-keyword)
@@ -2852,7 +2852,33 @@ h1{
     order: 2;
 }
  ```
+### flex-basis
+- initial length of flex item towards main axis.
+- if we give both flex-basis and width/height, browser take flex-basis.
 
+### flex-grow
+- It decides how flex items occupied the remaining space.
+- By default, `flex-grow:0`
+- ```css
+  .box-1{
+      background-color: lightblue;
+      flex-grow: 2;
+  }
+
+  .box-2{
+      background-color: lightseagreen;
+      flex-grow: 1;
+  }
+
+  .box-3{
+      background-color: lightcoral;
+      flex-grow: 1;
+  }
+  ```
+  - box 1 takes remaining space 2 times more than box 2 and box 3.
+
+- <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/flex-grow.png?raw=true">  
+### flex-shrink
 
 
 
