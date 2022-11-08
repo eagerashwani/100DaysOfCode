@@ -66,6 +66,7 @@ Learn Full Stack in just 100 Days
     - [align-content](#align-content)
     - [flex-flow](#flex-flow)
     - [Align self](#align-self)
+    - [order](#order)
   - [Day 16 - JavaScript](#day-16---javascript)
     - [Comments](#comments)
     - [Variables](#variables)
@@ -2829,7 +2830,28 @@ h1{
   ```
   - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/align-self.png?raw=true">  
 
+### order
+- Its flex items property.
+- By default, box1, box2 and box3 are ordered
+- But you want box2, box1 and box3 or any other order.
+- By default, order is 0.
+- low order comes at start and higher order comes at end.
+ ```css
+ .box-1{
+    background-color: lightblue;
+    order: 1;
+}
 
+.box-2{
+    background-color: lightseagreen;
+    order: 0;
+}
+
+.box-3{
+    background-color: lightcoral;
+    order: 2;
+}
+ ```
 
 
 
