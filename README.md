@@ -62,6 +62,7 @@ Learn Full Stack in just 100 Days
     - [flex-direction](#flex-direction)
     - [flex-wrap](#flex-wrap)
     - [justify-content](#justify-content)
+    - [align-items](#align-items)
   - [Day 16 - JavaScript](#day-16---javascript)
     - [Comments](#comments)
     - [Variables](#variables)
@@ -2765,7 +2766,12 @@ h1{
 - By default, `justify-content: flex-start`.
 - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/justify-content1.png?raw=true">
 - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/justify-content2.png?raw=true">
-- 
+
+
+### align-items
+- By default, `align-items: stretch` 
+- This property distributes Flex-items along the Cross Axis.
+- <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/align-items.png?raw=true"> 
 
 
 
