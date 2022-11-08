@@ -1,15 +1,15 @@
 .box-wrapper{
     border: 4px solid black;
     display: flex;
-    /* flex-direction: row;
-    flex-wrap: wrap-reverse; */
-    height: 700px;
-    align-items: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 600px;
     
 }
 
 .box{
     border: 2px solid gray;
+    width: 400px;
 }
 
 .box-1{

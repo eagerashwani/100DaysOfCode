@@ -63,8 +63,7 @@ Learn Full Stack in just 100 Days
     - [flex-wrap](#flex-wrap)
     - [justify-content](#justify-content)
     - [align-items](#align-items)
-  - [Day 16 - JavaScript](#day-16---javascript)
-    - [Comments](#comments)
+    - [align-content](#align-content)
     - [Variables](#variables)
     - [Naming Rules](#naming-rules)
     - [`Let` Keyword](#let-keyword)
@@ -2770,10 +2769,30 @@ h1{
 
 ### align-items
 - By default, `align-items: stretch` 
+- Its flex container property
 - This property distributes Flex-items along the Cross Axis.
 - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/align-items.png?raw=true"> 
 
+### align-content
+- Its flex container property.
+- When we have more than one row, like in flex-wrap, we use align-content.
+- ```css
+  .box-wrapper{
+      border: 4px solid black;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      height: 600px;
+      
+  }
 
+  .box{
+      border: 2px solid gray;
+      width: 400px;
+  }
+  ```
+  - Output is looks like this:
+    - <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/align-content1.png?raw=true"> 
 
 
 
