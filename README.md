@@ -2727,7 +2727,7 @@ h1{
   - If we remove p tag, than items takes width as their requirement but flext container takes all width.
   
 ### Some Terminologies
-- <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/flexboxarch.png?raw=true>
+- <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/flexboxarch.png?raw=true">
 
 
 
