@@ -380,8 +380,8 @@ Learn Full Stack in just 100 Days
   - Login/Signup Form
 
 - HTML tag looks like
-  - <openTag> Content </closeTag>
-  - eg: <html> Something here </html>
+  - `<openTag>` Content `</closeTag>`
+  - eg: `<html> Something here </html>`
 
 - Note: In Html, we also have self-closing tags.
 
