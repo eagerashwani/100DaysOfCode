@@ -56,6 +56,7 @@ Learn Full Stack in just 100 Days
     - [Absolute unit](#absolute-unit)
     - [Relative units](#relative-units)
     - [Viewport Units](#viewport-units)
+    - [Media Query](#media-query)
   - [Day 11](#day-11)
     - [Flexbox](#flexbox)
     - [Flexbox Architecture](#flexbox-architecture)
@@ -2665,6 +2666,28 @@ h1{
   - p is visible when we start scrolling, used in many websites.
 - vmin and vmax(confusing and not used very much)
 
+### Media Query
+- CSS Media Queries allows you to create responsive websites across all the screen sizes.
+  <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/mediaquery1.png?raw=true" />
+- himHtml
+  ```html
+    <h1>This is heading</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, aut.</p>
+  ```
+- himCSS
+  ```css
+  html{
+    font-size: 10px;
+  }
+
+  h1{
+      font-size: 10rem;
+  }
+
+  p{
+      font-size: 5rem;
+  }
+  ```
 
 ## Day 11
 ### Flexbox
