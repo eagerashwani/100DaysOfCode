@@ -2669,6 +2669,7 @@ h1{
 ### Media Query
 - CSS Media Queries allows you to create responsive websites across all the screen sizes.
   <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/mediaquery1.png?raw=true" />
+- Always put your media query code in the end of css file.
 - himHtml
   ```html
     <h1>This is heading</h1>
@@ -2679,6 +2680,9 @@ h1{
   html{
     font-size: 10px;
   }
+  body{
+    background-color: lightblue;
+  }
 
   h1{
       font-size: 10rem;
@@ -2688,6 +2692,9 @@ h1{
       font-size: 5rem;
   }
   ```
+- To use media query `@media ()`
+  <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/mediaquery2.png?raw=true" />
+  
 
 ## Day 11
 ### Flexbox

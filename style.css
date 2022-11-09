@@ -1,11 +1,23 @@
-html{
-    font-size: 10px;
+html {
+  font-size: 10px;
+}
+body {
+  background-color: lightblue;
 }
 
-h1{
-    font-size: 10rem;
+h1 {
+  font-size: 10rem;
 }
 
-p{
-    font-size: 5rem;
+p {
+  font-size: 5rem;
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 5px;
+  }
+  body {
+    background-color: lightcoral;
+  }
 }
