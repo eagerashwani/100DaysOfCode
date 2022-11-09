@@ -2721,6 +2721,7 @@ h1{
     }
   }
   ```
+  <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/mediatype.png?raw=true" />
 
 ## Day 11
 ### Flexbox
