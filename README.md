@@ -79,6 +79,7 @@ Learn Full Stack in just 100 Days
     - [row gap and column gap](#row-gap-and-column-gap)
     - [Grid fraction unit](#grid-fraction-unit)
     - [repeat()](#repeat)
+    - [Other Terminologies](#other-terminologies)
   - [Day 16 - JavaScript](#day-16---javascript)
     - [Comments](#comments)
     - [Variables](#variables)
@@ -3009,7 +3010,7 @@ h1{
       margin: auto;
       border: 4px solid red;
       background-color: cornsilk;
-      width: 1200px;
+      max-width: 1440px;
   }
 
   .item{
@@ -3070,6 +3071,7 @@ h1{
   ```
   - Both lines are same.
   - If you want 2nd column twice width, `grid-template-columns: 1fr 2fr 1fr;`
+### Other Terminologies
 
 - `grid-template-rows: 100px 100px;`
   - 1st and 2nd row height 100px;
@@ -3080,7 +3082,12 @@ h1{
     - Arrange data row wise, If you it to column, than column wise data show
 - There is an another property ` grid-auto-columns: 100px;`
 - We don't use `grid-auto-flow: column` and  `grid-auto-columns` very much.
-- 
+- We have also mix fraction like `grid-template-columns: 300px repeat(2, 1fr);` this.
+
+- `auto-fit` and `auto-fill`
+  - I don't want fix 3 columns 
+      - `grid-template-columns: repeat(auto-fit, 100px);`
+  - Same as auto-fill but both are different.
 
 
 
