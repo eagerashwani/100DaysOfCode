@@ -2694,7 +2694,33 @@ h1{
   ```
 - To use media query `@media ()`
   <img src="https://github.com/eagerashwani/100DaysOfCode/blob/main/images/mediaquery2.png?raw=true" />
-  
+  ```css
+  @media (max-width: 500px) {
+    html {
+      font-size: 5px;
+    }
+    body {
+      background-color: lightcoral;
+    }
+  }
+
+  ```
+- Now I want 501 to 768px lightseagreen color
+  ```css
+  @media (min-width: 501px) and (max-width: 768px){
+    body{
+        background-color: lightseagreen;
+    }
+  }
+  ```
+- Now I want beyond 1200px different color
+  ```css
+  @media (min-width: 1200px){
+    body{
+        background-color: maroon;
+    }
+  }
+  ```
 
 ## Day 11
 ### Flexbox

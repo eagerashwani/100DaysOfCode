@@ -21,3 +21,15 @@ p {
     background-color: lightcoral;
   }
 }
+
+@media (min-width: 501px) and (max-width: 768px){
+    body{
+        background-color: lightseagreen;
+    }
+}
+
+@media (min-width: 1200px){
+    body{
+        background-color: maroon;
+    }
+}
