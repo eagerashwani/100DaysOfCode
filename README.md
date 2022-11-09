@@ -2551,7 +2551,7 @@ h1{
     <div class="box1">
       <p class="text-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse dolores sequi aspernatur
         aperiam, consequatur nisi ea repellat perspiciatis itaque eius non repellendus, distinctio ut exercitationem.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, nemo.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, nemo.</p>
     </div>
    ```
    - himCSS
