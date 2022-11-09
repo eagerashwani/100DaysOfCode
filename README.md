@@ -71,6 +71,14 @@ Learn Full Stack in just 100 Days
     - [flex-basis](#flex-basis)
     - [flex-grow](#flex-grow)
     - [flex](#flex)
+  - [Day 12](#day-12)
+    - [Grid layout](#grid-layout)
+    - [Show Grid Lines](#show-grid-lines)
+    - [Grid Template columns](#grid-template-columns)
+    - [implicit vs explicit](#implicit-vs-explicit)
+    - [row gap and column gap](#row-gap-and-column-gap)
+    - [Grid fraction unit](#grid-fraction-unit)
+    - [repeat()](#repeat)
   - [Day 16 - JavaScript](#day-16---javascript)
     - [Comments](#comments)
     - [Variables](#variables)
@@ -2968,14 +2976,111 @@ h1{
 - Shorthand
 - `flex: flex-grow flex-shrink flex-basis`
 
+## Day 12
+### Grid layout
+- Lets create 12 divs
+  - shortcut `.container>.item.item${Item $}*12`
+- himHTML
+  ```html
+    <div class="container">
+      <div class="item item1">Item 1</div>
+      <div class="item item2">Item 2</div>
+      <div class="item item3">Item 3</div>
+      <div class="item item4">Item 4</div>
+      <div class="item item5">Item 5</div>
+      <div class="item item6">Item 6</div>
+      <div class="item item7">Item 7</div>
+      <div class="item item8">Item 8</div>
+      <div class="item item9">Item 9</div>
+      <div class="item item10">Item 10</div>
+      <div class="item item11">Item 11</div>
+      <div class="item item12">Item 12</div>
+    </div>
+  ```
+- himCSS
+  ```css
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
 
+  .container{
+      margin: auto;
+      border: 4px solid red;
+      background-color: cornsilk;
+      width: 1200px;
+  }
 
+  .item{
+      padding: 10px;
+      border: 2px solid green;
+  }
+  ```
+- when i gave .container `display:grid` nothing changes.
+- Grid layout has two things
+  - container
+  - items
+  
+### Show Grid Lines
+- Inspect your page and click on grid(chips like style) near your grid container(.container class)
+- It shows line numbers in the grid.
 
+### Grid Template columns
+- There is only one column in my layout.
+- Its grid container property.
+- I want to show 3 columns.
+- `grid-template-columns: 100px 200px 100px;`
+  - First column is 100px wide.
+  - Second column is 200px wide.
+  - Third column is 100px wide.
+- I only decide the column not row, but arranges row implicitly.
 
+### implicit vs explicit
+- Explicit --> I define
+- Implicit --> Browser defines 
+- I define column and browser defines row.
 
+### row gap and column gap
+- We can give gap to our layout.
+- `column-gap: 50px`
+  ```css
+   grid-template-columns: 33% 33% 33%;
+   column-gap: 50px;
+  ```
+  - 3rd column overflow from the grid container.
+  - When we use grid, we dont use %, we use fraction.
 
+### Grid fraction unit
+- First browser give space to units that are not fraction like px.
+- column-gap get 50px, than column get 1fr.
+  ```css
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 50px;
+  ```
+- Now 3rd column never overflow from the grid container.
+- Instead of column-gap and row-gap, we can use shorthand `gap`
+- `gap: 10px 50px;` 10px --> row-gap, 50px --> column-gap.
 
+### repeat()
+  ```css
+   /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(3, 1fr);
+  ```
+  - Both lines are same.
+  - If you want 2nd column twice width, `grid-template-columns: 1fr 2fr 1fr;`
 
+- `grid-template-rows: 100px 100px;`
+  - 1st and 2nd row height 100px;
+- If you want to change implicit rows height
+  - `grid-auto-rows: 100px;` 
+- Why browser put data in new row, why it cant put in single row
+  - There is a property `grid-auto-flow: row;` By default.
+    - Arrange data row wise, If you it to column, than column wise data show
+- There is an another property ` grid-auto-columns: 100px;`
+- We don't use `grid-auto-flow: column` and  `grid-auto-columns` very much.
+- 
 
 
 
