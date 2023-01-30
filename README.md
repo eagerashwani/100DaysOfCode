@@ -188,6 +188,8 @@ Learn Full Stack in just 100 Days
     - [innerHTML](#innerhtml)
     - [DOM Tree](#dom-tree)
     - [Traversing DOM](#traversing-dom)
+  - [Day 26](#day-26)
+    - [](#)
   - [Day 30](#day-30)
     - [First React](#first-react)
     - [First React Practice](#first-react-practice)
@@ -6289,6 +6291,10 @@ console.log(myhead.innerHTML);
 ### Traversing DOM
 ```js
 ```
+
+## Day 26
+### 
+
 
 ## Day 30
 ### First React
